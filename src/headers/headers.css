@@ -1,0 +1,32 @@
+.h-image {
+    display: flex;
+    justify-content: center;
+    background-color: #793f6f;
+}
+
+/* NAVBAR */
+nav .container {
+    margin-left: 2em;
+}
+
+nav img {
+    width: 2em;
+    position: absolute;
+    /* margin: auto .3em; */
+    top: 1em;
+}
+nav img:nth-child(1) {
+    right: 5em;
+}
+nav img:nth-child(2){
+    right: 2.75em;
+}
+nav img:nth-child(3){
+    right: .5em;
+}
+
+@media (max-width: 600px) {
+    .h-image {
+        display: none;
+    }
+}
