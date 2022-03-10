@@ -1,0 +1,21 @@
+.outer-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 3em;
+}
+.inner-container {
+    /* border: 1px solid black; */
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 30px 20px;
+}
+.soundcloud-wrapper {
+    padding: 0 20px 20px;
+}
+
+@media (max-width: 767px){
+    .soundcloud-wrapper{
+        display: none;
+    }
+}

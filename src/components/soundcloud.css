@@ -1,0 +1,13 @@
+.soundcloud-container{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+}
+.soundcloud-inner-container {
+    margin-bottom: 5em;
+}
+.soundcloud-name{
+    border: 1px solid #cccc;
+    background-color: #cccc;
+    padding: 3px;
+}

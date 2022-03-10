@@ -1,0 +1,86 @@
+.flyer-container {
+  display: flex;
+  /* background-color: pink; */
+  margin: 0 auto 5em;
+}
+.item {
+  /* border: 1px solid red; */
+}
+
+.item-center {
+  /* border: 1px solid red; */
+  flex-grow: 1;
+}
+
+.item + .item {
+  margin-left: 2%;
+}
+
+/* Flyer  */
+.flyer-date {
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 1em;
+  position: relative;
+}
+.flyer-date p {
+  margin-bottom: 0;
+  margin-left: 1em;
+}
+.flyer-date div {
+  background-color: #f00000;
+  height: 100%;
+  width: 5px;
+  position: absolute;
+}
+.flyer-container img {
+  width: 20em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* info */
+.list-group {
+  font-family: sans-serif;
+}
+
+.headliner {
+  font-family: 'Fredoka', sans-serif;
+  padding-top: 0;
+  font-size: 2em;
+}
+.support {
+  font-size: .9em;
+}
+.clock {
+  margin-right: .25em;
+}
+.time {
+}
+.location {
+}
+.location img {
+  margin-right: .25em;
+  width: 15px;
+  box-shadow: none;
+}
+
+.flyer-container li {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+
+/* tickets  */
+.tickets {
+  font-family: 'Roboto', sans-serif;
+  width: 100px;
+  padding: 3px;
+  margin: 0 2em 2em;
+}
+@media (max-width: 767px) {
+  .flyer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
