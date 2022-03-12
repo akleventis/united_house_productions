@@ -2,7 +2,7 @@
 
 ## Development
 
-Basically have two terminal windows open
+Basically have two terminal instances open
 
 One running `npm run server:dev` for the express server
 
@@ -10,7 +10,7 @@ And another running `npm run client:dev` for the react client in dev mode
 
 ## Deployment
 
-Run `npm install` (and hopefully `postinstall` is triggered 🤞)and then `npm run start` 😀
+Run `npm install` (and hopefully `postinstall` is triggered 🤞) and then `npm run start` 😀
 
 ## Scripts
 

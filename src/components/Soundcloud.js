@@ -1,5 +1,6 @@
 import ReactPlayer from "react-player";
-import "./soundcloud.css";
+import "./Soundcloud.css";
+
 const Soundcloud = () => {
   const artists = [
     {

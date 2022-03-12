@@ -1,7 +1,7 @@
 import { Domii } from "../assets/images/index";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import "./flyer.css";
+import "./Flyer.css";
 
 const Flyer = () => {
   return (
