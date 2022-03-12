@@ -1,26 +1,24 @@
 .flyer-container {
   display: flex;
-  /* background-color: pink; */
-  margin: 0 auto 5em;
+  margin-bottom: 5em;
 }
+/* poster / ticket*/
 .item {
-  /* border: 1px solid red; */
 }
-
+/* info */
 .item-center {
-  /* border: 1px solid red; */
   flex-grow: 1;
 }
 
 .item + .item {
   margin-left: 2%;
 }
-
 /* Flyer  */
 .flyer-date {
   background-color: #ffffff;
+  color: black;
   font-weight: 700;
-  font-size: 1em;
+  font-size: .85em;
   position: relative;
 }
 .flyer-date p {
@@ -34,7 +32,7 @@
   position: absolute;
 }
 .flyer-container img {
-  width: 20em;
+  width: 15em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -47,16 +45,20 @@
   font-family: 'Fredoka', sans-serif;
   padding-top: 0;
   font-size: 2em;
+  color: rgb(36, 240, 255) !important;
 }
 .support {
   font-size: .9em;
+  font-family: 'Fredoka', sans-serif;
 }
 .clock {
   margin-right: .25em;
 }
 .time {
+  padding-bottom: 0;
 }
 .location {
+  /* padding-top: 0; */
 }
 .location img {
   margin-right: .25em;
@@ -76,8 +78,8 @@
   font-family: 'Roboto', sans-serif;
   width: 100px;
   padding: 3px;
-  margin: 0 2em 2em;
 }
+
 @media (max-width: 767px) {
   .flyer-container {
     flex-direction: column;

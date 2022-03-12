@@ -6,6 +6,8 @@ import "./flyer.css";
 const Flyer = () => {
   return (
     <div>
+      <p>March 2022</p>
+      <hr />
       <div className="flyer-container">
         <div className="item">
           <Zoom>
@@ -56,8 +58,8 @@ const Flyer = () => {
           </ul>
         </div>
         <div className="item">
-          <button type="button" class="btn btn-info tickets">
-            Buy Tickets
+          <button type="button" class="tickets">
+            Tickets
           </button>
         </div>
       </div>

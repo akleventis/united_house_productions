@@ -15,8 +15,13 @@ nav {
     background-color: #474747;
     top: 0;
 }
+.navbar-toggler {
+    padding: 1px !important;
+}
+
 .nav-link {
     margin: auto 10px;
+    padding: 0;
     color: #ffffff !important;
     transition: 500ms;
 }
@@ -24,7 +29,7 @@ nav {
     color: #f00000 !important;
 }
 nav .container {
-    margin-left: 2em;
+    margin-left: 0;
 }
 
 /* social icons */
@@ -54,5 +59,8 @@ nav img:hover {
 @media (max-width: 600px) {
     .h-image {
         display: none;
+    }
+    .nav-link {
+        padding: 3px
     }
 }
