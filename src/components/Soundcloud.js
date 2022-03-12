@@ -20,9 +20,9 @@ const Soundcloud = () => {
     <div>
       <div className="soundcloud-container">
         <div className="dj-title">Local Artists ❤️</div>
-        {artists.map((artist) => {
+        {artists.map((artist, i) => {
           return (
-            <div className="soundcloud-inner-container">
+            <div className="soundcloud-inner-container" key={i}>
               <div className="soundcloud-name"> {artist.name} </div>
               <ReactPlayer width="200px" height="200px" url={artist.url} />
             </div>
