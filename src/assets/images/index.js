@@ -5,3 +5,7 @@ export const Facebook = require('./social/facebook.png')
 
 // flyers
 export const Domii = require('./flyers/domii.jpeg')
+
+// products
+export const Shirt = require('./products/shirt.png')
+export const Shroomy = require('./products/shroomy.png')
