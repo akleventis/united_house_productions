@@ -6,8 +6,6 @@ import moment from "moment";
 const Flyer = ({ event }) => {
   return (
     <div>
-      <p>{moment(event.startTime).format("MMMM YYYY")}</p>
-      <hr />
       <div className="flyer-container">
         <div className="item">
           <Zoom>
