@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <Router>
         <Navigate />
@@ -22,7 +22,7 @@ const App = () => {
           <Soundcloud />
         </div>
       </Router>
-    </div>
+    </>
   );
 };
 
