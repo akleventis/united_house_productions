@@ -1,7 +1,7 @@
 import { Domii } from "../assets/images/index";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import "./flyer.css";
+import "./Flyer.css";
 
 const Flyer = () => {
   return (
@@ -21,12 +21,12 @@ const Flyer = () => {
           </Zoom>
         </div>
         <div className="item-center">
-          <ul class="list-group">
-            <li class="list-group-item headliner">DOMii</li>
-            <li class="list-group-item support">
+          <ul className="list-group">
+            <li className="list-group-item headliner">DOMii</li>
+            <li className="list-group-item support">
               DUPLEX | YESPEEZ | VLADISLOVE | WARRIORS
             </li>
-            <li class="list-group-item time">
+            <li className="list-group-item time">
               <svg
                 className="clock"
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const Flyer = () => {
               9pm - 2:30am
             </li>
 
-            <li class="list-group-item location">
+            <li className="list-group-item location">
               <a
                 href="https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525"
                 target="_blank"
@@ -58,7 +58,7 @@ const Flyer = () => {
           </ul>
         </div>
         <div className="item">
-          <button type="button" class="tickets">
+          <button type="button" className="tickets">
             Tickets
           </button>
         </div>
