@@ -1,4 +1,4 @@
-import Flyer from "../components/Flyer.js";
+import Flyer from "../components/events/Flyer.js";
 import { Domii } from "../assets/images/index";
 import "./events.css";
 
