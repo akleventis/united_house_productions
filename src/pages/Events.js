@@ -7,43 +7,36 @@ const djs = {
     name: "DOMii",
     site: "",
     insta: "",
-    soundcloud: "",
   },
   duplex: {
     name: "duplex",
     site: "",
     insta: "",
-    soundcloud: "",
   },
   dabaldo: {
     name: "DaBaldo",
     site: "",
     insta: "",
-    soundcloud: "",
   },
   tylr: {
     name: "TYLR",
     site: "",
     insta: "",
-    soundcloud: "",
   },
   warriors: {
     name: "warriors",
     site: "",
     insta: "",
-    soundcloud: "",
   },
   yespeez: {
     name: "yespeez",
     site: "",
     insta: "",
-    soundcloud: "",
   },
   vladislove: {
     name: "vladislove",
     site: "",
     insta: "",
-    soundcloud: "",
   },
 };
 

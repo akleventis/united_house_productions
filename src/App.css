@@ -10,13 +10,7 @@
     width: 100%;
     padding: 0 30px 20px;
 }
-/* .soundcloud-wrapper {
-    padding: 20px;
-    background-color: rgb(163, 163, 163);
+.router-title {
+    color: white;
+    margin: 0 0 20px 20px;
 }
-
-@media (max-width: 767px){
-    .soundcloud-wrapper{
-        display: none;
-    }
-} */
