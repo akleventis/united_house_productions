@@ -1,5 +1,5 @@
 import Flyer from "../components/events/Flyer.js";
-import { Domii } from "../assets/images/index";
+import { Domii, Square } from "../assets/images/index.js";
 import "./events.css";
 import moment from "moment";
 
@@ -55,7 +55,7 @@ const events = [
   },
   {
     headliner: djs.tylr,
-    poster: null,
+    poster: Square,
     supportingActs: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
     location: {
       url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
