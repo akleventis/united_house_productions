@@ -7,7 +7,7 @@ import "./headers.css";
 const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
   return (
     <>
-      <Navbar expand="md navbar-dark" className="nav-links">
+      <Navbar expand="md navbar-dark" className="nav-links" sticky="top">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
