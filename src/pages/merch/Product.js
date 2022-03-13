@@ -2,17 +2,22 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { addToCart } from "../../api";
 
-const handleClick = (name) => {
-  console.log("add product id: ", name, " to shopping cart");
-  toast(`'${name}' added to cart 🔥`, {
+const handleClick = (product) => {
+  console.log(`Added ${product.name} (id: ${product.id}) to cart`);
+  toast(`'${product.name}' added to cart 🔥`, {
     position: "bottom-center",
     autoClose: 4000,
     hideProgressBar: false,
     closeOnClick: true,
     draggable: true,
     progress: undefined,
-    });
+  });
+
+  product.quantity = 1;
+
+  addToCart(product);
 };
 const Product = ({ product }) => {
   return (
@@ -38,16 +43,18 @@ const Product = ({ product }) => {
               <div className="h-bg">
                 <div className="h-bg-inner"></div>
               </div>
-              <a className="cart" onClick={(event) => {
-                event.preventDefault();
-                handleClick(product.name)
-              }}>
+              <a
+                className="cart"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleClick(product);
+                }}
+              >
                 <ToastContainer
                   position="bottom-center"
                   autoClose={4000}
                   hideProgressBar={false}
                   newestOnTop={false}
-
                   rtl={false}
                   pauseOnFocusLoss={false}
                   className="toast-container"
