@@ -38,3 +38,11 @@ export const addToCart = async (product) => {
     }
   }
 };
+
+export const removeFromCart = async (id) => {
+  const cart = await getFromLocalStorage("cart");
+  setInLocalStorage(
+    "cart",
+    cart.filter((item) => item.id !== id)
+  );
+};

@@ -1,17 +1,21 @@
 import { Modal, ListGroup, Button } from "react-bootstrap";
 import { useState, useEffect, useCallback } from "react";
-import { getFromLocalStorage } from "../api";
+import { getFromLocalStorage, removeFromCart } from "../api";
 import { BsFillTrashFill } from "react-icons/bs";
 
 const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   const [cart, setCart] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+  const refreshCart = () => {
+    setRefresh(!refresh);
+  };
   const hydrateCart = useCallback(() => {
     getFromLocalStorage("cart").then((res) => setCart(res ?? []));
   }, [setCart]);
 
   useEffect(() => {
     hydrateCart();
-  }, [hydrateCart, showShoppingCart]);
+  }, [hydrateCart, showShoppingCart, refresh]);
 
   const handleClose = () => setShowShoppingCart(false);
 
@@ -33,8 +37,13 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
             >
               <span>{product.name}</span>
               <span>{`QTY: ${product.quantity}`}</span>
-              <Button variant="danger" onClick={() => {}}>
-                {/* TODO: Make this do something */}
+              <Button
+                variant="danger"
+                onClick={() => {
+                  removeFromCart(product.id);
+                  refreshCart();
+                }}
+              >
                 <BsFillTrashFill />
               </Button>
             </ListGroup.Item>
