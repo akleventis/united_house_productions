@@ -1,7 +1,11 @@
 .h-image {
     display: flex;
     justify-content: center;
-    background-color: #ffffff;
+    background-image: url(../assets/images/background.jpg);
+}
+.h-image img {
+    background-color: #ffffff93;
+    box-shadow:0 0 5px 10px rgba(255, 255, 255, 0.548);
 }
 
 /* NAVBAR */
@@ -10,7 +14,7 @@ nav {
     font-size: 1.1em;
     font-weight: 600;
     position: -webkit-sticky;
-    position: sticky;
+    position: sticky !important;
     z-index: 1;
     background-color: #474747;
     top: 0;

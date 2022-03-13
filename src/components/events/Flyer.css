@@ -32,7 +32,7 @@
   position: absolute;
 }
 .flyer-container img {
-  width: 15em;
+  width: 17em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -44,7 +44,7 @@
 .headliner {
   font-family: "Fredoka", sans-serif;
   padding-top: 0;
-  font-size: 2em;
+  font-size: 1.8em;
   color: #62aedd !important;
 }
 .support {
