@@ -66,7 +66,7 @@ const events = [
   },
 ];
 
-const Events = (props) => {
+const Events = () => {
   const months = {};
 
   events.forEach((event) => {
@@ -81,12 +81,12 @@ const Events = (props) => {
   return (
     <div className="events-container">
       <h2>Upcoming Events</h2>
-      {Object.entries(months).map((month, i) => {
+      {Object.entries(months).map(([month, eventsInMonth], i) => {
         return (
           <div key={i}>
-            <p>{month[0]}</p>
+            <p>{month}</p>
             <hr />
-            {month[1].map((event, j) => (
+            {eventsInMonth.map((event, j) => (
               <Flyer key={j} event={event} />
             ))}
           </div>
