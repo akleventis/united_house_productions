@@ -1,7 +1,7 @@
-// import {LinkTree, Instagram, Facebook } from '../assets/images/index'
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { ShoppingCart } from "../components/index.js";
+import { ShoppingCart } from "../../components/index.js";
+import { SocialIcon } from "react-social-icons";
 import "./headers.css";
 
 const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
@@ -28,9 +28,9 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
             </Nav>
           </Navbar.Collapse>
           <div>
-            {/* <img src={LinkTree} alt='link tree' />
-                        <img src={Instagram} alt='instagram' />
-                        <img src={Facebook} alt='facebook' /> */}
+            <SocialIcon className="social" url="https://linktr.ee/unitedhouseproductions" />
+            <SocialIcon className="social" url="https://www.instagram.com/unitedhouseproductions/" />
+            <SocialIcon className="social" url="https://facebook.com" />
           </div>
         </Container>
       </Navbar>

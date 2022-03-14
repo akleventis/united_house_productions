@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, Navigate } from "./headers/index.js";
-import { About, Contact, Events, Merch } from "./pages/index.js";
-import { Soundcloud } from "./components/index.js";
+import { About, Contact, Events, Products, Header, Navigate, Soundcloud} from "./pages/index.js";
 import "./App.css";
 import { useState } from "react";
 
@@ -20,7 +18,7 @@ const App = () => {
           <div className="inner-container">
             <Routes>
               <Route path="/" element={<Events />} />
-              <Route path="/merch" element={<Merch />} />
+              <Route path="/merch" element={<Products />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

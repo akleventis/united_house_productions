@@ -1,9 +1,6 @@
-import Flyer from "../components/events/Flyer.js";
-import { Domii, Patty } from "../assets/images/index.js";
-import "./events.css";
-import moment from "moment";
+import { Domii, Patty, Shirt, Shroomy } from "../assets/images/index.js";
 
-const djs = {
+export const djs = {
   domii: {
     name: "DOMii",
     site: "",
@@ -41,7 +38,7 @@ const djs = {
   },
 };
 
-const events = [
+export const events = [
   {
     headliner: djs.domii,
     poster: Domii,
@@ -66,34 +63,64 @@ const events = [
   },
 ];
 
-const Events = (props) => {
-  const months = {};
+export const featuredSongs = [
+  {
+    dj: djs.tylr,
+    url: "https://soundcloud.com/musicbytylr/2022-showcase-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+  {
+    dj: djs.yespeez,
+    url: "https://soundcloud.com/alex-mahar-189115224/nobody?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+  {
+    dj: djs.dabaldo,
+    url: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+];
 
-  events.forEach((event) => {
-    const month = moment(event.startTime).format("MMMM YYYY");
-    if (Object.hasOwn(months, month)) {
-      months[month].push(event);
-    } else {
-      months[month] = [event];
-    }
-  });
-
-  return (
-    <div className="events-container">
-      <h2>Upcoming Events</h2>
-      {Object.entries(months).map((month, i) => {
-        return (
-          <div key={i}>
-            <p>{month[0]}</p>
-            <hr />
-            {month[1].map((event, j) => (
-              <Flyer key={j} event={event} />
-            ))}
-          </div>
-        );
-      })}
-    </div>
-  );
-};
-
-export default Events;
+export const products = [
+  {
+    id: 1,
+    name: "T-Shirt",
+    price: 25,
+    sizes: ["S", "M", "L", "XL"],
+    size: "",
+    img: Shirt,
+  },
+  // {
+  //   id: 1,
+  //   name: "T-Shirt",
+  //   price: 25,
+  //   size: "S",
+  //   img: Shirt,
+  // },
+  // {
+  //   id: 2,
+  //   name: "T-Shirt",
+  //   price: 25,
+  //   size: "M",
+  //   img: Shirt,
+  // },
+  // {
+  //   id: 3,
+  //   name: "T-Shirt",
+  //   price: 25,
+  //   size: "L",
+  //   img: Shirt,
+  // },
+  // {
+  //   id: 4,
+  //   name: "T-Shirt",
+  //   price: 25,
+  //   size: "XL",
+  //   img: Shirt,
+  // },
+  {
+    id: 5,
+    name: "Bucket Hat",
+    price: 15,
+    sizes: ['Universal'],
+    size: "Universal",
+    img: Shroomy,
+  },
+];

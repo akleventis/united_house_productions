@@ -1,0 +1,26 @@
+.items-container {
+    padding: 1em;
+}
+.items-container div {
+    display: inline-block;
+    margin-right: 1em;
+}
+.items-container div:nth-child(5) {
+    margin-right: 0;
+}
+.item-name{
+    width: 20%;
+}
+.item-size {
+    width: 15%;
+}
+.item-price {
+    width: 7%;
+}
+.item-quantity {
+    width: 5%;
+}
+
+.items-container button {
+    margin: auto 3px;
+}
