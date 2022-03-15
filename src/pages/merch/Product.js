@@ -5,33 +5,19 @@ import { useCart } from "react-use-cart";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import './Merch.css'
+import { products } from '../../data/data.js'
 
+const alertAdd = (p) => {
+  toast(`${p.name} added to cart 🔥`, {
+  });
+  return;
+}
 
-
-// const handleAdd = (product) => {
-//   if (product.size === "") {
-//     toast.error("Please select a size!", {
-//       position: "top-right",
-//       autoClose: 5000,
-//       hideProgressBar: false,
-//       closeOnClick: true,
-//       pauseOnHover: true,
-//       draggable: true,
-//       progress: undefined,
-//     });
-//     return;
-//   }
-//   toast(`${product.name} added to cart 🔥`, {
-//     position: "top-right",
-//     autoClose: 4000,
-//     hideProgressBar: false,
-//     closeOnClick: true,
-//     draggable: true,
-//     progress: undefined,
-//   });
-// };
-
-
+const alertSelectSize = () => {
+  toast.error("Please select a size!", {
+  });
+  return;
+}
 
 const Product = ({ product }) => {
   const [selectedSize, setSize] = useState("");
@@ -40,10 +26,11 @@ const Product = ({ product }) => {
   const handleAdd = (p) => {
     if (p.size==='Universal' || selectedSize !== '') {
       p.size = p.size === 'Universal' ? p.size : selectedSize
-      addItem(p)
-      alert('item added to card')
+      let item = products[p.name][p.size]
+      addItem(item)
+      alertAdd(item)
     }
-    else alert('please select a size')
+    else alertSelectSize()
     setSize("");
   }
 
@@ -54,7 +41,6 @@ const Product = ({ product }) => {
     displaySize = selectedSize === '' ? <span /> : <span className="txt display-size">{selectedSize}</span>
   }
 
-// TODO: map product name/size to correct product id => add the corresponding product to cart
   return (
     <div className="container page-wrapper">
       <div className="page-inner">
@@ -94,15 +80,15 @@ const Product = ({ product }) => {
                   handleAdd(product);
                 }}
               >
-                {/* <ToastContainer
-                  position="bottom-center"
-                  autoClose={4000}
+                <ToastContainer
+                  autoClose={1500}
+                  position="top-right"
                   hideProgressBar={false}
                   newestOnTop={false}
                   rtl={false}
                   pauseOnFocusLoss={false}
                   className="toast-container"
-                /> */}
+                /> 
                 <span className="price">${product.price}</span>
                 <span className="add-to-cart">
                   <span className="txt">Add to cart</span>
