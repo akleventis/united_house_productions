@@ -1,51 +1,81 @@
 .h-image {
-    display: flex;
-    justify-content: center;
-    background-image: url(../../assets/images/header/background.jpg);
+  display: flex;
+  justify-content: center;
+  background-image: url(../../assets/images/header/background.jpg);
 }
 .h-image img {
-    background-color: #ffffff93;
-    box-shadow:0 0 5px 10px rgba(255, 255, 255, 0.548);
+  background-color: #ffffff93;
+  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.548);
 }
 
 /* NAVBAR */
+.nav-container {
+  max-width: 1300px;
+  margin: 0 !important;
+}
+.navbar-collapse {
+  position: relative;
+}
 nav {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    font-weight: 600;
-    position: -webkit-sticky;
-    position: sticky !important;
-    z-index: 1;
-    background-color: #474747;
-    top: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  position: -webkit-sticky;
+  position: sticky !important;
+  z-index: 1;
+  background-color: #474747;
+  top: 0;
 }
 .navbar-toggler {
-    padding: 1px !important;
+  padding: 1px !important;
 }
 .nav-links {
-    justify-content: center !important;
+  justify-content: center !important;
 }
 
 .nav-link {
-    margin: auto 10px;
-    padding: 0;
-    color: #ffffff !important;
-    transition: 500ms;
+  margin: auto 10px;
+  padding: 0;
+  color: #ffffff !important;
+  transition: 500ms;
 }
 .nav-link:hover {
-    color: #f00000 !important;
+  color: #f00000 !important;
 }
 nav .container {
-    margin-left: 0;
+  margin-left: 0;
 }
 
-
+/* social */
+.social-small {
+  display: none !important;
+}
+.social {
+  position: absolute !important;
+}
+.facebook {
+  right: 10px !important;
+}
+.insta {
+  right: 55px !important;
+}
+.linktree {
+  right: 100px !important;
+}
 /* TODO: add uhp logo to nav */
+@media (max-width: 767px) {
+  .social-small {
+    display: inline !important;
+  }
+  .social-large {
+    display: none !important;
+  }
+}
 @media (max-width: 600px) {
-    .h-image {
-        display: none;
-    }
-    .nav-link {
-        padding: 3px
-    }
+  .h-image img {
+    width: 300px;
+  }
+  .nav-link {
+    padding: 3px;
+  }
 }

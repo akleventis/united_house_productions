@@ -7,37 +7,37 @@ import "./headers.css";
 const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
   return (
     <>
-      <Navbar expand="md navbar-dark" className="nav-links">
-        <Container>
+      <Navbar collapseOnSelect expand="md navbar-dark" className="nav-links">
+        <Container className='nav-container'>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link eventKey="1" as={Link} to="/">
                 Events
               </Nav.Link>
-              <Nav.Link as={Link} to="/merch">
+              <Nav.Link eventKey="2" as={Link} to="/merch">
                 Merch
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link eventKey="3" as={Link} to="/about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
+              <Nav.Link eventKey="4" as={Link} to="/contact">
                 Contact
               </Nav.Link>
               <Button onClick={() => setShowShoppingCart(true)}>🛒</Button>
             </Nav>
+            <SocialIcon className="social linktree social-large" style={{ height: 35, width: 35 }} url="https://linktree.com/unitedhouseproductions" />
+            <SocialIcon className="social insta social-large" style={{ height: 35, width: 35 }} url="https://www.instagram.com/unitedhouseproductions/" />
+            <SocialIcon className="social facebook social-large" bgColor="#34d8eb"  style={{ height: 35, width: 35 }} url="https://facebook.com" />
           </Navbar.Collapse>
-          <div>
-            <SocialIcon className="social" url="https://linktr.ee/unitedhouseproductions" />
-            <SocialIcon className="social" url="https://www.instagram.com/unitedhouseproductions/" />
-            <SocialIcon className="social" url="https://facebook.com" />
-          </div>
+
         </Container>
+            <SocialIcon className="social linktree social-small" style={{ height: 35, width: 35 }} url="https://linktree.com/unitedhouseproductions" />
+            <SocialIcon className="social insta social-small" style={{ height: 35, width: 35 }} url="https://www.instagram.com/unitedhouseproductions/" />
+            <SocialIcon className="social facebook social-small" bgColor="#34d8eb" style={{ height: 35, width: 35 }} url="https://facebook.com" />
+            <ShoppingCart showShoppingCart={showShoppingCart} setShowShoppingCart={setShowShoppingCart} />
       </Navbar>
-      <ShoppingCart
-        showShoppingCart={showShoppingCart}
-        setShowShoppingCart={setShowShoppingCart}
-      />
     </>
   );
 };

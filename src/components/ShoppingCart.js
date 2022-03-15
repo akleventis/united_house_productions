@@ -6,7 +6,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   const handleClose = () => setShowShoppingCart(false);
   const {
     isEmpty,
-    totalItems,
+    // totalItems,
     cartTotal,
     items,
     updateItemQuantity,
@@ -28,7 +28,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
       </Modal.Header>
 
       {items.map((item) => (
-        <>
+        <div key={`c${item.id}`}>
           <div className="items-container">
             <div className="item-name">{item.name}</div>
             <div className="item-size">{item.size}</div>
@@ -52,7 +52,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
               </div>
             </div>
           </div>
-        </>
+        </div>
       ))}
       <Modal.Footer>
         <h5>Total ${cartTotal}</h5>
@@ -63,11 +63,3 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
 };
 
 export default ShoppingCart;
-
-// {
-//   id: 1,
-//   name: "T-Shirt",
-//   price: 25,
-//   sizes: ["S", "M", "L", "XL"],
-//   img: Shirt,
-// },
