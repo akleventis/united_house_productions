@@ -15,10 +15,14 @@
   border-radius: 10px;
   background-color: #f200fa;
   position: absolute;
-  right: 220px;
+  right: 0;
   height: 30px;
   width: 30px;
   z-index: 1;
+  transition: right 0.3s ease-in-out;
+}
+.sidebar-toggle.open {
+  right: 220px;
 }
 /* TODO: WHAT THE FUCK. FUck CSS SHIT */
 .soundcloud-outer-container {
@@ -27,7 +31,6 @@
   right: -220px;
   margin-left: 5vw;
   transition: right 0.3s ease-in-out;
-  /* overflow-x: hidden; */
 }
 .soundcloud-outer-container.open {
   right: 0;
