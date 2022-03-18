@@ -1,13 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About, Contact, Events, Products, Header, Navigate, Soundcloud} from "./pages/index.js";
+import { About, Booking, Events, Products, Header, Navigate, Soundcloud} from "./pages/index.js";
 import "./App.css";
 import { useState } from "react";
 
 const App = () => {
   const [showShoppingCart, setShowShoppingCart] = useState(false);
-
+  const [showSideBar, setSideBar] = useState(false)
+  const handleViewSidebar = () => {
+    setSideBar(!showSideBar)
+  }
+  const handleClose = () => {
+    if (showSideBar) {
+      handleViewSidebar()
+    }
+    if (showShoppingCart) {
+      setShowShoppingCart(!showShoppingCart)
+    }
+  }
+  
   return (
-    <>
+    <div onClick={handleClose}>
       <Header />
       <Router>
         <Navigate
@@ -20,13 +32,13 @@ const App = () => {
               <Route path="/" element={<Events />} />
               <Route path="/merch" element={<Products />} />
               <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/booking" element={<Booking />} />
             </Routes>
           </div>
-          <Soundcloud />
+          <Soundcloud isOpen={showSideBar} toggleSideBar={handleViewSidebar}/>
         </div>
       </Router>
-    </>
+    </div>
   );
 };
 

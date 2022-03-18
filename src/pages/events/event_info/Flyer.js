@@ -4,12 +4,13 @@ import "./Flyer.css";
 import moment from "moment";
 
 const Flyer = ({ event }) => {
+  let tickets = event.ticketURL !== "" ? <button type="button" onClick={() => window.open(event.ticketURL, '_blank')} className="tickets">Tickets</button>:<button className="tickets">Free 🎉</button>
   return (
     <div>
       <div className="flyer-container">
         <div className="item">
-          <Zoom>
-            <div>
+          <Zoom >
+            <div >
               <div className="flyer-date">
                 <div></div>
                 <p>{moment(event.startTime).format("ddd, MMM. DD")}</p>
@@ -21,12 +22,12 @@ const Flyer = ({ event }) => {
         <div className="item-center">
           <ul className="list-group">
             <li className="list-group-item headliner">
-              {event.headliner.name}
+              <a href={event.headliner.url} target="_blank" rel="noreferrer">{event.headliner.name}</a>
             </li>
             <li className="list-group-item support">
-              {event.supportingActs
-                .map((act) => act.name.toUpperCase())
-                .join(" | ")}
+              {event.openers.map(dj => (
+                <a href={dj.url} key={dj.name} rel='noreferrer' target="_blank">{dj.name}</a>
+              ))}
             </li>
             <li className="list-group-item time">
               <svg
@@ -56,9 +57,7 @@ const Flyer = ({ event }) => {
           </ul>
         </div>
         <div className="item">
-          <button type="button" className="tickets">
-            Tickets
-          </button>
+          {tickets}
         </div>
       </div>
     </div>

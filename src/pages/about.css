@@ -1,0 +1,19 @@
+.about-container {
+    color: white !important;
+}
+
+.about-container p {
+    /* text-align: center; */
+    padding-left: 1em;
+}
+.about-container img {
+    width: 65%;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.about-container div {
+    display: flex;
+    justify-content: center;
+}

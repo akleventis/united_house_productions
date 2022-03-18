@@ -3,38 +3,32 @@ import { Domii, Patty, Shirt, Shroomy } from "../assets/images/index.js";
 export const djs = {
   domii: {
     name: "DOMii",
-    site: "",
-    insta: "",
+    url: "https://www.instagram.com/ariel_domii/",
   },
+  
   duplex: {
-    name: "duplex",
-    site: "",
-    insta: "",
+    name: "DUPLEX",
+    url: "https://www.instagram.com/duplex_music/",
   },
   dabaldo: {
     name: "DaBaldo",
-    site: "",
-    insta: "",
+    url: "https://www.instagram.com/_dabaldo_/",
   },
   tylr: {
     name: "TYLR",
-    site: "",
-    insta: "",
+    url: "https://www.instagram.com/musicbytylr/",
   },
   warriors: {
-    name: "warriors",
-    site: "",
-    insta: "",
+    name: "WARRIORS",
+    url: "",
   },
   yespeez: {
-    name: "yespeez",
-    site: "",
-    insta: "",
+    name: "YESPEEZ",
+    url: "https://www.instagram.com/yespeezmusic/",
   },
   vladislove: {
-    name: "vladislove",
-    site: "",
-    insta: "",
+    name: "VLADISLOVE",
+    url: "https://www.instagram.com/djvladislovee/",
   },
 };
 
@@ -42,24 +36,26 @@ export const events = [
   {
     headliner: djs.tylr,
     poster: Patty,
-    supportingActs: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
+    openers: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
     location: {
       url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
       name: "The Fruit",
     },
     startTime: "2022-03-17T21:00:00.000",
     endTime: "2022-03-18T02:30:00.000",
+    ticketURL: "",
   },
   {
     headliner: djs.domii,
     poster: Domii,
-    supportingActs: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
+    openers: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
     location: {
       name: "The Fruit",
       url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
     },
     startTime: "2022-04-16T21:00:00.000",
     endTime: "2022-04-17T02:30:00.000",
+    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-domii-tickets-273962728897",
   },
 ];
 
@@ -76,14 +72,19 @@ export const featuredSongs = [
     dj: djs.dabaldo,
     url: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
+  {
+    dj: djs.duplex,
+    url: "https://soundcloud.com/duplexmusic/duplex-house-step?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+  }
 ];
 
+// ACTUAL PRODUCTS are stored server side 
 export const productMapping = [
   {id: 1, name: "T-Shirt", price: 25, sizes: ["S", "M", "L", "XL"], size: "", img: Shirt},
   {id: 2, name: "Bucket Hat", price: 15, sizes: ["Universal"], size: "Universal", img: Shroomy}
 ]
 
-// 1 = Shirt, 2 = Bucket Hat
+// Information to display in shopping cart
 export const products = {
   "T-Shirt": {
     "S": {

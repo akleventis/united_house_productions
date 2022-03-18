@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.contact-container {
+  color: white !important;
+}
+.contact-container h2 {
+  text-align: center;
+}
+
+.contact-container h4 {
+  border-left: 1px solid red;
+  padding-left: 5px;
+}
+
+.contact-container a {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.booking-info {
+  font-size: 1.1em;
+  text-align: center;
+}
+.booking-sub-info {
+  padding-left: 10px;
+}
+
+form { max-width:420px; margin:20px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent !important;
+  border:2px solid #bb2b2b;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+  
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+.feedback-input:focus { border:2px solid #e97a7a; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#bb2b2b;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#e97a7a; }

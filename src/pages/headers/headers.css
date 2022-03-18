@@ -10,7 +10,7 @@
 
 /* NAVBAR */
 .nav-container {
-  max-width: 1300px;
+  max-width: 1020px;
   margin: 0 !important;
 }
 .navbar-collapse {
@@ -23,7 +23,8 @@ nav {
   position: -webkit-sticky;
   position: sticky !important;
   z-index: 1;
-  background-color: #474747;
+  background-color: rgba(75, 74, 74, 0.979);
+  border-bottom: 1px solid rgb(109, 109, 109);
   top: 0;
 }
 .navbar-toggler {
@@ -44,6 +45,11 @@ nav {
 }
 nav .container {
   margin-left: 0;
+}
+
+.cart-button {
+  width: 2.5em;
+  margin-left: 10px;
 }
 
 /* social */

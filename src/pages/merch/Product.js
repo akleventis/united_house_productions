@@ -8,14 +8,12 @@ import './Merch.css'
 import { products } from '../../data/data.js'
 
 const alertAdd = (p) => {
-  toast(`${p.name} added to cart 🔥`, {
-  });
+  toast(`${p.name} added to cart 🔥`, {});
   return;
 }
 
 const alertSelectSize = () => {
-  toast.error("Please select a size!", {
-  });
+  toast.error("Please select a size!", {});
   return;
 }
 
@@ -56,11 +54,7 @@ const Product = ({ product }) => {
                   Size:{" "}
                   <span className="size">
                     {product.sizes.map((s) => (
-                      <a
-                        className="sizes"
-                        key={s}
-                        onClick={() => setSize(s)}
-                      >
+                      <a className="sizes" key={s} onClick={() => setSize(s)} >
                         {s}{" "}
                       </a>
                     ))}
@@ -73,22 +67,11 @@ const Product = ({ product }) => {
               <div className="h-bg">
                 <div className="h-bg-inner"></div>
               </div>
-              <a
-                className="cart"
-                onClick={(event) => {
+              <a className="cart" onClick={(event) => {
                   event.preventDefault();
                   handleAdd(product);
-                }}
-              >
-                <ToastContainer
-                  autoClose={1500}
-                  position="top-right"
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  rtl={false}
-                  pauseOnFocusLoss={false}
-                  className="toast-container"
-                /> 
+                }}>
+                <ToastContainer autoClose={1500} position="bottom-center" hideProgressBar={false} newestOnTop={false} rtl={false} pauseOnFocusLoss={false} className="toast-container"/> 
                 <span className="price">${product.price}</span>
                 <span className="add-to-cart">
                   <span className="txt">Add to cart</span>

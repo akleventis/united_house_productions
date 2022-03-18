@@ -1,12 +1,36 @@
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import "./cart.css";
+
+const handleCheckout = items => {
+  // Send id and quantity to the server
+  let itemArr = []
+  items.map(item => {
+    return itemArr.push({ id: item.id, quantity: item.quantity})
+  })
+  
+  fetch(`http://localhost:5001/checkout`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({items: itemArr})
+  }).then(res => {
+    console.log(res)
+    if (res.ok) return res.json()
+    return res.json().then(json => Promise.reject(json))
+  }).then(({ url }) => {
+    window.location = url
+    console.log(url)
+  }).catch(e => {
+    console.error(e.error)
+  })
+}
 
 const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   const handleClose = () => setShowShoppingCart(false);
   const {
     isEmpty,
-    // totalItems,
     cartTotal,
     items,
     updateItemQuantity,
@@ -56,7 +80,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
       ))}
       <Modal.Footer>
         <h5>Total ${cartTotal}</h5>
-        <Button variant="primary">Checkout</Button>
+        <button onClick={ () => handleCheckout(items) }>Checkout</button>
       </Modal.Footer>
     </Modal>
   );

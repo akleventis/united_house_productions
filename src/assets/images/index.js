@@ -14,3 +14,6 @@ export const Patty = require('./flyers/patty.jpg')
 // products
 export const Shirt = require('./products/shirt.png')
 export const Shroomy = require('./products/shroomy.png')
+
+// about
+export const AboutImg = require('./header/about.jpg')
