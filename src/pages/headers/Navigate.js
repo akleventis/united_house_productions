@@ -1,6 +1,6 @@
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { ShoppingCart } from "../../components/index.js";
+import { ShoppingCart } from "../../cart/index.js";
 import { SocialIcon } from "react-social-icons";
 import "./headers.css";
 
@@ -22,11 +22,12 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
               <Nav.Link eventKey="3" as={Link} to="/about">
                 About
               </Nav.Link>
-              <Nav.Link eventKey="4" as={Link} to="/contact">
-                Contact
+              <Nav.Link eventKey="4" as={Link} to="/booking">
+                Booking
               </Nav.Link>
-              <Button onClick={() => setShowShoppingCart(true)}>🛒</Button>
+              <button className="cart-button" onClick={() => setShowShoppingCart(true)}>🛒</button>
             </Nav>
+            <ShoppingCart showShoppingCart={showShoppingCart} setShowShoppingCart={setShowShoppingCart} />
             <SocialIcon className="social linktree social-large" style={{ height: 35, width: 35 }} url="https://linktree.com/unitedhouseproductions" />
             <SocialIcon className="social insta social-large" style={{ height: 35, width: 35 }} url="https://www.instagram.com/unitedhouseproductions/" />
             <SocialIcon className="social facebook social-large" bgColor="#34d8eb"  style={{ height: 35, width: 35 }} url="https://facebook.com" />
@@ -36,7 +37,6 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
             <SocialIcon className="social linktree social-small" style={{ height: 35, width: 35 }} url="https://linktree.com/unitedhouseproductions" />
             <SocialIcon className="social insta social-small" style={{ height: 35, width: 35 }} url="https://www.instagram.com/unitedhouseproductions/" />
             <SocialIcon className="social facebook social-small" bgColor="#34d8eb" style={{ height: 35, width: 35 }} url="https://facebook.com" />
-            <ShoppingCart showShoppingCart={showShoppingCart} setShowShoppingCart={setShowShoppingCart} />
       </Navbar>
     </>
   );

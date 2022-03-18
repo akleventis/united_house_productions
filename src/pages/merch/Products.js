@@ -6,14 +6,14 @@ import Product from './Product'
 const Products = () => {
     return (
         <main>
-            <h2 className='router-title'>Merch</h2>
-            <Grid container justifyContent="center" className='merch-grid' spacing={4}>
+            <h3 className='router-title'>Merch</h3>
+            <div className='merch-grid'>
                 {productMapping.map((p) => (
-                    <Grid key={`g${p.id}`} item xs={12} sm={6} md={4} lg={3}>
+                    <div key={`g${p.id}`} item xs={12} sm={6} md={4} lg={3}>
                         <Product key={p.id} product={p} />
-                    </Grid>
+                    </div>
                 ))}
-            </Grid>
+            </div>
         </main>
     )
 }

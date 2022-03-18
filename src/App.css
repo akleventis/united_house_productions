@@ -11,5 +11,7 @@
 }
 .router-title {
     color: white;
-    margin: 0 0 20px 20px;
+    border-left: 2px solid red;
+    padding-left: .7em;
+    margin: 0 0 20px 0;
 }

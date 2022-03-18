@@ -4,6 +4,7 @@
 }
 /* poster / ticket*/
 .item {
+  
 }
 /* info */
 .item-center {
@@ -41,21 +42,35 @@
   font-family: sans-serif;
 }
 
-.headliner {
+.headliner a {
+  text-decoration: none;
   font-family: "Fredoka", sans-serif;
   padding-top: 0;
   font-size: 1.8em;
   color: #62aedd !important;
+  transition: 500ms;
+}
+.headliner a:hover {
+  color: #1e84c4 !important;
 }
 .support {
   font-size: 0.9em;
-  font-family: "Fredoka", sans-serif;
+  font-family: sans-serif;
+}
+.support a {
+  text-decoration: none !important;
+  color: white;
+  margin-right: 0.5em;
+  transition: 500ms;
+}
+.support a:hover {
+  color: #62aedd;
 }
 .clock {
   margin-right: 0.25em;
 }
 .time {
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
 }
 .location {
   /* padding-top: 0; */

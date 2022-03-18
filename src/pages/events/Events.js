@@ -17,7 +17,7 @@ const Events = (props) => {
 
   return (
     <div className="events-container">
-      <h2>Upcoming Events</h2>
+      <h3 className='router-title'>Upcoming Events</h3>
       {Object.entries(months).map((month, i) => {
         return (
           <div key={i}>

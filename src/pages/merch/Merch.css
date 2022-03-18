@@ -1,9 +1,11 @@
 
 /* https://codepen.io/slicecrowd/pen/GWJEZB */
 .merch-grid {
+  display: flex;
     justify-content: space-around !important;
     text-align: center;
 }
+
 
 
 .d-flex {
@@ -40,7 +42,7 @@
 
 .el-wrapper {
   border-radius: 10px;
-  width: 360px;
+  width: 300px;
   padding: 15px;
   margin: 15px auto;
   background-color: #fff;
@@ -56,6 +58,9 @@
   .el-wrapper {
     width: 290px;
     margin: 30px auto;
+  }
+  .merch-grid {
+    flex-direction: column;
   }
 }
 
