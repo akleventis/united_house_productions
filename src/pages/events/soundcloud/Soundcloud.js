@@ -7,7 +7,7 @@ const Soundcloud = ({isOpen, toggleSideBar}) => {
   const sidebarClass = isOpen ? "soundcloud-outer-container open": "soundcloud-outer-container";
   const toggleButtonClass = isOpen ? "sidebar-toggle open" : "sidebar-toggle"
   return (
-    <>
+    <div className='sidebar-container'>
     <button onClick={toggleSideBar} className={toggleButtonClass}>👀</button>
     
     <div className={sidebarClass}>
@@ -23,7 +23,7 @@ const Soundcloud = ({isOpen, toggleSideBar}) => {
         })}
       </div>
     </div>
-    </>
+    </div>
   );
 };
 export default Soundcloud;

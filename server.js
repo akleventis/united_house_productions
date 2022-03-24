@@ -35,12 +35,6 @@ app.post('/checkout', async (req, res) => {
             },
             unit_amount: storeItem.priceInCents
           },
-          // TODO: Handle this
-          adjustable_quantity: {
-            enabled: true,
-            minimum: 1,
-            maximum: storeItem.totalQuantity
-          },
           quantity: item.quantity
         }
       }),

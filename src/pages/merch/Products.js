@@ -1,4 +1,3 @@
-import {Grid} from '@material-ui/core';
 import { productMapping } from '../../data/data.js'
 import Product from './Product'
 

@@ -1,3 +1,7 @@
+.sidebar-container {
+  overflow-x: hidden;
+}
+
 .sidebar {
   position: absolute;
   top: 60px;
@@ -24,8 +28,10 @@
 .sidebar-toggle.open {
   right: 220px;
 }
-/* TODO: WHAT THE FUCK. FUck CSS SHIT */
+
+/* TODO: Come back and fix this shit ): */
 .soundcloud-outer-container {
+  /* display: none; */
   position: absolute;
   width: 220px;
   right: -220px;
@@ -34,6 +40,7 @@
 }
 .soundcloud-outer-container.open {
   right: 0;
+  display: block;
 }
 
 .soundcloud-container {

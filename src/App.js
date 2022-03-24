@@ -13,9 +13,9 @@ const App = () => {
     if (showSideBar) {
       handleViewSidebar()
     }
-    if (showShoppingCart) {
-      setShowShoppingCart(!showShoppingCart)
-    }
+    // if (showShoppingCart) {
+    //   setShowShoppingCart(!showShoppingCart)
+    // }
   }
   
   return (
