@@ -1,30 +1,19 @@
 import { Modal } from "react-bootstrap";
 import { useCart } from "react-use-cart";
+import axios from 'axios'
 import "./cart.css";
 
-const handleCheckout = items => {
-  // Send id and quantity to the server
+const handleCheckout = async items => {
   let itemArr = []
   items.map(item => {
     return itemArr.push({ id: item.id, quantity: item.quantity})
   })
-  
-  fetch(`http://localhost:5001/checkout`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({items: itemArr})
-  }).then(res => {
-    console.log(res)
-    if (res.ok) return res.json()
-    return res.json().then(json => Promise.reject(json))
-  }).then(({ url }) => {
-    window.location = url
-    console.log(url)
-  }).catch(e => {
-    console.error(e.error)
-  })
+  try {
+    const resp = await axios.post(`http://localhost:5001/checkout`, {items: itemArr})
+    window.location = resp.data.url
+  } catch (error) {
+    console.log(error.message)
+  }
 }
 
 const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {

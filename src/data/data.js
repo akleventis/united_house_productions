@@ -88,28 +88,28 @@ export const productMapping = [
 export const products = {
   "T-Shirt": {
     "S": {
-      id: 1, // Shirt
+      id: "prod_LL0QYWYULvLiRJ", // S Shirt 
       name: productMapping[0].name,
       price: productMapping[0].price,
       size: productMapping[0].sizes[0], // Small
       img: productMapping[0].img,
     },
     "M": {
-      id: 2, // Shirt
-      name: productMapping[0].name,
+      id: "prod_LL0V9nBF9SWBXe", // M Shirt 
+      name: productMapping[0].name, 
       price: productMapping[0].price,
       size: productMapping[0].sizes[1], // Medium
       img: productMapping[0].img,
     },
     "L": {
-      id: 3, // Shirt
+      id: "prod_LL0WQaYdbcAyrr", // L Shirt 
       name: productMapping[0].name,
       price: productMapping[0].price,
       size: productMapping[0].sizes[2], // Large
       img: productMapping[0].img,
     },
     "XL": {
-      id: 4, // Shirt
+      id: "prod_LL0WG35KgIK1EP", // XL Shirt 
       name: productMapping[0].name,
       price: productMapping[0].price,
       size: productMapping[0].sizes[3], // X-Large
@@ -118,7 +118,7 @@ export const products = {
   },
   "Bucket Hat": {
     "Universal": {
-      id: 5, // Bucket Hat
+      id: "prod_LL0XoG82MFwFxR", // Bucket Hat 
       name: productMapping[1].name,
       price: productMapping[1].price,
       size: productMapping[1].sizes[0], // Universal
