@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About, Booking, Events, Products, Header, Navigate, Soundcloud} from "./pages/index.js";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import { useState } from "react";
 
@@ -10,16 +11,12 @@ const App = () => {
     setSideBar(!showSideBar)
   }
   const handleClose = () => {
-    if (showSideBar) {
-      handleViewSidebar()
-    }
-    // if (showShoppingCart) {
-    //   setShowShoppingCart(!showShoppingCart)
-    // }
+    if (showSideBar) handleViewSidebar()
   }
   
   return (
     <div onClick={handleClose}>
+      <ToastContainer/>
       <Header />
       <Router>
         <Navigate

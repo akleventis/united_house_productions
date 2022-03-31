@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useCart } from "react-use-cart";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
@@ -71,7 +71,6 @@ const Product = ({ product }) => {
                   event.preventDefault();
                   handleAdd(product);
                 }}>
-                <ToastContainer autoClose={1500} position="bottom-center" hideProgressBar={false} newestOnTop={false} rtl={false} pauseOnFocusLoss={false} className="toast-container"/> 
                 <span className="price">${product.price}</span>
                 <span className="add-to-cart">
                   <span className="txt">Add to cart</span>

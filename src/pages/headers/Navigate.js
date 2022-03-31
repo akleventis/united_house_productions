@@ -16,16 +16,18 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
               <Nav.Link eventKey="1" as={Link} to="/">
                 Events
               </Nav.Link>
-              <Nav.Link eventKey="2" as={Link} to="/merch">
-                Merch
-              </Nav.Link>
-              <Nav.Link eventKey="3" as={Link} to="/about">
+              <Nav.Link eventKey="2" as={Link} to="/about">
                 About
               </Nav.Link>
-              <Nav.Link eventKey="4" as={Link} to="/booking">
+              <Nav.Link eventKey="3" as={Link} to="/booking">
                 Booking
               </Nav.Link>
-              <button className="cart-button" onClick={() => setShowShoppingCart(true)}>🛒</button>
+              <Nav.Link eventKey="4" as={Link} to="/merch">
+                Merch
+              </Nav.Link>
+              <Nav.Link onClick={() => setShowShoppingCart(true)}>
+                Cart
+              </Nav.Link>
             </Nav>
             <ShoppingCart showShoppingCart={showShoppingCart} setShowShoppingCart={setShowShoppingCart} />
             <SocialIcon className="social linktree social-large" style={{ height: 35, width: 35 }} url="https://linktree.com/unitedhouseproductions" />

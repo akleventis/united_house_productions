@@ -78,6 +78,8 @@ export const featuredSongs = [
   }
 ];
 
+// UPDATE FLOW //
+
 // ACTUAL PRODUCTS are stored server side 
 export const productMapping = [
   {id: 1, name: "T-Shirt", price: 25, sizes: ["S", "M", "L", "XL"], size: "", img: Shirt},

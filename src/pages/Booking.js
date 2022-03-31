@@ -37,7 +37,7 @@ const Booking = () => {
       <input name="from_name" required type="text" className="feedback-input" placeholder="Name" />   
       <input name="from_email" required type="text" className="feedback-input" placeholder="Email" />
       <textarea name="message" required className="feedback-input" placeholder="Message"></textarea>
-      <input type="submit" value="SEND 🚀"/>
+      <input type="submit" value="SEND"/>
     </form>
     </div>
     
