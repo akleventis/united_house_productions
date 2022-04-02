@@ -6,10 +6,7 @@ export const Background = require('./header/background.jpg')
 export const LinkTree = require('./social/link_tree.png')
 export const Instagram = require('./social/instagram.png')
 export const Facebook = require('./social/facebook.png')
-
-// about
-export const AboutImg = require('./header/about.jpg')
-
+export const SoundcloudImg = require('./social/soundcloud.png')
 
 // UPDATE FLOW //
 // flyers

@@ -2,10 +2,7 @@
   display: flex;
   margin-bottom: 3.5em;
 }
-/* poster / ticket*/
-.item {
-  
-}
+
 /* info */
 .item-center {
   flex-grow: 1;
@@ -16,7 +13,7 @@
 }
 /* Flyer  */
 .flyer-date {
-  background-color: #ffffff;
+  background-color: #ffffffc9;
   color: black;
   font-weight: 700;
   font-size: 0.85em;
@@ -42,38 +39,47 @@
   font-family: sans-serif;
 }
 
+/* HEADLINER */
+.headliner {
+  font-family: "Rajdhani",sans-serif;
+  font-weight: 600;
+  padding-bottom: 0;
+}
+
 .headliner a {
-  text-decoration: none;
-  font-family: "Fredoka", sans-serif;
-  padding-top: 0;
-  font-size: 1.8em;
-  color: #34d8eb !important;
-  transition: 500ms;
+  padding: .2em .5em 0 0;
+  font-size: 1.6em;
+  color: #ffffff;
+  position: relative;
 }
+
 .headliner a:hover {
-  color: #1e84c4 !important;
+  text-shadow: 4px 4px 0px #000, 
+  -4px 0 0px #000,
+  7px 4px 0 rgba(218, 0, 0, 0.687);
 }
+/* SUPPORT  */
 .support {
   font-size: 0.9em;
-  font-family: sans-serif;
+
 }
+
 .support a {
-  text-decoration: none !important;
-  color: white;
   margin-right: 0.5em;
-  transition: 500ms;
 }
 .support a:hover {
-  color: #62aedd;
+  color: #1e84c4;
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
+
 .clock {
   margin-right: 0.25em;
 }
-.time {
-  /* padding-bottom: 0; */
-}
+
 .location {
+  cursor: pointer;
   margin-bottom: 20px;
+  padding-left: .9rem;
 }
 .location img {
   margin-right: 0.25em;
@@ -81,8 +87,14 @@
   box-shadow: none;
 }
 
+.location a:hover {
+  color: rgb(188, 188, 188);
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+}
+
+
 .flyer-container li {
-  color: white;
+  color: rgb(188, 188, 188);
   background-color: transparent;
   border: none;
 }
@@ -93,10 +105,11 @@
 .tickets:after {
   width: 95px;
   height: 40px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Rajdhani",sans-serif;
+  font-weight: bold;
   background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
   border: 0;
-  color: #fff;
+  color: rgb(237, 237, 237);
   box-shadow: 6px 0px 0px #34d8eb;
   outline: transparent;
   position: relative;

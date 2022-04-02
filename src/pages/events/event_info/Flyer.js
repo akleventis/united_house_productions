@@ -8,7 +8,7 @@ const Flyer = ({ event }) => {
   return (
     <div>
       <div className="flyer-container">
-        <div className="item">
+        <div>
           <Zoom >
             <div >
               <div className="flyer-date">
@@ -21,15 +21,21 @@ const Flyer = ({ event }) => {
         </div>
         <div className="item-center">
           <ul className="list-group">
+
+            {/* HEADLINER */}
             <li className="list-group-item headliner">
               <a href={event.headliner.url} target="_blank" rel="noreferrer">{event.headliner.name}</a>
             </li>
+
+            {/* SUPPORT */}
             <li className="list-group-item support">
               {event.openers.map(dj => (
-                <a href={dj.url} key={dj.name} rel='noreferrer' target="_blank">{dj.name}</a>
+                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer' target="_blank">{dj.name}</a>
               ))}
             </li>
-            <li className="list-group-item time">
+
+            {/* TIME */}
+            <li className="list-group-item">
               <svg
                 className="clock"
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,17 +51,21 @@ const Flyer = ({ event }) => {
               {moment(event.startTime).format("h:mma")} -{" "}
               {moment(event.endTime).format("h:mma")}
             </li>
-            <li className="list-group-item location">
+
+            {/* LOCATION  */}
+            <li className="list-group-item location" >
               <a href={event.location.url} target="_blank" rel="noreferrer">
                 <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACCklEQVQ4jYWQv08TcRjGn7vDg7uj0F5NE7QhkLAYaa2JPxIHg4bAQoQwOOvgogkLE5MuRiZm9T8wKWlITYpDxcREJzFQRLrYllJ69Nqzvev9FPw6lDak7eEzffO8z/P5vnkpdNHW1JTADAw8oTkuBAB/TTNl2fbbG/G40Z6lOsrz8w88gcDLwOjoOMOyAIATx0Epk9lRy+WlSDT63hWQmp29I46NvRODwWC3zSr7+wdKNvswHIt9bXr02UCvz/e8WdZ1HSXQkCkautHY3D88HOwbHHxxttMCfJmeFgVRDAOAY9swr4bge7YA79MFmFfG8ce2AQD9ohjamJjwdgAIIZdYnvcDQN004bk32frFc38SdcMEAFzg+YsCRV3uAJwwzNGx46gAwLEsjNR2C2Bsb4HrbRz02HFqhKal5qyn+bibSMi/RkYK3qEhP8fzsD4l8Tv9EwDASkX0CTwAwNK0g9vJZKUDAACOrn8DIWFQFHz9AqDVGoPTMgiBWa9vdj0iAGiatqKWSjJcVJOkslOtrrgCbsZiO0qh8NkNUC0WNyLx+A9XAABYsrxYyeVy7X45k8mpqrrY7ncArq+vZ5V8/rWt61YLqut29fDwza21tfx/AQAQXl1dltLpD4QQEEJwtLeXCEWjr7ple7qZACArymNmd/cjRVFM3bYfueXO1fe5ucjmzMy18zL/AN320eTh4osMAAAAAElFTkSuQmCC"
                   alt="location"
                 />
-              </a>
               {event.location.name}
+              </a>
             </li>
           </ul>
         </div>
+        
+        {/* TICKETS */}
         <div className="item">
           {tickets}
         </div>

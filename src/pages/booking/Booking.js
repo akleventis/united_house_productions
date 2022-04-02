@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 import { SocialIcon } from "react-social-icons";
-import "./booking.css";
+import "./Booking.css";
 
 // .move to .env
 const user_id = "y4Yb4OMVHxzJk8qsj";

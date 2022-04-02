@@ -1,11 +1,11 @@
-/* html, body {
+html, body {
   max-width: 100%;
   overflow-x: hidden !important;
-} */
-
-/* html {
+  overflow-y: scroll !important;
+  position: relative;
   height: 100%;
-} */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,7 +27,4 @@ a {
   text-decoration: none !important;
   color: inherit;
   transition: 500ms;
-}
-a:hover {
-  color: #1e84c4 !important;
 }

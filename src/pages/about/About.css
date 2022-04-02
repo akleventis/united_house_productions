@@ -6,13 +6,12 @@
     padding-left: 1em;
 }
 .about-container img {
-    width: 65%;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid rgb(109, 109, 109);
+    width: 20%;
+    margin: 1em;
 }
 
-.about-container div {
+.insta-container {
+    margin-top: 5em;
     display: flex;
     justify-content: center;
 }
