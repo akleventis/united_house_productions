@@ -76,7 +76,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
         </div>
       ))}
       <Modal.Footer>
-        <h5>Total ${cartTotal}</h5>
+        <h5 className='total'>Total ${cartTotal}</h5>
         <button className="cart-button checkout" onClick={ () => handleCheckout(items) }>Checkout</button>
       </Modal.Footer>
     </Modal>
