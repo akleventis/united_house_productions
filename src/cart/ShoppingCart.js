@@ -45,7 +45,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   return (
     <Modal className="special_modal" show={showShoppingCart} onHide={() => handleClose()}>
       <Modal.Header closeButton>
-        <Modal.Title>Cart</Modal.Title>
+        <Modal.Title></Modal.Title>
       </Modal.Header>
 
       {items.map((item) => (
@@ -54,30 +54,22 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
             <div className="flex1">{item.name}</div>
             <div className="flex2">{item.size}</div>
             <div className="flex3">${item.price}</div>
-            <div className="flex4">x{item.quantity}</div>
-            <div>
-              <div key={item.id}>
-                <button className="cart-button quantity"
-                  onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
-                >
-                  -
-                </button>
-                <button className="cart-button quantity"
-                  onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
-                >
-                  +
-                </button>
-                <button className="cart-button remove" onClick={() => removeItem(item.id)}>
-                  Remove &times;
-                </button>
-              </div>
+
+            <div className="flex4">
+              <button className="quantity-adjust" onClick={() => updateItemQuantity(item.id, item.quantity - 1)} > - </button>
+              <div className="quantity">{item.quantity}</div>
+              <button className="quantity-adjust" onClick={() => updateItemQuantity(item.id, item.quantity + 1)} > + </button>  
             </div>
-          </div>
+
+            <div>
+             <button className="remove" onClick={() => removeItem(item.id)}> x </button>  
+            </div>
+            </div>
         </div>
       ))}
       <Modal.Footer>
         <h5 className='total'>Total ${cartTotal}</h5>
-        <button className="cart-button checkout" onClick={ () => handleCheckout(items) }>Checkout</button>
+        <button className="checkout" onClick={ () => handleCheckout(items) }>Checkout</button>
       </Modal.Footer>
     </Modal>
   );

@@ -52,16 +52,20 @@ nav .container {
   display: none !important;
 }
 .social {
+  border-radius: 100%;
   position: absolute !important;
 }
 .facebook {
   right: 10px !important;
 }
 .insta {
-  right: 55px !important;
+  right: 50px !important;
 }
 .linktree {
-  right: 100px !important;
+  right: 90px !important;
+}
+.social:hover {
+  background-color: white;
 }
 /* TODO: add uhp logo to nav */
 @media (max-width: 767px) {

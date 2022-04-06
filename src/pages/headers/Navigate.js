@@ -30,15 +30,15 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
               </Nav.Link>
             </Nav>
             <ShoppingCart showShoppingCart={showShoppingCart} setShowShoppingCart={setShowShoppingCart} />
-            <SocialIcon className="social linktree social-large" style={{ height: 35, width: 35 }} target="_blank" rel="noreferrer"  url="https://linktree.com/unitedhouseproductions" />
-            <SocialIcon className="social insta social-large" style={{ height: 35, width: 35 }} target="_blank" rel="noreferrer" url="https://www.instagram.com/unitedhouseproductions/" />
-            <SocialIcon className="social facebook social-large" bgColor="#34d8eb"  style={{ height: 35, width: 35 }} target="_blank" rel="noreferrer"  onClick={() => window.open("https://facebook.com", "_blank")} url="https://facebook.com" />
+            <SocialIcon className="social linktree social-large" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://linktree.com/unitedhouseproductions" />
+            <SocialIcon className="social insta social-large" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer" url="https://www.instagram.com/unitedhouseproductions/" />
+            <SocialIcon className="social facebook social-large" bgColor="#34d8eb"  style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  onClick={() => window.open("https://facebook.com", "_blank")} url="https://facebook.com" />
           </Navbar.Collapse>
 
         </Container>
-            <SocialIcon className="social linktree social-small" style={{ height: 35, width: 35 }} target="_blank" rel="noreferrer"  url="https://linktree.com/unitedhouseproductions" />
-            <SocialIcon className="social insta social-small" style={{ height: 35, width: 35 }} target="_blank" rel="noreferrer"  url="https://www.instagram.com/unitedhouseproductions/" />
-            <SocialIcon className="social facebook social-small" bgColor="#34d8eb" style={{ height: 35, width: 35 }} target="_blank" rel="noreferrer"  url="https://facebook.com" />
+            <SocialIcon className="social linktree social-small" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://linktree.com/unitedhouseproductions" />
+            <SocialIcon className="social insta social-small" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://www.instagram.com/unitedhouseproductions/" />
+            <SocialIcon className="social facebook social-small" bgColor="#34d8eb" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://facebook.com" />
       </Navbar>
     </>
   );
