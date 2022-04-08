@@ -4,7 +4,9 @@
     border: 3px solid red;
     border-radius: 15px;
  }
-
+.header-empty {
+    border: none;
+}
 .items-container {
     font-size: .9em;
     font-weight: 600;

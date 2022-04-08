@@ -37,7 +37,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   if (isEmpty)
     return (
       <Modal className="special_modal" show={showShoppingCart} onHide={() => handleClose()}>
-        <Modal.Header closeButton>
+        <Modal.Header  className="header-empty" closeButton>
           <Modal.Body>Your cart is empty</Modal.Body>
         </Modal.Header>
       </Modal>
@@ -45,7 +45,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   return (
     <Modal className="special_modal" show={showShoppingCart} onHide={() => handleClose()}>
       <Modal.Header closeButton>
-        <Modal.Title></Modal.Title>
+        <Modal.Title>Shopping Cart</Modal.Title>
       </Modal.Header>
 
       {items.map((item) => (
@@ -68,7 +68,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
         </div>
       ))}
       <Modal.Footer>
-        <h5 className='total'>Total ${cartTotal}</h5>
+        <h5 className='total'>Total: ${cartTotal}</h5>
         <button className="checkout" onClick={ () => handleCheckout(items) }>Checkout</button>
       </Modal.Footer>
     </Modal>
