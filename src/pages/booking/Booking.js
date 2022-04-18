@@ -34,14 +34,16 @@ const Booking = () => {
     <p className='booking-sub-info'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> */}
     <h2>Contact Us</h2>
     <form  onSubmit={handleSendEmail}>      
-      <input name="from_name" required type="text" className="feedback-input" placeholder="Name" />   
-      <input name="from_email" required type="text" className="feedback-input" placeholder="Email" />
+      <input name="from_name" autocomplete="off" autocorrect="off" required type="text" className="feedback-input" placeholder="Name" />   
+      <input name="from_email" autocomplete="off" autocorrect="off"  required type="text" className="feedback-input" placeholder="Email" />
       <textarea name="message" required className="feedback-input" placeholder="Message"></textarea>
-      <input type="submit" value="SEND"/>
+      {/* <div className='submit-container'> */}
+        <input type="submit" value="SEND"/>
+      {/* </div> */}
     </form>
     </div>
     
   );
 };
-//https://javascript.plainenglish.io/how-to-build-a-contact-form-in-react-that-sends-emails-using-emailjs-70011d2563a3
+
 export default Booking;

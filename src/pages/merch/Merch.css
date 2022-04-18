@@ -218,7 +218,7 @@
 }
 .sizes:hover {
     color: #1e84c4;
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    font-weight: bold;
 }
 .cart {
   cursor: pointer;
