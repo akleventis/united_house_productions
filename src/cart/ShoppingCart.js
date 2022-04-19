@@ -44,10 +44,7 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
     );
   return (
     <Modal className="special_modal" show={showShoppingCart} onHide={() => handleClose()}>
-      <Modal.Header closeButton>
-        <Modal.Title>Shopping Cart</Modal.Title>
-      </Modal.Header>
-
+      <Modal.Header closeButton />
       {items.map((item) => (
         <div key={`c${item.id}`}>
           <div className="items-container">

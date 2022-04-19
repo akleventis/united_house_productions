@@ -65,7 +65,8 @@ nav .container {
   right: 90px !important;
 }
 .social:hover {
-  background-color: white;
+  /* background-color: #00abbe; */
+  background-color: red;
 }
 /* TODO: add uhp logo to nav */
 @media (max-width: 767px) {

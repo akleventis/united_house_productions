@@ -38,8 +38,8 @@
   border: 1px solid rgb(109, 109, 109);
   flex-direction: column;
   margin-bottom: auto;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .soundcloud-inner-container {
   margin-bottom: 25px;
@@ -48,6 +48,7 @@
   text-align: center;
   padding: 5px;
   color: white;
+  font-style: italic;
   margin-bottom: 7px;
 }
 .soundcloud-name {

@@ -1,17 +1,23 @@
 
 .special_modal .modal-content{
-    background-color: rgba(255, 255, 255, 0.911);
-    border: 3px solid red;
+    background-color: rgba(255, 255, 255, 0.921);
+    border-left: 2px solid red;
+    border-bottom: 2px solid red;
     border-radius: 15px;
  }
 .header-empty {
     border: none;
+}
+.cart-header {
+    text-align: center;
+    margin-top: .7em;
 }
 .items-container {
     font-size: .9em;
     padding: .8em .3em;
     display: flex;
     justify-content:center;
+    align-items: center;
 }
 
 .items-container button {
@@ -59,9 +65,11 @@
     max-width: 23px;
     min-width: 23px;
     text-align: center;
-    font-size: .85em;
+    font-size: .9em;
     height: 1.7em;
     margin-top: .2em;
+    font-weight: 600;
+
 }
 .quantity-adjust {
     background-color: transparent;
@@ -69,10 +77,11 @@
     width: 22px;
     transition: all 235ms ease-in-out;
     border-radius: 10px;
+    font-weight: 600;
 }
 .quantity-adjust:hover {
     font-weight: 700;
-    background-color: hsla(191, 73%, 91%, 0.895);
+    background-color: hsla(191, 88%, 84%, 0.895);
 }
 
 .remove {
