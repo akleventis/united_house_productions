@@ -9,7 +9,7 @@ const Flyer = ({ event }) => {
     <div>
       <div className="flyer-container">
         <div>
-          <Zoom >
+          <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.8)">
             <div >
               <div className="flyer-date">
                 <div></div>

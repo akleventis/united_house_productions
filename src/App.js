@@ -13,7 +13,7 @@ const App = () => {
   const handleClose = () => {
     if (showSideBar) handleViewSidebar()
   }
-  
+
   return (
     <div onClick={handleClose}>
       <ToastContainer autoClose={3000} />
