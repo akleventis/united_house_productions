@@ -37,9 +37,7 @@ const Booking = () => {
       <input name="from_name" autoComplete="off" autoCorrect="off" required type="text" className="feedback-input" placeholder="Name" />   
       <input name="from_email" autoComplete="off" autoCorrect="off"  required type="text" className="feedback-input" placeholder="Email" />
       <textarea name="message" required className="feedback-input" placeholder="Message"></textarea>
-      {/* <div className='submit-container'> */}
         <input type="submit" value="SEND"/>
-      {/* </div> */}
     </form>
     </div>
     

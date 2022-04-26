@@ -2,14 +2,46 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "../../cart/index.js";
 import { SocialIcon } from "react-social-icons";
-import "./headers.css";
+import "./Header.css";
+
+const Socials = ({ size }) => {
+  const cssClass = size === "large" ? "social-large" : "social-small";
+  return (
+    <>
+      <SocialIcon
+        className={"social linktree " + cssClass}
+        bgColor="#E7E7E7"
+        style={{ height: 30, width: 30 }}
+        target="_blank"
+        rel="noreferrer"
+        url="https://linktree.com/unitedhouseproductions"
+      />
+      <SocialIcon
+        className={"social insta " + cssClass}
+        bgColor="#E7E7E7"
+        style={{ height: 30, width: 30 }}
+        target="_blank"
+        rel="noreferrer"
+        url="https://www.instagram.com/unitedhouseproductions/"
+      />
+      <SocialIcon
+        className={"social facebook " + cssClass}
+        bgColor="#E7E7E7"
+        style={{ height: 30, width: 30 }}
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => window.open("https://facebook.com", "_blank")}
+        url="https://facebook.com"
+      />
+    </>
+  );
+};
 
 const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
   return (
     <>
       <Navbar collapseOnSelect expand="md navbar-dark" className="nav-links">
-        <Container className='nav-container'>
-
+        <Container className="nav-container">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -29,16 +61,14 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
                 Cart
               </Nav.Link>
             </Nav>
-            <ShoppingCart showShoppingCart={showShoppingCart} setShowShoppingCart={setShowShoppingCart} />
-            <SocialIcon className="social linktree social-large" bgColor="#E7E7E7" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://linktree.com/unitedhouseproductions" />
-            <SocialIcon className="social insta social-large" bgColor="#E7E7E7" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer" url="https://www.instagram.com/unitedhouseproductions/" />
-            <SocialIcon className="social facebook social-large" bgColor="#E7E7E7"  style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  onClick={() => window.open("https://facebook.com", "_blank")} url="https://facebook.com" />
+            <ShoppingCart
+              showShoppingCart={showShoppingCart}
+              setShowShoppingCart={setShowShoppingCart}
+            />
+            <Socials size="large" />
           </Navbar.Collapse>
-
         </Container>
-            <SocialIcon className="social linktree social-small" bgColor="#E7E7E7" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://linktree.com/unitedhouseproductions" />
-            <SocialIcon className="social insta social-small" bgColor="#E7E7E7" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://www.instagram.com/unitedhouseproductions/" />
-            <SocialIcon className="social facebook social-small" bgColor="#E7E7E7" style={{ height: 30, width: 30 }} target="_blank" rel="noreferrer"  url="https://facebook.com" />
+        <Socials />
       </Navbar>
     </>
   );

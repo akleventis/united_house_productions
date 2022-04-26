@@ -1,9 +1,9 @@
-import Flyer from "./event_info/Flyer.js";
+import Flyer from "./flyer/Flyer.js";
 import { events} from '../../data/data.js'
 import "./events.css";
 import moment from "moment";
 
-const Events = (props) => {
+const Events = () => {
   const months = {};
 
   events.forEach((event) => {

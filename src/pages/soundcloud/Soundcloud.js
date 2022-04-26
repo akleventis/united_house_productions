@@ -6,6 +6,7 @@ import "./Soundcloud.css";
 const Soundcloud = ({isOpen, toggleSideBar}) => {
   const sidebarClass = isOpen ? "soundcloud-outer-container open": "soundcloud-outer-container";
   const toggleButtonClass = isOpen ? "sidebar-toggle open" : "sidebar-toggle"
+
   const items = featuredSongs.map((fs, i) => {
     return (
       <div className="soundcloud-inner-container" key={i}>
@@ -14,6 +15,7 @@ const Soundcloud = ({isOpen, toggleSideBar}) => {
       </div>
     );
   })
+  
   return (
     <div className='sidebar-container'>
     <button onClick={toggleSideBar} className={toggleButtonClass} />

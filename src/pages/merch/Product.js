@@ -73,7 +73,7 @@ const Product = ({ product }) => {
                 }}>
                 <span className="price">${product.price}</span>
                 <span className="add-to-cart">
-                  <span className="txt">Add to cart</span>
+                  <span className="txt">ADD TO CART</span>
                   {displaySize}
                 </span>
               </a>

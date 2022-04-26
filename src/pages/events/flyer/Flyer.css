@@ -50,9 +50,6 @@
 }
 
 .headliner a:hover {
-  text-shadow: 4px 4px 0px #000, 
-  -4px 0 0px #000,
-  7px 4px 0 rgba(218, 0, 0, 0.687);
   color: #1e84c4;
 }
 

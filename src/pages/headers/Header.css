@@ -1,3 +1,4 @@
+/* Header */
 .h-image {
   display: flex;
   justify-content: center;
@@ -13,14 +14,15 @@
   max-width: 1020px;
   margin: 0 !important;
 }
+
 .navbar-collapse {
   position: relative;
 }
+
 nav {
   font-family: "Roboto", sans-serif;
   font-size: 1.1em;
   font-weight: 600;
-  position: -webkit-sticky;
   position: sticky !important;
   z-index: 1;
   background-color: rgba(75, 74, 74, 0.979);
@@ -28,23 +30,20 @@ nav {
   top: 0;
 }
 .navbar-toggler {
-  padding: 1px !important;
+  padding: 1px;
 }
 .nav-links {
-  justify-content: center !important;
+  justify-content: center;
 }
 
 .nav-link {
   margin: auto 10px;
   padding: 0;
-  color: #ffffff !important;
+  color: #ffffff;
   transition: 500ms;
 }
 .nav-link:hover {
   color: #f00000 !important;
-}
-nav .container {
-  margin-left: 0;
 }
 
 /* social */
@@ -56,16 +55,15 @@ nav .container {
   position: absolute !important;
 }
 .facebook {
-  right: 10px !important;
+  right: 10px;
 }
 .insta {
-  right: 50px !important;
+  right: 50px;
 }
 .linktree {
-  right: 90px !important;
+  right: 90px;
 }
 .social:hover {
-  /* background-color: #00abbe; */
   background-color: red;
 }
 /* TODO: add uhp logo to nav */

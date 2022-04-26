@@ -32,6 +32,7 @@ export const djs = {
   },
 };
 
+// YYYY-DD-MMTHH:MM:SS (24)
 export const events = [
   {
     headliner: djs.tylr,

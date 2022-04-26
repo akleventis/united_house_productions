@@ -1,5 +1,5 @@
 import {UnitedLogo} from "../../assets/images/index.js";
-import "./headers.css";
+import "./Header.css";
 
 const Header = () => {
   return (

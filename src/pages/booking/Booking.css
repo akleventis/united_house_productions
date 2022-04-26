@@ -62,9 +62,6 @@ textarea {
   line-height: 150%;
   resize:vertical;
 }
-/* .submit-container {
-  text-align: center;
-} */
 
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;

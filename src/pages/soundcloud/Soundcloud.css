@@ -21,12 +21,10 @@
   position: absolute;
   width: 220px;
   right: -220px;
-  margin-left: 5vw;
 }
 .soundcloud-outer-container.open {
   overflow-x: visible;
   right: 0;
-  display: block;
   transition: right 0.3s ease-in-out;
 }
 
@@ -37,13 +35,14 @@
   background-color: rgba(75, 74, 74, 0.8);
   border: 1px solid rgb(109, 109, 109);
   flex-direction: column;
-  margin-bottom: auto;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
 .soundcloud-inner-container {
   margin-bottom: 25px;
 }
+
 .dj-title {
   text-align: center;
   padding: 5px;
@@ -56,12 +55,11 @@
   font-size: .8em;
   padding: 3px;
   text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   color: rgb(66, 65, 65);
 }
 
 .soundcloud-name a:hover {
-  color: inherit;
-  font-weight: bold;
+  font-weight: 700;
 }
