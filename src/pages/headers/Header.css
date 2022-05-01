@@ -2,7 +2,7 @@
 .h-image {
   display: flex;
   justify-content: center;
-  background-image: url(../../assets/images/header/background.jpg);
+  background-image: url(../../assets/header/background.jpg);
 }
 .h-image img {
   background-color: #ffffff93;
@@ -39,7 +39,6 @@ nav {
 .nav-link {
   margin: auto 10px;
   padding: 0;
-  color: #ffffff;
   transition: 500ms;
 }
 .nav-link:hover {

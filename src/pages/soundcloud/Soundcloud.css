@@ -3,7 +3,7 @@
 }
 .sidebar-toggle {
   z-index: 0;
-  background: url('../../assets/images/social/soundcloud.png');
+  background: url('../../assets/social/soundcloud.png');
   border: none;
   background-size: cover;
   position: absolute;

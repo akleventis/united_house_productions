@@ -1,4 +1,4 @@
-import { Domii, Patty, Shirt, Shroomy } from "../assets/images/index.js";
+import { Domii, Patty, Shirt, Shroomy } from "../assets/index.js";
 
 export const djs = {
   domii: {

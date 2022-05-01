@@ -1,4 +1,5 @@
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 import { SocialIcon } from "react-social-icons";
 import "./Booking.css";
 
@@ -13,11 +14,12 @@ const Booking = () => {
     emailjs.sendForm(service_id, template_id, e.target, user_id).then(
       (result) => {
         console.log(result.text);
-        alert("Message sent successfully");
+        toast("Your message has been delivered");
+        document.getElementById('email-form').reset();
       },
       (error) => {
         console.log(error.text);
-        alert("error sending email");
+        toast.error("error sending email");
       }
     );
     e.target.close();
@@ -33,7 +35,7 @@ const Booking = () => {
     <h4>If you are interested in headlining your own show: </h4>
     <p className='booking-sub-info'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     <h2>Contact Us</h2>
-    <form  onSubmit={handleSendEmail}>      
+    <form  id='email-form' onSubmit={handleSendEmail}>      
       <input name="from_name" autoComplete="off" autoCorrect="off" required type="text" className="feedback-input" placeholder="Name" />   
       <input name="from_email" autoComplete="off" autoCorrect="off"  required type="text" className="feedback-input" placeholder="Email" />
       <textarea name="message" required className="feedback-input" placeholder="Message"></textarea>
