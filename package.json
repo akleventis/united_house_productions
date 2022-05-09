@@ -46,7 +46,7 @@
     "client:test": "react-scripts test",
     "client:eject": "react-scripts eject",
     "server:dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [

@@ -40,8 +40,12 @@ nav {
   margin: auto 10px;
   padding: 0;
   transition: 500ms;
+  color: #ffffff !important;
 }
 .nav-link:hover {
+  color: #f00000 !important;
+}
+.nav-link.active {
   color: #f00000 !important;
 }
 

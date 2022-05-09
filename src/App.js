@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div onClick={handleClose}>
-      <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={3000} pauseOnHover={false} />
       <Header />
       <Router>
         <Navigate

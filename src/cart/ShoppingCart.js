@@ -18,8 +18,10 @@ const handleCheckout = async items => {
     const resp = await axios.post(`http://localhost:5001/checkout`, {items: itemArr})
     window.location = resp.data.url
   } catch (error) {
-    if (error.response.status===400) {
+    try {
       alertErr(error.response.data)
+    } catch(error) {
+      alertErr("Network Error")
     }
   }
 }
