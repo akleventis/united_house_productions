@@ -3,12 +3,9 @@ import { toast } from "react-toastify";
 import { SocialIcon } from "react-social-icons";
 import "./Booking.css";
 
-// .move to .env
-const user_id = "y4Yb4OMVHxzJk8qsj";
-const service_id = "service_4i3ufxi";
-const template_id = "template_xcpc83z";
-
 const Booking = () => {
+  const [user_id, service_id, template_id] = [process.env.REACT_APP_EMAIL_USER, process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLATE]
+  
   const handleSendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(service_id, template_id, e.target, user_id).then(
