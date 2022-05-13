@@ -20,16 +20,17 @@ const handleCheckout = async items => {
     const resp = await axios.post(`${server_url}/checkout`, {items: itemArr})
     window.location = resp.data.url
   } catch (error) {
-    try {
-      alertErr(error.response.data)
-    } catch(error) {
-      alertErr("Network Error")
-    }
+    alertErr("Network Error")
+    // try {
+    //   alertErr(error.response.data)
+    // } catch(error) {
+    //   alertErr("Network Error")
+    // }
   }
 }
 
-const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
-  const handleClose = () => setShowShoppingCart(false);
+const Cart = ({ showCart, setCart }) => {
+  const handleClose = () => setCart(false);
   const {
     isEmpty,
     cartTotal,
@@ -40,14 +41,14 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
 
   if (isEmpty)
     return (
-      <Modal className="special_modal" show={showShoppingCart} onHide={() => handleClose()}>
+      <Modal className="special_modal" show={showCart} onHide={() => handleClose()}>
         <Modal.Header  className="header-empty" closeButton>
           <Modal.Body>Your cart is empty</Modal.Body>
         </Modal.Header>
       </Modal>
     );
   return (
-    <Modal className="special_modal" show={showShoppingCart} onHide={() => handleClose()}>
+    <Modal className="special_modal" show={showCart} onHide={() => handleClose()}>
       <Modal.Header closeButton />
       {items.map((item) => (
         <div key={`c${item.id}`}>
@@ -78,4 +79,4 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
   );
 };
 
-export default ShoppingCart;
+export default Cart;

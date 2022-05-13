@@ -5,7 +5,7 @@ import "./App.css";
 import { useState } from "react";
 
 const App = () => {
-  const [showShoppingCart, setShowShoppingCart] = useState(false);
+  const [showCart, setCart] = useState(false);
   const [showSideBar, setSideBar] = useState(false)
   const handleViewSidebar = () => {
     setSideBar(!showSideBar)
@@ -20,8 +20,8 @@ const App = () => {
       <Header />
       <Router>
         <Navigate
-          showShoppingCart={showShoppingCart}
-          setShowShoppingCart={setShowShoppingCart}
+          showCart={showCart}
+          setCart={setCart}
         />
         <div className="outer-container">
           <div className="inner-container">

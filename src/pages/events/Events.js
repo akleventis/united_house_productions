@@ -6,13 +6,10 @@ import moment from "moment";
 const Events = () => {
   const months = {};
 
+  events.sort((a, b) => moment(a.startTime) - moment(b.startTime))
   events.forEach((event) => {
     const month = moment(event.startTime).format("MMMM YYYY");
-    if (Object.hasOwn(months, month)) {
-      months[month].push(event);
-    } else {
-      months[month] = [event];
-    }
+    Object.hasOwn(months, month) ? months[month].push(event) : months[month] = [event]
   });
 
   return (

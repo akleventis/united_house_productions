@@ -19,7 +19,7 @@ export const djs = {
   },
   united_house: {
     name : "United House Takeover",
-    url: "",
+    url: "https://www.intagram.com/unitedhouseproductions/",
   },
   duplex: {
     name: "DUPLEX",
@@ -58,7 +58,7 @@ export const events = [
       url: "https://www.google.com/maps/place/Killjoy/@35.7821239,-78.6476033,17z/data=!3m1!4b1!4m5!3m4!1s0x89ac5f69d2326c93:0xa23dc68ef8e1bfd4!8m2!3d35.7821239!4d-78.6454146",
     },
     startTime: "2022-05-14T21:00:00.000",
-    endTime: "2022-05-15T02:30:00.000",
+    endTime: "",
     ticketURL: "",
   },
   {

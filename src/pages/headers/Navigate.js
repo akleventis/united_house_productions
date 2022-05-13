@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { ShoppingCart } from "../../cart/index.js";
+import Cart from "../../cart/Cart.js";
 import { SocialIcon } from "react-social-icons";
 import "./Header.css";
 
@@ -37,7 +37,7 @@ const Socials = ({ size }) => {
   );
 };
 
-const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
+const Navigate = ({ showCart, setCart }) => {
   return (
     <>
       <Navbar collapseOnSelect expand="md navbar-dark" className="nav-links">
@@ -57,13 +57,13 @@ const Navigate = ({ showShoppingCart, setShowShoppingCart }) => {
               <Nav.Link eventKey="4" as={Link} to="/merch">
                 Merch
               </Nav.Link>
-              <Nav.Link onClick={() => setShowShoppingCart(true)}>
+              <Nav.Link onClick={() => setCart(true)}>
                 Cart
               </Nav.Link>
             </Nav>
-            <ShoppingCart
-              showShoppingCart={showShoppingCart}
-              setShowShoppingCart={setShowShoppingCart}
+            <Cart
+              showCart={showCart}
+              setCart={setCart}
             />
             <Socials size="large" />
           </Navbar.Collapse>
