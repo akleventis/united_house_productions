@@ -1,4 +1,5 @@
 export {default as Header} from "./headers/Header.js"
+export {default as Footer} from "./headers/Footer.js"
 export {default as Navigate} from "./headers/Navigate.js";
 export {default as About} from "./about/About"
 export { default as Booking } from "./booking/Booking.js";

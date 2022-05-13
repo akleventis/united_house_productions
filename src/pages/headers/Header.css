@@ -43,10 +43,10 @@ nav {
   color: #ffffff !important;
 }
 .nav-link:hover {
-  color: #f00000 !important;
+  color: #f33b3b !important;
 }
 .nav-link.active {
-  color: #f00000 !important;
+  color: #f33b3b !important;
 }
 
 /* social */
@@ -67,9 +67,10 @@ nav {
   right: 90px;
 }
 .social:hover {
-  background-color: red;
+  background-color: #f33b3b;
+  box-shadow: rgb(255, 0, 0) 0px 0px 20px;
 }
-/* TODO: add uhp logo to nav */
+
 @media (max-width: 767px) {
   .social-small {
     display: inline !important;
@@ -85,4 +86,21 @@ nav {
   .nav-link {
     padding: 3px;
   }
+}
+
+footer {
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+  background-color: rgba(75, 74, 74, 0.979);
+  border-top: 1px solid rgb(109, 109, 109);
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  font-size: 0.7em;
+}
+footer p {
+  color: #b4b3b3;
+  margin-left: 10px;
 }

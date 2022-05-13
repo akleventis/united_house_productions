@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import axios from 'axios'
 import "./cart.css";
 
+const server_url=process.env.REACT_APP_SERVER_URL
+
 const alertErr = (data) => {
   toast.error(data);
   return;
@@ -15,7 +17,7 @@ const handleCheckout = async items => {
     return itemArr.push({ id: item.id, quantity: item.quantity})
   })
   try {
-    const resp = await axios.post(`http://localhost:5001/checkout`, {items: itemArr})
+    const resp = await axios.post(`${server_url}/checkout`, {items: itemArr})
     window.location = resp.data.url
   } catch (error) {
     try {
@@ -54,13 +56,15 @@ const ShoppingCart = ({ showShoppingCart, setShowShoppingCart }) => {
             <div className="flex2">{item.size}</div>
             <div className="flex3">${item.price}</div>
 
-            <div className="flex4">
-              <button className="quantity-adjust" onClick={() => updateItemQuantity(item.id, item.quantity - 1)} > - </button>
-              <div className="quantity">{item.quantity}</div>
-              <button className="quantity-adjust" onClick={() => updateItemQuantity(item.id, item.quantity + 1)} > + </button>  
+            <div className="flex4-6">
+              <button className="quantity-adjust" onClick={() => updateItemQuantity(item.id, item.quantity - 1)} >-</button>
+            </div>
+            <div className="quantity flex5">{item.quantity}</div>
+            <div className="flex4-6">
+              <button className="quantity-adjust" onClick={() => updateItemQuantity(item.id, item.quantity + 1)} >+</button>  
             </div>
 
-            <div>
+            <div className="flex7">
              <button className="remove" onClick={() => removeItem(item.id)}> x </button>  
             </div>
             </div>

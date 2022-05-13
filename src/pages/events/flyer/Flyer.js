@@ -24,13 +24,20 @@ const Flyer = ({ event }) => {
 
             {/* HEADLINER */}
             <li className="list-group-item headliner">
+              {event.headliner.url==="" ? 
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
+              <a href="javascript:;" >{event.headliner.name}</a> : 
               <a href={event.headliner.url} target="_blank" rel="noreferrer">{event.headliner.name}</a>
+              }
             </li>
 
             {/* SUPPORT */}
             <li className="list-group-item support">
               {event.openers.map(dj => (
-                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer' target="_blank">{dj.name}</a>
+                dj.url === "" ? 
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                <a href="javascript:;" key={dj.name} className='support-a'>{dj.name}</a> :
+                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer' target="_blank">{dj.name}</a> 
               ))}
             </li>
 

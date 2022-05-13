@@ -32,7 +32,7 @@
   display: flex;
   position: absolute;
   padding: 0 20px 0;
-  background-color: rgba(75, 74, 74, 0.8);
+  background-color: #4a4a4af1;
   border: 1px solid rgb(109, 109, 109);
   flex-direction: column;
   border-top-left-radius: 5px;

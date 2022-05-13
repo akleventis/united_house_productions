@@ -1,11 +1,26 @@
-import { Domii, Patty, Shirt, Shroomy } from "../assets/index.js";
+import { f1, f2, Shirt, Shroomy } from "../assets/index.js";
 
 export const djs = {
-  domii: {
-    name: "DOMii",
-    url: "https://www.instagram.com/ariel_domii/",
+  sam_wolfe: {
+    name: "SAM WOLFE",
+    url: "https://www.instagram.com/samwolfemusic/",
   },
-  
+  j_5: {
+    name: "J/5",
+    url: "https://www.instagram.com/johnny.cupcvke/",
+  },
+  seance: {
+    name: "Seance",
+    url: "https://www.instagram.com/seancemusic666/",
+  },
+  u9: {
+    name: "Ruiz0m & KAŸ",
+    url: "",
+  },
+  united_house: {
+    name : "United House Takeover",
+    url: "",
+  },
   duplex: {
     name: "DUPLEX",
     url: "https://www.instagram.com/duplex_music/",
@@ -35,29 +50,30 @@ export const djs = {
 // YYYY-DD-MMTHH:MM:SS (24)
 export const events = [
   {
-    headliner: djs.tylr,
-    poster: Patty,
-    openers: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
+    headliner: djs.united_house,
+    poster: f2,
+    openers: [],
     location: {
-      url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-      name: "The Fruit",
+      name: "Killjoy",
+      url: "https://www.google.com/maps/place/Killjoy/@35.7821239,-78.6476033,17z/data=!3m1!4b1!4m5!3m4!1s0x89ac5f69d2326c93:0xa23dc68ef8e1bfd4!8m2!3d35.7821239!4d-78.6454146",
     },
-    startTime: "2022-03-17T21:00:00.000",
-    endTime: "2022-03-18T02:30:00.000",
+    startTime: "2022-05-14T21:00:00.000",
+    endTime: "2022-05-15T02:30:00.000",
     ticketURL: "",
   },
   {
-    headliner: djs.domii,
-    poster: Domii,
-    openers: [djs.duplex, djs.yespeez, djs.vladislove, djs.warriors],
+    headliner: djs.sam_wolfe,
+    poster: f1,
+    openers: [djs.j_5, djs.seance, djs.u9],
     location: {
-      name: "The Fruit",
       url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+      name: "The Fruit",
     },
-    startTime: "2022-04-16T21:00:00.000",
-    endTime: "2022-04-17T02:30:00.000",
-    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-domii-tickets-273962728897",
+    startTime: "2022-07-02T21:00:00.000",
+    endTime: "2022-07-03T02:00:00.000",
+    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-sam-wolfe-tickets-336460280757",
   },
+
 ];
 
 export const featuredSongs = [

@@ -1,10 +1,12 @@
+import './Header.css'
+
 const Footer = () => {
-    
-
     return (
-        <div>
-
-        </div>
+        <footer>
+        <p>
+          © United House Productions 2022
+        </p>
+      </footer>
     )
 }
 

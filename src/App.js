@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About, Booking, Events, Products, Header, Navigate, Soundcloud} from "./pages/index.js";
+import { About, Booking, Events, Products, Header, Footer,  Navigate, Soundcloud} from "./pages/index.js";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import { useState } from "react";
@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div onClick={handleClose}>
-      <ToastContainer autoClose={3000} pauseOnHover={false} />
+      <ToastContainer autoClose={3000} pauseOnHover={false} pauseOnFocusLoss={false}/>
       <Header />
       <Router>
         <Navigate
@@ -35,6 +35,7 @@ const App = () => {
           <Soundcloud isOpen={showSideBar} toggleSideBar={handleViewSidebar}/>
         </div>
       </Router>
+      <Footer />
     </div>
   );
 };

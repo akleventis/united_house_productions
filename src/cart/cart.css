@@ -25,8 +25,8 @@
 }
 
 .flex1 {
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    /* border-radius: 10px; */
+    box-shadow: rgba(60, 60, 77, 0.1) 0px 1px 0px;
     flex-basis: 23%;
     font-weight: 500;
 }
@@ -38,10 +38,18 @@
     flex-basis: 15%;
     font-weight: 500;
 }
-.flex4 {
-    flex-basis: 25%;
+.flex4-6 {
+    flex-basis: 8%;
     display: flex;
+    align-items: center;
     justify-content: center;
+}
+.flex5 {
+    flex-basis: 5%;
+}
+
+.flex7 {
+    margin-left: 1em;
 }
 /* CSS */
 .checkout{
@@ -68,19 +76,20 @@
     width: 23px;
     text-align: center;
     font-size: .9em;
-    margin-top: .2em;
     font-weight: 600;
 
 }
 .quantity-adjust {
-    border: none;
-    width: 25px;
+    border-width: 1px;
+    border-top-color: rgba(3, 102, 214, 0.3);
+    border-left-color: rgba(3, 102, 214, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 19px;
+    width: 19px;
+    background-color: #e9f1f4;
     transition: all 235ms ease-in-out;
-    border-radius: 50px;
-    font-weight: 600;
-}
-.quantity-adjust:hover {
-    background-color: hsla(191, 87%, 76%, 0.895);
 }
 
 .remove {
