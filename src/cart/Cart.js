@@ -21,11 +21,6 @@ const handleCheckout = async items => {
     window.location = resp.data.url
   } catch (error) {
     alertErr("Network Error")
-    // try {
-    //   alertErr(error.response.data)
-    // } catch(error) {
-    //   alertErr("Network Error")
-    // }
   }
 }
 

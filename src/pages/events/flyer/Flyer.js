@@ -27,7 +27,7 @@ const Flyer = ({ event }) => {
             {/* HEADLINER */}
             <li className="list-group-item headliner">
               {event.headliner.url==="" ? 
-              <a href="javascript:;" >{event.headliner.name}</a> : 
+              <a>{event.headliner.name}</a> : 
               <a href={event.headliner.url} target="_blank" rel="noreferrer">{event.headliner.name}</a>
               }
             </li>
@@ -36,7 +36,7 @@ const Flyer = ({ event }) => {
             <li className="list-group-item support">
               {event.openers.map(dj => (
                 dj.url === "" ? 
-                <a href="javascript:;" key={dj.name} className='support-a'>{dj.name}</a> :
+                <a key={dj.name} className='support-a'>{dj.name}</a> :
                 <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer' target="_blank">{dj.name}</a> 
               ))}
             </li>

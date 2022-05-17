@@ -9,4 +9,5 @@ a {
   text-decoration: none !important;
   color: inherit;
   transition: 500ms;
+  cursor: pointer;
 }
