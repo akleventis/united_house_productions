@@ -4,8 +4,9 @@ import './About.css'
 const About = () => {
 
   useEffect(() => {
-    window.instgrm.Embeds.process()
-  });
+    if (window.instgrm)
+        window.instgrm.Embeds.process();
+    });
 
   
   return (
