@@ -43,6 +43,7 @@
 }
 
 .headliner a {
+  cursor: pointer;
   padding: .2em 0 0;
   font-size: 1.4em;
   color: #ffffffc8;
@@ -60,6 +61,7 @@
 }
 
 .support a {
+  cursor: pointer;
   margin-right: 0.5em;
 }
 .support a:hover {

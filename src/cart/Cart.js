@@ -18,8 +18,22 @@ const handleCheckout = async items => {
   })
   try {
     const resp = await axios.post(`${server_url}/checkout`, {items: itemArr})
+    if (resp.status === 202) {
+      const [quantity, size, name] = [resp.data.product.quantity, resp.data.product.size, resp.data.product.name]
+      let message
+      switch(resp.data.product.quantity) {
+        case 0:
+          message = `${size} ${name} is out of stock. Please update cart`
+          break
+        default:
+          message = `Only ${quantity} ${size} ${name}(s) in stock. Please update cart`
+      }
+      alertErr(message)
+      return
+    }
     window.location = resp.data.url
   } catch (error) {
+    console.log(error)
     alertErr("Network Error")
   }
 }
