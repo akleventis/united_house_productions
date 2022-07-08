@@ -2,11 +2,10 @@
 .h-image {
   display: flex;
   justify-content: center;
-  background-image: url(../../assets/header/background.jpg);
+  background-image: url(../../assets/header/background2.jpg);
 }
 .h-image img {
-  background-color: #ffffff93;
-  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.548);
+  margin-top: 1em;
 }
 
 /* NAVBAR */
@@ -25,8 +24,9 @@ nav {
   font-weight: 600;
   position: sticky !important;
   z-index: 1;
-  background-color: rgba(75, 74, 74, 0.979);
-  border-bottom: 1px solid rgb(109, 109, 109);
+  /* background-color: rgba(75, 74, 74, 0.979); */
+  background-color: #3e3a3a;
+  /* border-bottom: 1px solid rgb(109, 109, 109); */
   top: 0;
 }
 .navbar-toggler {
@@ -94,7 +94,7 @@ footer {
   bottom: 0;
   height: 20px;
   width: 100%;
-  background-color: rgba(75, 74, 74, 0.979);
+  background-color: #3e3a3a;
   border-top: 1px solid rgb(109, 109, 109);
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;

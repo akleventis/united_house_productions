@@ -1,6 +1,6 @@
 .flyer-container {
   display: flex;
-  margin-bottom: 3.5em;
+  margin-bottom: 4em;
 }
 
 /* info */
@@ -16,7 +16,7 @@
   background-color: #ffffffc9;
   color: black;
   font-weight: 600;
-  font-size: 0.85em;
+  font-size: .9em;
   position: relative;
 }
 .flyer-date p {
@@ -30,7 +30,7 @@
   position: absolute;
 }
 .flyer-container img {
-  width: 17em;
+  width: 20em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -46,18 +46,17 @@
   cursor: pointer;
   padding: .2em 0 0;
   font-size: 1.4em;
-  color: #ffffffc8;
+  color: #ffffff;
   position: relative;
 }
 
 .headliner a:hover {
-  color: #1e84c4;
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 
 /* SUPPORT  */
 .support {
-  font-size: 0.9em;
-  padding-top: 0;
+  padding-top: .5em;
 }
 
 .support a {
@@ -72,8 +71,7 @@
 /* info */
 .time {
   font-size: .9em;
-  padding-left: 1em;
-  padding-bottom: 0;
+  padding: 0 0 .5em 1em;
 }
 
 .clock {
@@ -198,8 +196,11 @@
 }
 
 @media (max-width: 767px) {
-  .flyer-container {
+  .ainer {
     flex-direction: column;
     text-align: center;
+  }
+  .headliner {
+    padding-top: 1em;
   }
 }

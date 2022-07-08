@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
+import { uhp_decks } from '../../assets';
 import './About.css'
 
 const About = () => {
 
-  useEffect(() => {
-    if (window.instgrm)
-        window.instgrm.Embeds.process();
-    });
+  // useEffect(() => {
+  //   if (window.instgrm)
+  //       window.instgrm.Embeds.process();
+  //   });
 
   
   return (
@@ -16,7 +17,8 @@ const About = () => {
       <p> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
     <div className='insta-container'>
-       <blockquote className="instagram-media" data-instgrm-permalink="https://www.instagram.com/unitedhouseproductions/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version={14} style={{background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '700px', minWidth: '326px', padding: 0, width: 'calc(100% - 2px)'}}>
+      <img src={uhp_decks} alt='beebo yespeez killin the game' style={{width: '70%'}}></img>
+       {/* <blockquote className="instagram-media" data-instgrm-permalink="https://www.instagram.com/unitedhouseproductions/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version={14} style={{background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '700px', minWidth: '326px', padding: 0, width: 'calc(100% - 2px)'}}>
           <div style={{padding: '16px'}}>
             <a href="https://www.instagram.com/unitedhouseproductions/?utm_source=ig_embed&utm_campaign=loading" rel="noreferrer" style={{background: '#FFFFFF', lineHeight: 0, padding: '0 0', textAlign: 'center', textDecoration: 'none', width: '100%'}} target="_blank">
               <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
@@ -68,7 +70,7 @@ const About = () => {
               <a href="https://www.instagram.com/unitedhouseproductions/?utm_source=ig_embed&utm_campaign=loading" rel="noreferrer" style={{color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px'}} target="_blank">unitedhouseproductions</a>) • Instagram photos and videos
             </p>
           </div>
-        </blockquote>
+        </blockquote> */}
         </div>
     </div>
   );

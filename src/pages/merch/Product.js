@@ -5,7 +5,6 @@ import { useCart } from "react-use-cart";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import './Merch.css'
-import { products } from '../../data/data.js'
 
 const alertAdd = (p) => {
   toast(`${p.name} added to cart 🔥`, {});
@@ -17,10 +16,11 @@ const alertSelectSize = () => {
   return;
 }
 
-const Product = ({ product }) => {
+const Product = ({ product, products }) => {
   const [selectedSize, setSize] = useState("");
   const { addItem } = useCart();
 
+  // size must be selected if not universal 
   const handleAdd = (p) => {
     if (p.size==='Universal' || selectedSize !== '') {
       p.size = p.size === 'Universal' ? p.size : selectedSize
@@ -32,6 +32,7 @@ const Product = ({ product }) => {
     setSize("");
   }
 
+  // 
   let displaySize 
   if (product.size === 'Universal') {
     displaySize = <></>
@@ -39,6 +40,11 @@ const Product = ({ product }) => {
     displaySize = selectedSize === '' ? <span /> : <span className="txt display-size">{selectedSize}</span>
   }
 
+ var s = { S: 0, M: 1, L: 2, XL: 3, XXL: 4 }
+ product.sizes.sort(function(a, b) {
+  return s[a] - s[b]
+ })
+ 
   return (
     <div className="container page-wrapper">
       <div className="page-inner">
