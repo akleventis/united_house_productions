@@ -18,13 +18,10 @@
     "react-use-cart": "^1.13.0"
   },
   "scripts": {
-    "postinstall": "npm run client:build",
-    "client:dev": "react-scripts start",
-    "client:build": "react-scripts build",
-    "client:test": "react-scripts test",
-    "client:eject": "react-scripts eject",
-    "server:dev": "nodemon server.js",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
