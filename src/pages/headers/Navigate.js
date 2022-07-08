@@ -30,8 +30,8 @@ const Socials = ({ size }) => {
         style={{ height: 30, width: 30 }}
         target="_blank"
         rel="noreferrer"
-        onClick={() => window.open("https://facebook.com", "_blank")}
-        url="https://facebook.com"
+        onClick={() => window.open("https://www.facebook.com/UnitedHouseProductions/", "_blank")}
+        url="https://www.facebook.com/UnitedHouseProductions/"
       />
     </>
   );

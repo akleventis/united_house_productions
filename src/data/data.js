@@ -61,6 +61,16 @@ export const djs = {
     name: "Jerm Jelly",
     url: "https://www.instagram.com/jermjelly/",
     feature_song: "",
+  },
+  mr_jupiter: {
+    name: "Mr.Jupiter",
+    url: "https://www.instagram.com/mrjupitermusicofficial/",
+    feature_song: "https://soundcloud.com/lewis-cinco-ocho-crumsey/rec008wav?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+  mvmtone: {
+    name: "MvMTone",
+    url: "https://www.instagram.com/mvmtone_dmvofficial/",
+    feature_song: "https://soundcloud.com/antonio-geter/shib-b2b-mvmtone-techno-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   }
 };
 
@@ -96,19 +106,27 @@ export const events = [
 export const featuredSongs = [
   {
     dj: djs.tylr,
-    url: "https://soundcloud.com/musicbytylr/2022-showcase-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    url: djs.tylr.featured_song,
   },
   {
     dj: djs.yespeez,
-    url: "https://soundcloud.com/alex-mahar-189115224/nobody?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    url: djs.yespeez.featured_song,
   },
   {
     dj: djs.dabaldo,
-    url: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    url: djs.dabaldo.featured_song,
   },
   {
     dj: djs.duplex,
-    url: "https://soundcloud.com/duplexmusic/duplex-house-step?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    url: djs.duplex.featured_song,
+  },
+  {
+    dj: djs.mr_jupiter,
+    url: djs.mr_jupiter.feature_song,
+  },
+  {
+    dj: djs.mvmtone,
+    url: djs.mvmtone.feature_song,
   }
 ];
 
