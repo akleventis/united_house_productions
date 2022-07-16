@@ -8,6 +8,8 @@
 .about-container img {
     width: 20%;
     margin: 1em;
+    border: 1px solid #3e3a3a;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .insta-container {

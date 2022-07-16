@@ -10,7 +10,7 @@ export const SoundcloudImg = require('./social/soundcloud.png')
 
 // UPDATE FLOW //
 // flyers
-export const f1 = require('./flyers/f1.png')
+export const f1 = require('./flyers/f1.jpg')
 export const f2 = require('./flyers/f2.jpg')
 
 // about // 

@@ -2,30 +2,29 @@ import { f1, f2 } from "../assets/index.js";
 
 // TODO: Migrate to database
 export const djs = {
+  beebo: {
+    name: "BEEBO",
+    url: "https://www.instagram.com/BEEBO_MUSIC/"
+  },
   sam_wolfe: {
     name: "SAM WOLFE",
     url: "https://www.instagram.com/samwolfemusic/",
-    featured_song: "",
   },
   j_5: {
     name: "J/5",
     url: "https://www.instagram.com/johnny.cupcvke/",
-    featured_song: "",
   },
   seance: {
     name: "Seance",
     url: "https://www.instagram.com/seancemusic666/",
-    featured_song: "",
   },
   u9: {
     name: "Ruiz0m & KAŸ",
     url: "",
-    featured_song: "",
   },
   united_house: {
     name : "United House Takeover",
     url: "https://www.intagram.com/unitedhouseproductions/",
-    featured_song: "",
   },
   duplex: {
     name: "DUPLEX",
@@ -50,7 +49,6 @@ export const djs = {
   vladislove: {
     name: "VLADISLOVE",
     url: "https://www.instagram.com/djvladislovee/",
-    featured_song: "",
   },
   dlmt: {
     name: "DLMT",
@@ -60,7 +58,7 @@ export const djs = {
   jermjelly: {
     name: "Jerm Jelly",
     url: "https://www.instagram.com/jermjelly/",
-    feature_song: "",
+    
   },
   mr_jupiter: {
     name: "Mr.Jupiter",
@@ -71,6 +69,18 @@ export const djs = {
     name: "MvMTone",
     url: "https://www.instagram.com/mvmtone_dmvofficial/",
     feature_song: "https://soundcloud.com/antonio-geter/shib-b2b-mvmtone-techno-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+  nikothekid: {
+    name: "Niko The Kid",
+    url: "https://www.instagram.com/nikothekid/",
+  },
+  diskull: {
+    name: "DISKULL",
+    url: "https://www.instagram.com/DISKULLOFFICIAL/",
+  },
+  gabriela: {
+    name: "Gagriela Gonzalez",
+    url: "https://instagram.com/DJGABRIELAGONZALEZ/"
   }
 };
 
@@ -89,16 +99,16 @@ export const events = [
     ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-dlmt-tickets-372119588707",
   },
   {
-    headliner: djs.sam_wolfe,
+    headliner: djs.nikothekid,
     poster: f1,
-    openers: [djs.j_5, djs.seance, djs.u9],
+    openers: [djs.diskull, djs.gabriela, djs.beebo],
     location: {
       url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
       name: "The Fruit",
     },
-    startTime: "2022-07-02T21:00:00.000",
-    endTime: "2022-07-03T02:00:00.000",
-    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-sam-wolfe-tickets-336460280757",
+    startTime: "2022-08-20T21:00:00.000",
+    endTime: "2022-08-20T02:00:00.000",
+    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
   },
 
 ];

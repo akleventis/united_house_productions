@@ -10,9 +10,9 @@ const Flyer = ({ event }) => {
   return (
     <div>
       <div className="flyer-container">
-        <div>
-          <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.8)" zoomMargin={50}>
-            <div >
+        <div >
+          <Zoom  overlayBgColorEnd="rgba(0, 0, 0, 0.8)" zoomMargin={50}>
+            <div className="flyer" >
               <div className="flyer-date">
                 <div></div>
                 <p>{moment(event.startTime).format("ddd, MMM. DD")}</p>

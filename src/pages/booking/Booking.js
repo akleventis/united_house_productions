@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import { SocialIcon } from "react-social-icons";
 import "./Booking.css";
 
+// TODO: Move to backend server to implement email rate limits
 const Booking = () => {
   const [user_id, service_id, template_id] = [process.env.REACT_APP_EMAIL_USER, process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLATE]
   
