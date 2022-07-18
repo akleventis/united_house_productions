@@ -15,3 +15,6 @@ export const f2 = require('./flyers/f2.jpg')
 
 // about // 
 export const uhp_decks = require('./header/uhp_decks.jpeg')
+
+// merch //
+export const ComingSoon = require('./merch/coming_soon.png')

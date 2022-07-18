@@ -1,10 +1,19 @@
 import Product from './Product'
-
+import { ComingSoon } from '../../assets'
 
 const Products = (props) => {
     const {products, productMapping} = props
     // let products = props.products
     // let productMapping = props.productMapping
+    console.log(productMapping)
+    if (productMapping.length === 0) {
+        return (
+            <main>
+            <h3 className='router-title'>Merch</h3>
+            <img className='cs' alt="coming soon" src={ComingSoon}></img>
+        </main>
+        )
+    }
 
     return (
         <main>
