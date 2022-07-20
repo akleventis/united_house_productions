@@ -33,6 +33,7 @@
 }
 .flyer-container img {
   width: 20em;
+  height: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
