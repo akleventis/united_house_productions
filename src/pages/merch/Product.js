@@ -32,7 +32,6 @@ const Product = ({ product, products }) => {
     setSize("");
   }
 
-  // 
   let displaySize 
   if (product.size === 'Universal') {
     displaySize = <></>
@@ -40,6 +39,7 @@ const Product = ({ product, products }) => {
     displaySize = selectedSize === '' ? <span /> : <span className="txt display-size">{selectedSize}</span>
   }
 
+  // sort sizes for display
  var s = { S: 0, M: 1, L: 2, XL: 3, XXL: 4 }
  product.sizes.sort(function(a, b) {
   return s[a] - s[b]

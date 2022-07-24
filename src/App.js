@@ -44,7 +44,7 @@ const hashProducts = data => {
     return products
 }
 
-// data structure (group sizes for same product)
+// data structure (group sizes for same product, name as pkey)
 // productMapping = [
 //   {id: 1, name: "T-Shirt", price: 25, sizes: ["S", "M", "L", "XL"], size: "", img: Shirt},
 //   {id: 2, name: "Bucket Hat", price: 15, sizes: ["Universal"], size: "Universal", img: Shroomy}
@@ -74,18 +74,17 @@ const createProductMapping = data => {
   const [productMapping, setProductMapping] = useState([]);
 
   useEffect(() => {
-    console.log("IN USE EFFECT")
       const getItems = async() => {
           const server_url=process.env.REACT_APP_SERVER_URL
           try {
               // get all merch from database
               const items = await axios.get(`${server_url}/products`)
 
-              // create hashed ds
+              // create hashed data structure
               const hashedProducts = hashProducts(items.data)
               setproducts(hashedProducts)
 
-              // create product mapping for fe cards
+              // create product mapping for front-end cards
               const productMapping = createProductMapping(items.data)
               setProductMapping(productMapping)
           } catch (error) {

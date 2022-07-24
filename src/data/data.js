@@ -1,6 +1,7 @@
 import { f1, f2 } from "../assets/index.js";
 
-// TODO: Migrate to database
+// TODO: djs_t
+// id (pKey), name, url
 export const djs = {
   beebo: {
     name: "BEEBO",
@@ -63,12 +64,12 @@ export const djs = {
   mr_jupiter: {
     name: "Mr.Jupiter",
     url: "https://www.instagram.com/mrjupitermusicofficial/",
-    feature_song: "https://soundcloud.com/lewis-cinco-ocho-crumsey/rec008wav?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/lewis-cinco-ocho-crumsey/rec008wav?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   mvmtone: {
     name: "MvMTone",
     url: "https://www.instagram.com/mvmtone_dmvofficial/",
-    feature_song: "https://soundcloud.com/antonio-geter/shib-b2b-mvmtone-techno-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/antonio-geter/shib-b2b-mvmtone-techno-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   nikothekid: {
     name: "Niko The Kid",
@@ -84,6 +85,11 @@ export const djs = {
   }
 };
 
+
+// TODO: events_t
+// dj's auto-inc unique id
+// use id as foreign key in events db (openers/headliner)
+// id, headliner (dj id), poster (string, s3 bucket url?), openers (array of dj id's), location_name, location_url, startTime, endTime, ticketURL
 // YYYY-DD-MMTHH:MM:SS (24)
 export const events = [
   {
@@ -113,6 +119,9 @@ export const events = [
 
 ];
 
+// TODO: featured_artists_t
+// dj (id), url string
+
 export const featuredSongs = [
   {
     dj: djs.tylr,
@@ -132,61 +141,10 @@ export const featuredSongs = [
   },
   {
     dj: djs.mr_jupiter,
-    url: djs.mr_jupiter.feature_song,
+    url: djs.mr_jupiter.featured_song,
   },
   {
     dj: djs.mvmtone,
-    url: djs.mvmtone.feature_song,
+    url: djs.mvmtone.featured_song,
   }
 ];
-
-
-
-// ACTUAL PRODUCTS are stored server side 
-// export const productMapping = [
-//   {id: 1, name: "T-Shirt", price: 25, sizes: ["S", "M", "L", "XL"], size: "", img: Shirt},
-//   {id: 2, name: "Bucket Hat", price: 15, sizes: ["Universal"], size: "Universal", img: Shroomy}
-// ]
-
-// // Information to display in shopping cart
-// export const products = {
-//   "T-Shirt": {
-//     "S": {
-//       id: "prod_LL0QYWYULvLiRJ", // S Shirt 
-//       name: productMapping[0].name,
-//       price: productMapping[0].price,
-//       size: productMapping[0].sizes[0], // Small
-//       img: productMapping[0].img,
-//     },
-//     "M": {
-//       id: "prod_LL0V9nBF9SWBXe", // M Shirt 
-//       name: productMapping[0].name, 
-//       price: productMapping[0].price,
-//       size: productMapping[0].sizes[1], // Medium
-//       img: productMapping[0].img,
-//     },
-//     "L": {
-//       id: "prod_LL0WQaYdbcAyrr", // L Shirt 
-//       name: productMapping[0].name,
-//       price: productMapping[0].price,
-//       size: productMapping[0].sizes[2], // Large
-//       img: productMapping[0].img,
-//     },
-//     "XL": {
-//       id: "prod_LL0WG35KgIK1EP", // XL Shirt 
-//       name: productMapping[0].name,
-//       price: productMapping[0].price,
-//       size: productMapping[0].sizes[3], // X-Large
-//       img: productMapping[0].img,
-//     }
-//   },
-//   "Bucket Hat": {
-//     "Universal": {
-//       id: "prod_LL0XoG82MFwFxR", // Bucket Hat 
-//       name: productMapping[1].name,
-//       price: productMapping[1].price,
-//       size: productMapping[1].sizes[0], // Universal
-//       img: productMapping[1].img,
-//     }
-//   }
-// }
