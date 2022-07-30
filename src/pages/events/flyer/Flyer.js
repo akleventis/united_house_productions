@@ -2,22 +2,62 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { loading } from "../../../assets";
 import "./Flyer.css";
 import moment from "moment";
+import { useState, useEffect } from "react";
+
+// const LoadFlyer = ({placeholderSrc, src, ...props }) => {
+//   const [imgSrc, setImgSrc] = useState(placeholderSrc || src)
+
+//     useEffect(() => {
+//       const img = new Image();
+//       img.src = src;
+//       img.onload = () => {
+//           setImgSrc(src)
+//       }
+//     }, [src])
+
+//   return (
+    // <img
+    //   {...{ src: imgSrc, ...props}}
+    //   alt={props.alt || ""}
+    //   className="dj"
+    //   />
+//   )
+// }
 
 const Flyer = ({ event }) => {
+
+  const [imgSrc, setImgSrc] = useState(loading || event.poster)
+  useEffect(() => {
+    console.log("IN USE EFFECT")
+    const img = new Image();
+    img.src = event.poster;
+    img.onload = () => {
+      // setTimeout(() => {
+        setImgSrc(event.poster)        
+      // }, "2000");
+    }
+  }, [event.poster])
+
   let tickets = event.ticketURL !== "" ? <button type="button" onClick={() => window.open(event.ticketURL, '_blank')} className="tickets">Tickets</button>:<button className="tickets">Free</button>
   return (
     <div>
       <div className="flyer-container">
         <div >
           <Zoom  overlayBgColorEnd="rgba(0, 0, 0, 0.8)" zoomMargin={50}>
-            <div className="flyer" >
+            <div className="flyer" style={{textAlign: "center"}}>
               <div className="flyer-date">
                 <div></div>
                 <p>{moment(event.startTime).format("ddd, MMM. DD")}</p>
               </div>
-              <img alt="dj" src={event.poster} width="100%" height="100%" />
+              <img
+                {...{ src: imgSrc}}
+                alt="event-flyer"
+                className="dj"
+              />
+              {/* <LoadFlyer alt="event-flyer" src={event.poster} placeholderSrc={loading} height="345.5px" width="20em"/> */}
             </div>
           </Zoom>
         </div>

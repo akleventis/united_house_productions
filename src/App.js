@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About, Booking, Events, Products, Header, Footer,  Navigate, Soundcloud} from "./pages/index.js";
 import { ToastContainer, toast } from "react-toastify";
+import { loading } from "./assets/index.js";
 import "./App.css";
 import axios from 'axios'
 import { useState, useEffect} from "react";
@@ -93,6 +94,7 @@ const createProductMapping = data => {
       }
       getItems()
   }, []);
+
 
   return (
     <div onClick={handleClose}>

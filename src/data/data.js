@@ -30,11 +30,11 @@ export const djs = {
   duplex: {
     name: "DUPLEX",
     url: "https://www.instagram.com/duplex_music/",
-    featured_song: "https://soundcloud.com/duplexmusic/duplex-house-step?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/duplexmusic/duplex-flip-it?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   dabaldo: {
     name: "DaBaldo",
-    url: "https://www.instagram.com/_dabaldo_/",
+    url: "https://www.instagram.com/dabaldo_music/",
     featured_song: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   tylr: {
@@ -124,16 +124,16 @@ export const events = [
 
 export const featuredSongs = [
   {
-    dj: djs.tylr,
-    url: djs.tylr.featured_song,
+    dj: djs.dabaldo,
+    url: djs.dabaldo.featured_song,
   },
   {
     dj: djs.yespeez,
     url: djs.yespeez.featured_song,
   },
   {
-    dj: djs.dabaldo,
-    url: djs.dabaldo.featured_song,
+    dj: djs.tylr,
+    url: djs.tylr.featured_song,
   },
   {
     dj: djs.duplex,

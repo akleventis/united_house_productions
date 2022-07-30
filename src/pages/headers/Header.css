@@ -3,9 +3,12 @@
   display: flex;
   justify-content: center;
   background-image: url(../../assets/header/background2.jpg);
+
 }
 .h-image img {
   margin-top: 1em;
+  width: 450px;
+  height: 160px;
 }
 
 /* NAVBAR */
@@ -80,6 +83,7 @@ nav {
 @media (max-width: 600px) {
   .h-image img {
     width: 300px;
+    height: 105px;
   }
   .nav-link {
     padding: 3px;

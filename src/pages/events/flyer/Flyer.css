@@ -3,7 +3,7 @@
   margin-bottom: 4em;
 }
 .flyer {
-  border: 2px solid #3e3a3a;
+  /* border: 2px solid #3e3a3a; */
 }
 /* info */
 .item-center {
@@ -25,15 +25,18 @@
   margin-bottom: 0;
   margin-left: 1em;
 }
+
 .flyer-date div {
   background-color: #f00000;
   height: 100%;
   width: 5px;
   position: absolute;
 }
-.flyer-container img {
+
+/* poster image */
+.dj {
   width: 20em;
-  height: auto;
+  height: 345px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 

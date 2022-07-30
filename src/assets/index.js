@@ -12,6 +12,7 @@ export const SoundcloudImg = require('./social/soundcloud.png')
 // flyers
 export const f1 = require('./flyers/f1.jpg')
 export const f2 = require('./flyers/f2.jpg')
+export const loading = require('./flyers/loading.gif')
 
 // about // 
 export const uhp_decks = require('./header/uhp_decks.jpeg')

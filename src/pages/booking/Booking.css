@@ -10,10 +10,16 @@ h2 {
 .contact-container h2 {
   text-align: center;
 }
+.contact-inner-container {
+  display: flex;
+}
 
-.contact-container h4 {
+.contact-container h5 {
   border-left: 1px solid red;
   padding-left: 5px;
+  margin-top: 1em;
+  text-align: left;
+  padding-left: .7em;
 }
 
 .contact-container a {
@@ -23,26 +29,38 @@ h2 {
 
 .booking-info {
   font-size: 1.1em;
-  text-align: center;
-  margin-bottom: 3em;
+  padding-left: .5em;
+  flex-basis: 70%;
+  margin-bottom: 2.5em;
+  margin-left: 1em;
+}
+.booking-info p {
+  border-left: 1px solid red;
+  padding-left: .5em;
+  margin-bottom: .5em;
 }
 .booking-sub-info {
   padding-left: 10px;
 }
-
-form { max-width:400px; margin:20px auto; }
+.inline-social {
+  bottom: 1px;
+}
+form { 
+  padding-left: 3em;
+  max-width:400px; 
+}
 
 .feedback-input {
   color:white;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
-  font-size: 18px;
+  /* font-weight:500; */
+  /* font-size: 18px; */
   border-radius: 5px;
-  line-height: 22px;
+  line-height: 20px;
   background-color: transparent !important;
   border:2px solid #bb2b2b;
   transition: all 0.3s;
-  padding: 13px;
+  padding: 5px;
   margin-bottom: 15px;
   width:100%;
   box-sizing: border-box;
@@ -79,3 +97,18 @@ textarea {
   font-weight:700;
 }
 [type="submit"]:hover { background:#e97a7a; }
+
+@media (max-width: 767px) {
+  .contact-inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .booking-info{
+    flex-basis: auto;
+    text-align: center;
+  }
+  .booking-info p {
+    border: none;
+  }
+}
