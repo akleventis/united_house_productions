@@ -34,6 +34,7 @@ h2 {
   margin-bottom: 2.5em;
   margin-left: 1em;
 }
+
 .booking-info p {
   border-left: 1px solid red;
   padding-left: .5em;
@@ -51,13 +52,11 @@ form {
 }
 
 .feedback-input {
-  color:white;
+  color: white;
   font-family: Helvetica, Arial, sans-serif;
-  /* font-weight:500; */
-  /* font-size: 18px; */
   border-radius: 5px;
   line-height: 20px;
-  background-color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.064) !important;
   border:2px solid #bb2b2b;
   transition: all 0.3s;
   padding: 5px;
@@ -65,8 +64,13 @@ form {
   width:100%;
   box-sizing: border-box;
   outline:0;
-  
 }
+::placeholder { 
+  color: rgb(191, 191, 191);
+  opacity: 1; 
+}
+
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -104,11 +108,15 @@ textarea {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .booking-info{
-    flex-basis: auto;
-    text-align: center;
-  }
   .booking-info p {
     border: none;
+  }
+  .booking-info {
+    padding-left: 0;
+    text-align: center;
+    margin-left: 0;
+  }
+  form { 
+    padding-left: 0;
   }
 }

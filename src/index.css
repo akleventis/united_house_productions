@@ -1,6 +1,8 @@
 body {
   box-sizing: border-box;
-  background-color: #090f0fe9;
+  /* background-color: #090f0fe9; */
+  background-image: url(./assets/background/background.jpeg);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

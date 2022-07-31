@@ -7,8 +7,9 @@
 }
 .about-container img {
     width: 20%;
+    max-width: 500px;
     margin: 1em;
-    border: 1px solid #3e3a3a;
+    border: 1px solid #30303e;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 

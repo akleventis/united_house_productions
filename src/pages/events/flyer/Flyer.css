@@ -3,7 +3,7 @@
   margin-bottom: 4em;
 }
 .flyer {
-  /* border: 2px solid #3e3a3a; */
+  /* border: 2px solid #30303e; */
 }
 /* info */
 .item-center {
@@ -66,11 +66,13 @@
 }
 
 .support a {
+  font-weight: 500;
+  text-shadow: 0px 0px 6px rgba(12, 143, 225, 0.566);
   cursor: pointer;
   margin-right: 0.5em;
 }
 .support a:hover {
-  color: #1e84c4;
+  color: #81bde3;
   text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 

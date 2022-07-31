@@ -7,37 +7,14 @@ import "./Flyer.css";
 import moment from "moment";
 import { useState, useEffect } from "react";
 
-// const LoadFlyer = ({placeholderSrc, src, ...props }) => {
-//   const [imgSrc, setImgSrc] = useState(placeholderSrc || src)
-
-//     useEffect(() => {
-//       const img = new Image();
-//       img.src = src;
-//       img.onload = () => {
-//           setImgSrc(src)
-//       }
-//     }, [src])
-
-//   return (
-    // <img
-    //   {...{ src: imgSrc, ...props}}
-    //   alt={props.alt || ""}
-    //   className="dj"
-    //   />
-//   )
-// }
-
 const Flyer = ({ event }) => {
 
   const [imgSrc, setImgSrc] = useState(loading || event.poster)
   useEffect(() => {
-    console.log("IN USE EFFECT")
     const img = new Image();
     img.src = event.poster;
     img.onload = () => {
-      // setTimeout(() => {
         setImgSrc(event.poster)        
-      // }, "2000");
     }
   }, [event.poster])
 

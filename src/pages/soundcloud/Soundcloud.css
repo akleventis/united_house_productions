@@ -32,7 +32,8 @@
   display: flex;
   position: absolute;
   padding: 0 20px 0;
-  background-color: #3e3a3a;
+  border-top: 1px solid #30303e;
+  background-color: #30303e;
   flex-direction: column;
   padding-bottom: 1em;
 }
