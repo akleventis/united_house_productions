@@ -57,7 +57,8 @@
 }
 
 .headliner a:hover {
-  text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+  color: #81bde3;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 
 /* SUPPORT  */
@@ -73,7 +74,7 @@
 }
 .support a:hover {
   color: #81bde3;
-  text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 
 /* info */
@@ -88,6 +89,7 @@
 }
 
 .location {
+  text-shadow: 0px 0px 6px rgba(12, 143, 225, 0.566);
   cursor: pointer;
   margin-bottom: 20px;
   padding-left: .8rem;
@@ -103,7 +105,7 @@
 
 .location a:hover {
   color: rgb(188, 188, 188);
-  text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 
 

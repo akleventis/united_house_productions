@@ -1,10 +1,13 @@
 body {
   box-sizing: border-box;
-  /* background-color: #090f0fe9; */
-  background-image: url(./assets/background/background.jpeg);
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(./assets/background/background.png); */
+  /* overflow: hidden; */
+  height: 100%;
+  background: url(./assets/background/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 a {

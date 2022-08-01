@@ -28,12 +28,16 @@ nav {
   position: sticky !important;
   z-index: 1;
   background-color: #30303e;
-  border-bottom: 1px solid rgb(128, 125, 125);
+  border-top: 1px solid rgba(128, 125, 125, 0.401);
+  border-bottom: 1px solid rgba(128, 125, 125, 0.401);
   top: 0;
 }
 .navbar-toggler {
-  padding: 1px;
-  /* margin-bottom: 3px; */
+  padding: 0;
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 .nav-links {
   justify-content: center;
@@ -106,5 +110,6 @@ footer {
 }
 footer p {
   color: #b4b3b3;
+  border-top: 1px solid rgba(128, 125, 125, 0.401);
   margin-left: 10px;
 }
