@@ -1,14 +1,9 @@
 body {
   box-sizing: border-box;
   min-height: 100%;
-  background: url(./assets/background/background.png) no-repeat center center fixed !important; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: linear-gradient(to bottom, #121111, #151415, #181718, #1a1a1a, #1d1d1d, #1d1d1d, #1d1d1d, #1d1d1d, #1a1a1a, #181718, #151415, #121111);
 }
 html {
-  background-color: rgb(21, 21, 21);
   height: 100%;
 }
 a {

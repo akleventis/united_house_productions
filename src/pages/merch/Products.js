@@ -3,8 +3,6 @@ import { ComingSoon } from '../../assets'
 
 const Products = (props) => {
     const {products, productMapping} = props
-    // let products = props.products
-    // let productMapping = props.productMapping
     if (productMapping.length === 0) {
         return (
             <main>
