@@ -7,8 +7,52 @@ import "./Flyer.css";
 import moment from "moment";
 import { useState, useEffect } from "react";
 
-const Flyer = ({ event }) => {
+const PastFlyer = ({event}) => {
 
+  // Image loader 
+  const [imgSrc, setImgSrc] = useState(loading || event.poster)
+  useEffect(() => {
+    const img = new Image();
+    img.src = event.poster;
+    img.onload = () => {
+        setImgSrc(event.poster)        
+    }
+  }, [event.poster])
+
+  return (
+    <div className="past-event">
+      <Zoom  overlayBgColorEnd="rgba(0, 0, 0, 0.8)" zoomMargin={50}>
+        <div className="flyer" style={{textAlign: "center"}}>
+          <div className="flyer-date">
+            <div></div>
+            <p>{moment(event.startTime).format("ddd, MMM. DD")}</p>
+          </div>
+          <img
+            {...{ src: imgSrc}}
+            alt="event-flyer"
+            className="flyer-image flyer-image-past"
+          />
+        </div>
+      </Zoom>
+      <div className="past-container">
+        <div>
+          <a href={event.headliner.url}>{event.headliner.name}</a>
+        </div>
+        <div className="past-support-container">
+          {event.openers.map(dj => (
+              dj.url === "" ? 
+              <a key={dj.name} className=''>{dj.name}</a> :
+              <a href={dj.url} key={dj.name} className='' rel='noreferrer' target="_blank">{dj.name}</a> 
+            ))}
+        </div>
+      </div>
+  </div>
+  )
+}
+
+const CurrentFlyer = ({ event }) => {
+
+  // Image loader
   const [imgSrc, setImgSrc] = useState(loading || event.poster)
   useEffect(() => {
     const img = new Image();
@@ -32,9 +76,8 @@ const Flyer = ({ event }) => {
               <img
                 {...{ src: imgSrc}}
                 alt="event-flyer"
-                className="dj"
+                className="flyer-image"
               />
-              {/* <LoadFlyer alt="event-flyer" src={event.poster} placeholderSrc={loading} height="345.5px" width="20em"/> */}
             </div>
           </Zoom>
         </div>
@@ -89,4 +132,4 @@ const Flyer = ({ event }) => {
   );
 };
 
-export default Flyer;
+export {CurrentFlyer, PastFlyer};

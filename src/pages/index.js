@@ -6,4 +6,5 @@ export { default as Booking } from "./booking/Booking.js";
 export { default as Events } from "./events/Events.js";
 export { default as Products } from "./merch/Products.js";
 export {default as Soundcloud } from "./soundcloud/Soundcloud.js"
-export {default as Flyer } from "./events/flyer/Flyer.js"
+// export {default as CurrentFlyer } from "./events/flyer/Flyer.js"
+// export {default as PastFlyer } from "./events/flyer/Flyer.js"

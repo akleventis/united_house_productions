@@ -35,7 +35,7 @@
   border-top: 1px solid #30303e;
   background-color: #30303e;
   flex-direction: column;
-  padding-bottom: 1em;
+  padding-bottom: 0;
 }
 
 .soundcloud-inner-container {
