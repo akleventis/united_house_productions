@@ -3,7 +3,6 @@ import ReactPlayer from "react-player";
 import { featuredSongs } from '../../data/data.js'
 import "./Soundcloud.css";
 
-// react redux for state!
 // const shuffle = (artists) => {
 //   for (var i = artists.length - 1; i > 0; i--) {
 //     var j = Math.floor(Math.random() * (i + 1));
@@ -32,7 +31,7 @@ const Soundcloud = ({isOpen, toggleSideBar}) => {
 
     <div className={sidebarClass}>
       <div className="soundcloud-container">
-        <div className="dj-title">Resident DJs ❤️</div>
+        <div className="dj-title">👀</div>
         {items}
       </div>
     </div>

@@ -30,7 +30,7 @@ const alertErr = (data) => {
 //   }
 const hashProducts = data => {
     let products = {}
-    data.map(p => {
+    data.forEach(p => {
         let sizeMapping = {}
         let pInfo = {id: p.id, name: p.name, size: p.size, price: p.price, img: p.image_url}
         if (p.name in products) {
@@ -88,7 +88,8 @@ const createProductMapping = data => {
               const productMapping = createProductMapping(items.data)
               setProductMapping(productMapping)
           } catch (error) {
-              alertErr("Network Error")
+              console.log("Error accounted for, server still wip")
+              // alertErr("Network Error")
           }
       }
       getItems()

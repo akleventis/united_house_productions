@@ -31,18 +31,7 @@ const Event = ({ month_map, past_event }) => {
 
 // Mapping format => {August 2022: [{event}, {event}], July 2022: [{event}, {event}]}
 const Events = () => {
-  const [showPastEvents, setShowPastEvents] = useState(false)
 
-  const handleClick = e => {
-    e.preventDefault();
-    setShowPastEvents(!showPastEvents)
-  }
-
-  useEffect(() => {
-    if (!showPastEvents) {
-      window.scroll(0, 0)
-    }
-  }, [showPastEvents])
 
 
 
@@ -70,12 +59,26 @@ const Events = () => {
     pastMonthsEventMapping[month] ? pastMonthsEventMapping[month].push(event) : (pastMonthsEventMapping[month] = [event]);
   });
 
+  // automatically show past events when no current events present
+  const currState = Object.entries(currentMonthsEventMapping).length === 0 ? true : false
+  const [showPastEvents, setShowPastEvents] = useState(currState)
+
+  const handleClick = e => {
+    e.preventDefault();
+    setShowPastEvents(!showPastEvents)
+  }
+
+  useEffect(() => {
+    if (!showPastEvents) {
+      window.scroll(0, 0)
+    }
+  }, [showPastEvents])
   return (
     <div className="events-container">
 
       <h3 className="router-title">Upcoming Events</h3>
       {Object.entries(currentMonthsEventMapping).length === 0 ? (
-          <>No current events, will update soon!</>
+          <div className="nil-events">No current events. Will update soon! In the meantime, check out our previously thrown events below</div>
         ) : (
           <Event month_map={currentMonthsEventMapping} past_event={false} />
       )}
@@ -85,7 +88,7 @@ const Events = () => {
 
       {showPastEvents && (
         <>
-          <h3 className="router-title">Past Events</h3>
+          <h3 className="router-title router-title-past">Past Events</h3>
           {Object.entries(pastMonthsEventMapping).length === 0 ? (
             <>No past events</>
           ) : (

@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-h2 {
-  font-size: 1.7em;
-}
-
 .contact-container {
   color: white !important;
 }
@@ -26,23 +22,37 @@ h2 {
   font-style: italic;
   font-weight: bold;
 }
-
 .booking-info {
   font-size: 1.1em;
-  padding-left: .5em;
   flex-basis: 70%;
-  margin-bottom: 2.5em;
-  margin-left: 1em;
+  margin-bottom: 1em;
 }
 
-.booking-info p {
-  border-left: 1px solid red;
+.booking-sub-title {
+  margin-top: 3em;
+}
+
+.booking-sub-info {
   padding-left: .5em;
   margin-bottom: .5em;
 }
-.booking-sub-info {
-  padding-left: 10px;
+.booking-sub-info p {
+  margin-bottom: 0;
+  font-size: .9em;
 }
+.booking-sub-info hr {
+  margin: .5em auto;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.booking-sub-info em {
+  border-bottom: rgba(236, 62, 62, 0.413) solid 2px;
+}
+.booking-sub-info b {
+  color: rgba(236, 62, 62, 0.413);
+}
+
 .inline-social {
   bottom: 1px;
 }
@@ -104,11 +114,17 @@ textarea {
 
 @media (max-width: 767px) {
   .contact-inner-container {
+    font-size: .95em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .booking-info p {
+
+  .contact-container h5 {
+    text-align: center;
+  }
+
+  .booking-sub-info {
     border: none;
   }
   .booking-info {

@@ -10,9 +10,18 @@
     text-align: center;
 }
 
+.nil-events {
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+.router-title-past {
+    margin-top: .5em !important;
+}
+
+
 /* CSS */
 .past-events {
-    border: 0;
+    border: 1px solid red;
     outline: 0;
     cursor: pointer;
     color: rgba(19, 19, 21, 0.92);
@@ -27,5 +36,5 @@
     transition: background-color .24s,box-shadow .24s;
 }
 .past-events:hover {
-    background-color: #ffffff;
+    border: 1px solid transparent;
 }

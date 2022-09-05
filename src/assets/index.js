@@ -1,6 +1,5 @@
 // header
 export const UnitedLogo = require('./header/logo_white.png')
-// export const Background = require('./header/background.jpeg')
 
 // social
 export const LinkTree = require('./social/link_tree.png')
