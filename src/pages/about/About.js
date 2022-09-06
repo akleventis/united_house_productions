@@ -8,13 +8,13 @@ const About = () => {
       <div className="about-container">
 
           <div className="box">
-            <p className='p0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui ligula, posuere id suscipit sit amet, semper vel tellus. Quisque ultrices sapien efficitur malesuada cursus. In eu odio augue. Sed a massa tincid</p>
-            <img className='py-img'  src={py0} alt="beebo yespeez" />
+            <p className='p0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui ligula, posuere id suscipit sit amet, semper vel tellus. Quisque ultrices sapien</p>
+            <img className='py-img' src={py0} alt="beebo yespeez" />
           </div>
 
           <div className="box">
             <img className='py-img' src={py1} alt="beebo yespeez" />
-            <p className='p1'>Quisque mollis sem quis turpis viverra vulputate sed condimentum orci. Ut ac magna non eros imperdiet porttitor id et metus.</p>
+            <p className='p1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui ligula, posuere id suscipit sit amet, semper vel tellus. Quisque ultrices sapien efficitur malesuada cursus. In eu odio augue. Sed a massa tincid</p>
           </div>
 
           <div className="box">

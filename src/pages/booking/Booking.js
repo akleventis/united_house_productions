@@ -66,7 +66,7 @@ const Booking = () => {
           style={{ height: 20, width: 20 }}
           url="https://www.instagram.com/unitedhouseproductions/"
         />{" "}
-        Instagram only.{" "}
+        Instagram only{" "}
       </h3>
       <div className="contact-inner-container">
         <div className="booking-info">

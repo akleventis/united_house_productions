@@ -35,7 +35,7 @@ export const djs = {
   dabaldo: {
     name: "DaBaldo",
     url: "https://www.instagram.com/dabaldo_music/",
-    featured_song: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing?show_teaser=false",
   },
   tylr: {
     name: "TYLR",
