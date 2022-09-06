@@ -13,7 +13,7 @@ const Event = ({ month_map, past_event }) => {
         var event_arr = m[1]
 
         return (
-          <div key={i}>
+          <div className="event-outer-container" key={i}>
             <p>{month}</p>
             <hr />
             {past_event ? (
@@ -31,10 +31,6 @@ const Event = ({ month_map, past_event }) => {
 
 // Mapping format => {August 2022: [{event}, {event}], July 2022: [{event}, {event}]}
 const Events = () => {
-
-
-
-
   const [currentMonthsEventMapping, pastMonthsEventMapping] = [{}, {}];
   const [currEvents, pastEvents] = [[], []]
   
