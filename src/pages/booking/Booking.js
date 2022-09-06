@@ -80,9 +80,9 @@ const Booking = () => {
             Local Talent:
           </h5>
           <div className="booking-sub-info">
-            <p><b>{"> "}</b>In an effort to support the community, we'd love to give everyone a chance to perform.</p>
+            <p><b>{"> "}</b>In an effort to support the local community, we'd love to give everyone a chance to perform.</p>
             <hr/>
-            <p><b>{"> "}</b>If you're interested in headlining or opening an upcoming event, shoot us an email!</p>
+            <p><b>{"> "}</b>If you're interested in headlining or opening for an upcoming event, shoot us an email!</p>
             <hr/>
             <p><b>{"> "}</b>Make sure to include your <em>name</em>, <em>email</em>, and any <em>links</em> showcasing personal songs or mixes.</p>
           </div>

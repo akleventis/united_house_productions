@@ -1,17 +1,28 @@
-import { uhp_decks } from '../../assets';
-import './About.css'
+import { py0, py1, py2 } from "../../assets";
+import "./About.css";
 
 const About = () => {
   return (
-    <div className='about-container'>
-      <h3 className='router-title'>About</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-      <p> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <>
+      <h3 className="router-title">About</h3>
+      <div className="about-container">
 
-    <div className='insta-container'>
-      <img src={uhp_decks} alt='beebo yespeez killin the game' style={{width: '70%'}}></img>
-        </div>
-    </div>
+          <div className="box">
+            <p className='p0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui ligula, posuere id suscipit sit amet, semper vel tellus. Quisque ultrices sapien efficitur malesuada cursus. In eu odio augue. Sed a massa tincid</p>
+            <img className='py-img'  src={py0} alt="beebo yespeez" />
+          </div>
+
+          <div className="box">
+            <img className='py-img' src={py1} alt="beebo yespeez" />
+            <p className='p1'>Quisque mollis sem quis turpis viverra vulputate sed condimentum orci. Ut ac magna non eros imperdiet porttitor id et metus.</p>
+          </div>
+
+          <div className="box">
+            <p className='p2'>Nulla in nisl nisl. Fusce nunc ligula, malesuada sit amet mattis ac, bibendum eu quam. Fusce iaculis diam quis egestas pulvinar. Nam ac libero ullamcorper massa consectetur tincidunt tempus quis est. </p>
+            <img className='py-img'  src={py2} alt="beebo yespeez" />
+          </div>
+      </div>
+    </>
   );
 };
 

@@ -16,7 +16,9 @@ export const dlmt = require('./flyers/dlmt.jpg')
 export const loading = require('./flyers/loading.gif')
 
 // about // 
-export const uhp_decks = require('./header/uhp_decks.jpeg')
+export const py0 = require('./header/py0.jpeg')
+export const py1 = require('./header/py1.jpg')
+export const py2 = require('./header/py2.jpg')
 
 // merch //
 export const ComingSoon = require('./merch/coming_soon.png')

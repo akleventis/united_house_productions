@@ -2,8 +2,7 @@
 .h-image {
   display: flex;
   justify-content: center;
-  /* background: url(../../assets/header/background.jpg); */
-  background: url(../../assets/header/background1.jpg);
+  background: url(../../assets/header/background.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -56,7 +56,7 @@ const createProductMapping = data => {
         if (productMapping.length > 0) {
             productMapping.forEach(p => {
                 if (p.name === value.name) {
-                    p.sizes.push(value.size)
+                    p.sizes.push(value.size)////
                     flag = true
                 }
             })

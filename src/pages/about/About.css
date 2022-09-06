@@ -2,19 +2,32 @@
     color: white !important;
 }
 
-.about-container p {
-    padding-left: 1em;
-}
-.about-container img {
-    width: 20%;
-    max-width: 500px;
-    margin: 1em;
-    border: 1px solid #30303e;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
 }
 
-.insta-container {
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
+.p0, .p1, .p2 {
+    border-left: 1px solid red;
+    padding: 0 0 0 1em;
 }
+
+.p1 {
+    margin-left: 3em;
+}
+.p0, .p2 {
+    margin-right: 2em;
+    margin-left: 2em;
+}
+.py-img {
+    width: 40%;
+    height: auto;
+    box-shadow: rgba(232, 221, 221, 0.1) 0px 10px 50px;
+    border-radius: 5px;
+}
+@media (max-width: 767px) {
+    .about-container {
+        font-size: .9em;
+    }
+  }
