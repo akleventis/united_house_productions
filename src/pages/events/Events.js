@@ -29,34 +29,37 @@ const Event = ({ month_map, past_event }) => {
   );
 };
 
+
+
 // Mapping format => {August 2022: [{event}, {event}], July 2022: [{event}, {event}]}
-const Events = () => {
+// const Events = ({events}) => {
+  const Events = () => {
   const [currentMonthsEventMapping, pastMonthsEventMapping] = [{}, {}];
   const [currEvents, pastEvents] = [[], []]
   
   events.forEach((event) => {
-    if (moment(event.endTime) < moment()) {
+    if (moment(event.end_time) < moment()) {
       pastEvents.push(event)
     } else {
       currEvents.push(event)
     }
   })
 
-  currEvents.sort((a, b) => moment(a.startTime) - moment(b.startTime));
-  pastEvents.sort((a, b) => moment(b.startTime) - moment(a.startTime));
+  currEvents.sort((a, b) => moment(a.start_time) - moment(b.start_time));
+  pastEvents.sort((a, b) => moment(b.start_time) - moment(a.start_time));
 
   currEvents.forEach((event) => {
-    const month = moment(event.startTime).format("MMMM YYYY");
+    const month = moment(event.start_time).format("MMMM YYYY");
     currentMonthsEventMapping[month] ? currentMonthsEventMapping[month].push(event) : (currentMonthsEventMapping[month] = [event]);
   });
 
   pastEvents.forEach((event) => {
-    const month = moment(event.startTime).format("MMMM YYYY");
+    const month = moment(event.start_time).format("MMMM YYYY");
     pastMonthsEventMapping[month] ? pastMonthsEventMapping[month].push(event) : (pastMonthsEventMapping[month] = [event]);
   });
 
-  // automatically show past events when no current events present
-  const currState = Object.entries(currentMonthsEventMapping).length === 0 ? true : false
+  // automatically show past events when less than 3 current events present
+  const currState = Object.entries(currentMonthsEventMapping).length < 3 ? true : false
   const [showPastEvents, setShowPastEvents] = useState(currState)
 
   const handleClick = e => {
@@ -78,13 +81,12 @@ const Events = () => {
         ) : (
           <Event month_map={currentMonthsEventMapping} past_event={false} />
       )}
-      <div className="b-div">
-        <button className="past-events" onClick={handleClick}>Past events</button>
-      </div>
 
+      <h3 className="router-title router-title-past">
+        <button className="past-events" onClick={handleClick}>Past Events</button>
+      </h3>
       {showPastEvents && (
         <>
-          <h3 className="router-title router-title-past">Past Events</h3>
           {Object.entries(pastMonthsEventMapping).length === 0 ? (
             <>No past events</>
           ) : (

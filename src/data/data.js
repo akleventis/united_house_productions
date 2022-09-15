@@ -1,6 +1,3 @@
-import { sam, dlmt, niko, domii } from "../assets/index.js";
-
-// TODO: djs_t
 // id (pKey), name, url
 export const djs = {
   beebo: {
@@ -22,10 +19,6 @@ export const djs = {
   u9: {
     name: "Ruiz0m & KAŸ",
     url: "",
-  },
-  united_house: {
-    name : "United House Takeover",
-    url: "https://www.intagram.com/unitedhouseproductions/",
   },
   duplex: {
     name: "DUPLEX",
@@ -62,7 +55,7 @@ export const djs = {
     
   },
   mr_jupiter: {
-    name: "Mr.Jupiter",
+    name: "Mr. Jupiter",
     url: "https://www.instagram.com/mrjupitermusicofficial/",
     featured_song: "https://soundcloud.com/lewis-cinco-ocho-crumsey/rec008wav?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
@@ -86,87 +79,76 @@ export const djs = {
   domii: {
     name: "DOMii",
     url: "https://www.instagram.com/ariel_domii/",
-  }
+  },
+  masteria: {
+    name: "MASTERIA",
+    url: "https://instagram.com/itsmasteria/"
+  },
+  woah: {
+    name: "WOAHH!",
+    url: "https://instagram.com/woahh_music/"
+  },
+  basswalker: {
+    name: "BASSWALKER",
+    url: "https://instagram.com/basswalker_/"
+  },
 };
 
 
-// TODO: events_t
 // dj's auto-inc unique id
 // use id as foreign key in events db (openers/headliner)
-// id, headliner (dj id), poster (string, s3 bucket url?), openers (array of dj id's), location_name, location_url, startTime, endTime, ticketURL
+// id, headliner (dj id), poster (string, s3 bucket url?), openers (array of dj id's), location_name, location_url, start_time, end_time, ticket_url
 // YYYY-DD-MMTHH:MM:SS (24)
 export const events = [
-  // {
-  //   headliner: djs.dlmt,
-  //   poster: dlmt,
-  //   openers: [djs.dabaldo, djs.jermjelly, djs.yespeez],
-  //   location: {
-  //     name: "The Fruit",
-  //     url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-  //   },
-  //   startTime: "2022-12-30T21:00:00.000",
-  //   endTime: "2022-12-30T02:00:00.000",
-  //   ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-dlmt-tickets-372119588707",
-  // },
-  // {
-  //   headliner: djs.dlmt,
-  //   poster: dlmt,
-  //   openers: [djs.dabaldo, djs.jermjelly, djs.yespeez],
-  //   location: {
-  //     name: "The Fruit",
-  //     url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-  //   },
-  //   startTime: "2022-07-30T21:00:00.000",
-  //   endTime: "2022-08-30T02:00:00.000",
-  //   ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-dlmt-tickets-372119588707",
-  // },
+  {
+    headliner: djs.masteria,
+    openers: [djs.woah, djs.basswalker],
+    location_url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+    location_name: "The Fruit",
+    image_url: "https://uhp-image-upload.s3.amazonaws.com/masteria.jpeg",
+    start_time: "2022-10-22T22:00:00.000",
+    end_time: "2022-10-23T02:00:00.000",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
+  },
   {
     headliner: djs.nikothekid,
-    poster: niko,
     openers: [djs.diskull, djs.gabriela, djs.beebo],
-    location: {
-      url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-      name: "The Fruit",
-    },
-    startTime: "2022-08-20T21:00:00.000",
-    endTime: "2022-08-21T02:00:00.000",
-    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
+    location_url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+    location_name: "The Fruit",
+    image_url: "https://uhp-image-upload.s3.amazonaws.com/niko.jpeg",
+    start_time: "2022-08-20T21:00:00.000",
+    end_time: "2022-08-21T02:00:00.000",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
   },
   {
     headliner: djs.dlmt,
-    poster: dlmt,
     openers: [djs.dabaldo, djs.jermjelly, djs.yespeez],
-    location: {
-      name: "The Fruit",
-      url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-    },
-    startTime: "2022-07-30T21:00:00.000",
-    endTime: "2022-07-31T02:00:00.000",
-    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-dlmt-tickets-372119588707",
+    location_name: "The Fruit",
+    location_url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+    image_url: "https://uhp-image-upload.s3.amazonaws.com/dlmt.jpeg",
+    start_time: "2022-07-30T21:00:00.000",
+    end_time: "2022-07-31T02:00:00.000",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-dlmt-tickets-372119588707",
   },
   {
     headliner: djs.sam_wolfe,
-    poster: sam,
     openers: [djs.j_5, djs.u9],
-    location: {
-      url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-      name: "The Fruit",
-    },
-    startTime: "2022-07-09T21:00:00.000",
-    endTime: "2022-07-10T02:00:00.000",
-    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
+    location_url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+    location_name: "The Fruit",
+    image_url: "https://uhp-image-upload.s3.amazonaws.com/sam.jpeg",
+    start_time: "2022-07-09T21:00:00.000",
+    end_time: "2022-07-10T02:00:00.000",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
   },
   {
     headliner: djs.domii,
-    poster: domii,
     openers: [djs.duplex, djs.yespeez, djs.vladislove, djs.beebo],
-    location: {
-      url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
-      name: "The Fruit",
-    },
-    startTime: "2022-04-16T21:00:00.000",
-    endTime: "2022-04-17T02:30:00.000",
-    ticketURL: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
+    location_url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+    location_name: "The Fruit",
+    image_url: "https://uhp-image-upload.s3.amazonaws.com/domii.jpeg",
+    start_time: "2022-04-16T21:00:00.000",
+    end_time: "2022-04-17T02:30:00.000",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
   },
 ];
 

@@ -31,14 +31,18 @@
 }
 
 /* poster image */
+/* .flyer {
+  width: 100%;
+} */
 .flyer-image {
-  width: 20em;
   height: 20em;
+  width: 20em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .past-flyer {
   filter: grayscale(90%) opacity(.8);
+  margin-top: .5em;
 }
 
 /* HEADLINER */ 
@@ -72,7 +76,7 @@
   font-weight: 500;
   text-shadow: 0px 0px 6px rgba(12, 143, 225, 0.566);
   cursor: pointer;
-  padding: .2em;
+  padding: 0 .2em 0 .2em;
 }
 .support a:hover {
   color: #81bde3;
@@ -93,7 +97,7 @@
 .location {
   text-shadow: 0px 0px 6px rgba(12, 143, 225, 0.566);
   cursor: pointer;
-  margin-bottom: 1.5em;
+  margin-bottom: .5em;
   padding-left: .8rem;
   padding-top: 0;
   font-size: .9em;
@@ -110,17 +114,19 @@
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 
-
 .flyer-container li {
   color: rgb(188, 188, 188);
   background-color: transparent;
   border: none;
 }
-
+.flyer-container a {
+  display: inline-block;
+}
 
 /* CSS */
 .tickets,
 .tickets:after {
+  margin-bottom: 1em;
   font-style: italic;
   width: 90px;
   height: 35px;
@@ -216,9 +222,18 @@
   .flyer-container li {
     padding-left: 0;
     padding-right: 0;
-    font-size: .85em;
+    font-size: .9em;
+  }
+  .flyer-image {
+    max-width: 100%;
+    height: auto;
   }
   .headliner {
     padding-top: 1em;
+  }
+}
+@media (max-width: 400px) {
+  .flyer-container {
+    font-size: .95em;
   }
 }

@@ -6,10 +6,6 @@
     font-size: .9em;
 }
 
-.b-div {
-    text-align: center;
-}
-
 .nil-events {
     margin-bottom: 1.5em;
     text-align: center;
@@ -24,22 +20,14 @@
 
 /* CSS */
 .past-events {
-    border: 1px solid red;
-    outline: 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
     cursor: pointer;
-    color: rgba(19, 19, 21, 0.92);
-    background-color: rgb(207, 207, 207);
-    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 4px 8px;
-    display: inline-block;
-    min-height: 28px;
-    transition: background-color .24s,box-shadow .24s;
+    color: white;
+    background-color: #7070701f;
 }
 .past-events:hover {
-    border: 1px solid transparent;
+    border: 1px solid red;
 }
 
 @media (max-width: 767px) {
@@ -48,5 +36,7 @@
     }
     .event-outer-container {
         margin-top: .5em;
+        padding-left: .5em;
+        padding-right: .5em;
     }
   }

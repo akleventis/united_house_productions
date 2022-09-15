@@ -1,5 +1,4 @@
 import { py0, py1, py2 } from "../../assets";
-// import Zoom from "react-medium-image-zoom";
 import "./About.css";
 
 const About = () => {
@@ -14,9 +13,7 @@ const About = () => {
           </div>
 
           <div className="box">
-            {/* <Zoom  className='py-img' overlayBgColorEnd="rgba(0, 0, 0, 0.8)"> */}
               <img className='py-img' src={py1} alt="beebo yespeez" />
-            {/* </Zoom> */}
             <p className='p1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui ligula, posuere id suscipit sit amet, semper vel tellus. Quisque ultrices sapien efficitur malesuada cursus. In eu odio augue. Sed a massa tincid</p>
           </div>
 

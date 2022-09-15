@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About, Booking, Events, Products, Header, Footer,  Navigate, Soundcloud} from "./pages/index.js";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import axios from 'axios'
 import { useState, useEffect} from "react";
@@ -15,10 +15,6 @@ const App = () => {
     if (showSideBar) handleViewSidebar()
   }
 
-const alertErr = (data) => {
-    toast.error(data);
-    return;
-  }
 
 // data structure O(1) access to merch
 //   "T-Shirt": {
@@ -56,7 +52,7 @@ const createProductMapping = data => {
         if (productMapping.length > 0) {
             productMapping.forEach(p => {
                 if (p.name === value.name) {
-                    p.sizes.push(value.size)////
+                    p.sizes.push(value.size)
                     flag = true
                 }
             })
@@ -69,9 +65,11 @@ const createProductMapping = data => {
     }
     return productMapping
 }
-
   const [products, setproducts] = useState([{}]);
   const [productMapping, setProductMapping] = useState([]);
+  // TODO: Uncomment when server is live 
+  // const [events, setEvents] = useState([{}])
+  // const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
       const getItems = async() => {
@@ -87,6 +85,12 @@ const createProductMapping = data => {
               // create product mapping for front-end cards
               const productMapping = createProductMapping(items.data)
               setProductMapping(productMapping)
+
+              // TODO: Uncomment when server is live 
+              // get events
+              // const events = await axios.get(`${server_url}/events`)
+              // setEvents(events.data)
+              // setLoading(false)
           } catch (error) {
               console.log("Error accounted for, server still wip")
               // alertErr("Network Error")
@@ -94,6 +98,7 @@ const createProductMapping = data => {
       }
       getItems()
   }, []);
+
 
 
   return (
@@ -108,6 +113,8 @@ const createProductMapping = data => {
         <div className="outer-container">
           <div className="inner-container">
             <Routes>
+              {/* TODO: Uncomment when server is live */}
+            {/* {isLoading ? <Route path="/" element={<div>loading...</div>} /> : <Route path="/" element={<Events events={events} />} />} */}
               <Route path="/" element={<Events />} />
               <Route path="/merch" element={<Products products={products} productMapping={productMapping}/>} />
               <Route path="/about" element={<About />} />
