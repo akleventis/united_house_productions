@@ -1,3 +1,5 @@
+// All data will eventually live in the database 
+
 // id (pKey), name, url
 export const djs = {
   beebo: {
@@ -82,15 +84,18 @@ export const djs = {
   },
   masteria: {
     name: "MASTERIA",
-    url: "https://instagram.com/itsmasteria/"
+    url: "https://instagram.com/itsmasteria/",
+    featured_song: "https://soundcloud.com/itsmasteria/bad-guy-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   },
   woah: {
     name: "WOAHH!",
-    url: "https://instagram.com/woahh_music/"
+    url: "https://instagram.com/woahh_music/",
+    featured_song: "https://soundcloud.com/woahh/gorillaz-feel-good-inc-woahh-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   },
   basswalker: {
     name: "BASSWALKER",
-    url: "https://instagram.com/basswalker_/"
+    url: "https://instagram.com/basswalker_/",
+    featured_song: "https://soundcloud.com/user-507608342/funk-machine?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   },
 };
 
@@ -108,7 +113,7 @@ export const events = [
     image_url: "https://uhp-image-upload.s3.amazonaws.com/masteria.jpeg",
     start_time: "2022-10-22T22:00:00.000",
     end_time: "2022-10-23T02:00:00.000",
-    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-niko-the-kid-tickets-384039200587",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-masteria-tickets-419754074737",
   },
   {
     headliner: djs.nikothekid,
@@ -157,12 +162,24 @@ export const events = [
 
 export const featuredSongs = [
   {
-    dj: djs.dabaldo,
-    url: djs.dabaldo.featured_song,
+    dj: djs.masteria,
+    url: djs.masteria.featured_song,
+  },
+  {
+    dj: djs.woah,
+    url: djs.woah.featured_song,
+  },
+  {
+    dj: djs.basswalker,
+    url: djs.basswalker.featured_song,
   },
   {
     dj: djs.yespeez,
     url: djs.yespeez.featured_song,
+  },
+  {
+    dj: djs.dabaldo,
+    url: djs.dabaldo.featured_song,
   },
   {
     dj: djs.tylr,
@@ -172,12 +189,4 @@ export const featuredSongs = [
     dj: djs.duplex,
     url: djs.duplex.featured_song,
   },
-  {
-    dj: djs.mr_jupiter,
-    url: djs.mr_jupiter.featured_song,
-  },
-  {
-    dj: djs.mvmtone,
-    url: djs.mvmtone.featured_song,
-  }
 ];
