@@ -67,11 +67,11 @@ const Event = ({ month_map, past_event }) => {
     setShowPastEvents(!showPastEvents)
   }
 
-  useEffect(() => {
-    if (!showPastEvents) {
-      window.scroll(0, 0)
-    }
-  }, [showPastEvents])
+  // useEffect(() => {
+  //   if (!showPastEvents) {
+  //     window.scroll(0, 0)
+  //   }
+  // }, [showPastEvents])
   return (
     <div className="events-container">
 

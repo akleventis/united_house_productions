@@ -97,6 +97,21 @@ export const djs = {
     url: "https://instagram.com/basswalker_/",
     featured_song: "https://soundcloud.com/user-507608342/funk-machine?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   },
+  san_pacho: {
+    name: "San Pacho",
+    url: "https://instagram.com/sanpachomusic/",
+    featured_song: ""
+  },
+  dexter: {
+    name: "DEXTER",
+    url: "https://instagram.com/thedextermusic/",
+    featured_song: "",
+  },
+  pimoux: {
+    name: "Pimoux",
+    url: "https://instagram.com/primoux/",
+    featured_song: ""
+  }
 };
 
 
@@ -105,6 +120,16 @@ export const djs = {
 // id, headliner (dj id), poster (string, s3 bucket url?), openers (array of dj id's), location_name, location_url, start_time, end_time, ticket_url
 // YYYY-DD-MMTHH:MM:SS (24)
 export const events = [
+  {
+    headliner: djs.san_pacho,
+    openers: [djs.dexter, djs.pimoux],
+    location_url: "https://www.google.com/maps/place/The+Fruit/@35.9906289,-78.8987875,17z/data=!3m1!4b1!4m5!3m4!1s0x89ace46f3381f42d:0x42006ab88a52e967!8m2!3d35.9906823!4d-78.8966525",
+    location_name: "The Fruit",
+    image_url: "https://uhp-image-upload.s3.amazonaws.com/san_pacho.jpeg",
+    start_time: "2022-12-02T22:00:00.000",
+    end_time: "2022-12-03T02:00:00.000",
+    ticket_url: "https://www.eventbrite.com/e/united-house-productions-presents-san-pacho-tickets-423280652827",
+  },
   {
     headliner: djs.masteria,
     openers: [djs.woah, djs.basswalker],
