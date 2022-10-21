@@ -32,10 +32,10 @@ export const djs = {
     url: "https://www.instagram.com/dabaldo_music/",
     featured_song: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing?show_teaser=false",
   },
-  tylr: {
-    name: "TYLR",
-    url: "https://www.instagram.com/musicbytylr/",
-    featured_song: "https://soundcloud.com/musicbytylr/2022-showcase-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  criso: {
+    name: "Criso",
+    url: "https://www.instagram.com/crisosound/",
+    featured_song: "https://soundcloud.com/crisosound/criso-field-of-vision-keota-master-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   yespeez: {
     name: "YESPEEZ",
@@ -95,22 +95,22 @@ export const djs = {
   basswalker: {
     name: "BASSWALKER",
     url: "https://instagram.com/basswalker_/",
-    featured_song: "https://soundcloud.com/user-507608342/funk-machine?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    featured_song: "https://soundcloud.com/user-507608342/gimme-some-keys-v1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   },
   san_pacho: {
     name: "San Pacho",
     url: "https://instagram.com/sanpachomusic/",
-    featured_song: ""
+    featured_song: "https://soundcloud.com/sanpachomusic/thevault001?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   },
   dexter: {
     name: "DEXTER",
     url: "https://instagram.com/thedextermusic/",
-    featured_song: "",
+    featured_song: "https://soundcloud.com/thedextermusic/woman-is-a-god-final-master-91422?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   pimoux: {
     name: "Pimoux",
     url: "https://instagram.com/primoux/",
-    featured_song: ""
+    featured_song: "https://soundcloud.com/primoux/bloodmoney-126?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
   }
 };
 
@@ -199,19 +199,19 @@ export const featuredSongs = [
     url: djs.basswalker.featured_song,
   },
   {
-    dj: djs.yespeez,
-    url: djs.yespeez.featured_song,
+    dj: djs.san_pacho,
+    url: djs.san_pacho.featured_song,
   },
   {
-    dj: djs.dabaldo,
-    url: djs.dabaldo.featured_song,
+    dj: djs.dexter,
+    url: djs.dexter.featured_song,
   },
   {
-    dj: djs.tylr,
-    url: djs.tylr.featured_song,
+    dj: djs.pimoux,
+    url: djs.pimoux.featured_song,
   },
   {
-    dj: djs.duplex,
-    url: djs.duplex.featured_song,
+    dj: djs.criso,
+    url: djs.criso.featured_song,
   },
 ];

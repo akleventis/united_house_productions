@@ -43,7 +43,7 @@ const PastFlyer = ({event}) => {
             <li className="list-group-item headliner">
               {event.headliner.url==="" ? 
               <a>{event.headliner.name}</a> : 
-              <a href={event.headliner.url} target="_blank" rel="noreferrer">{event.headliner.name}</a>
+              <a href={event.headliner.url} rel="noreferrer">{event.headliner.name}</a>
               }
             </li>
 
@@ -52,7 +52,7 @@ const PastFlyer = ({event}) => {
               {event.openers.map(dj => (
                 dj.url === "" ? 
                 <a key={dj.name} className='support-a'>{dj.name}</a> :
-                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer' target="_blank">{dj.name}</a> 
+                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer'>{dj.name}</a> 
               ))}
             </li>
 
@@ -67,7 +67,7 @@ const PastFlyer = ({event}) => {
 
             {/* LOCATION  */}
             <li className="list-group-item location" >
-              <a href={event.location_url} target="_blank" rel="noreferrer">
+              <a href={event.location_url} rel="noreferrer">
                 <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACCklEQVQ4jYWQv08TcRjGn7vDg7uj0F5NE7QhkLAYaa2JPxIHg4bAQoQwOOvgogkLE5MuRiZm9T8wKWlITYpDxcREJzFQRLrYllJ69Nqzvev9FPw6lDak7eEzffO8z/P5vnkpdNHW1JTADAw8oTkuBAB/TTNl2fbbG/G40Z6lOsrz8w88gcDLwOjoOMOyAIATx0Epk9lRy+WlSDT63hWQmp29I46NvRODwWC3zSr7+wdKNvswHIt9bXr02UCvz/e8WdZ1HSXQkCkautHY3D88HOwbHHxxttMCfJmeFgVRDAOAY9swr4bge7YA79MFmFfG8ce2AQD9ohjamJjwdgAIIZdYnvcDQN004bk32frFc38SdcMEAFzg+YsCRV3uAJwwzNGx46gAwLEsjNR2C2Bsb4HrbRz02HFqhKal5qyn+bibSMi/RkYK3qEhP8fzsD4l8Tv9EwDASkX0CTwAwNK0g9vJZKUDAACOrn8DIWFQFHz9AqDVGoPTMgiBWa9vdj0iAGiatqKWSjJcVJOkslOtrrgCbsZiO0qh8NkNUC0WNyLx+A9XAABYsrxYyeVy7X45k8mpqrrY7ncArq+vZ5V8/rWt61YLqut29fDwza21tfx/AQAQXl1dltLpD4QQEEJwtLeXCEWjr7ple7qZACArymNmd/cjRVFM3bYfueXO1fe5ucjmzMy18zL/AN320eTh4osMAAAAAElFTkSuQmCC"
                   alt="location"
@@ -94,7 +94,7 @@ const CurrentFlyer = ({ event }) => {
     }
   }, [event.image_url])
 
-  let tickets = event.ticket_url !== "" ? <button type="button" onClick={() => window.open(event.ticket_url, '_blank')} className="tickets">Tickets</button>:<button className="tickets">Free</button>
+  let tickets = event.ticket_url !== "" ? <button type="button" onClick={() => window.open(event.ticket_url)} className="tickets">Tickets</button>:<button className="tickets">Free</button>
   return (
     <div>
       <div className="flyer-container">
@@ -120,7 +120,7 @@ const CurrentFlyer = ({ event }) => {
             <li className="list-group-item headliner">
               {event.headliner.url==="" ? 
               <a>{event.headliner.name}</a> : 
-              <a href={event.headliner.url} target="_blank" rel="noreferrer">{event.headliner.name}</a>
+              <a href={event.headliner.url} rel="noreferrer">{event.headliner.name}</a>
               }
             </li>
 
@@ -129,7 +129,7 @@ const CurrentFlyer = ({ event }) => {
               {event.openers.map(dj => (
                 dj.url === "" ? 
                 <a key={dj.name} className='support-a'>{dj.name}</a> :
-                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer' target="_blank">{dj.name}</a> 
+                <a href={dj.url} key={dj.name} className='support-a' rel='noreferrer'>{dj.name}</a> 
               ))}
             </li>
 
@@ -144,7 +144,7 @@ const CurrentFlyer = ({ event }) => {
 
             {/* LOCATION  */}
             <li className="list-group-item location" >
-              <a href={event.location_url} target="_blank" rel="noreferrer">
+              <a href={event.location_url} rel="noreferrer">
                 <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACCklEQVQ4jYWQv08TcRjGn7vDg7uj0F5NE7QhkLAYaa2JPxIHg4bAQoQwOOvgogkLE5MuRiZm9T8wKWlITYpDxcREJzFQRLrYllJ69Nqzvev9FPw6lDak7eEzffO8z/P5vnkpdNHW1JTADAw8oTkuBAB/TTNl2fbbG/G40Z6lOsrz8w88gcDLwOjoOMOyAIATx0Epk9lRy+WlSDT63hWQmp29I46NvRODwWC3zSr7+wdKNvswHIt9bXr02UCvz/e8WdZ1HSXQkCkautHY3D88HOwbHHxxttMCfJmeFgVRDAOAY9swr4bge7YA79MFmFfG8ce2AQD9ohjamJjwdgAIIZdYnvcDQN004bk32frFc38SdcMEAFzg+YsCRV3uAJwwzNGx46gAwLEsjNR2C2Bsb4HrbRz02HFqhKal5qyn+bibSMi/RkYK3qEhP8fzsD4l8Tv9EwDASkX0CTwAwNK0g9vJZKUDAACOrn8DIWFQFHz9AqDVGoPTMgiBWa9vdj0iAGiatqKWSjJcVJOkslOtrrgCbsZiO0qh8NkNUC0WNyLx+A9XAABYsrxYyeVy7X45k8mpqrrY7ncArq+vZ5V8/rWt61YLqut29fDwza21tfx/AQAQXl1dltLpD4QQEEJwtLeXCEWjr7ple7qZACArymNmd/cjRVFM3bYfueXO1fe5ucjmzMy18zL/AN320eTh4osMAAAAAElFTkSuQmCC"
                   alt="location"

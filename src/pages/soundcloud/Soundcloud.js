@@ -19,7 +19,7 @@ const Soundcloud = ({isOpen, toggleSideBar}) => {
   const items = featuredSongs.map((fs, i) => {
     return (
       <div className="soundcloud-inner-container" key={i}>
-        <div className="soundcloud-name"> <a target="_blank" rel='noreferrer' href={fs.dj.url}>{fs.dj.name}</a> </div>
+        <div className="soundcloud-name"> <a rel='noreferrer' href={fs.dj.url}>{fs.dj.name}</a> </div>
         <ReactPlayer width="100%" height="100%" url={fs.url} />
       </div>
     );

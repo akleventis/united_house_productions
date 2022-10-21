@@ -22,4 +22,7 @@
     .router-title {
         font-size: 1.2em;
     }
+    .inner-container {
+        padding: 0 10px 20px;
+    }
   }

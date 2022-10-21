@@ -12,7 +12,6 @@ const Socials = ({ size }) => {
         className={"social linktree " + cssClass}
         bgColor="#E7E7E7"
         style={{ height: 30, width: 30 }}
-        target="_blank"
         rel="noreferrer"
         url="https://linktree.com/unitedhouseproductions"
       />
@@ -20,7 +19,6 @@ const Socials = ({ size }) => {
         className={"social insta " + cssClass}
         bgColor="#E7E7E7"
         style={{ height: 30, width: 30 }}
-        target="_blank"
         rel="noreferrer"
         url="https://www.instagram.com/unitedhouseproductions/"
       />
@@ -28,9 +26,7 @@ const Socials = ({ size }) => {
         className={"social facebook " + cssClass}
         bgColor="#E7E7E7"
         style={{ height: 30, width: 30 }}
-        target="_blank"
         rel="noreferrer"
-        onClick={() => window.open("https://www.facebook.com/UnitedHouseProductions/", "_blank")}
         url="https://www.facebook.com/UnitedHouseProductions/"
       />
     </>
