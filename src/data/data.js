@@ -25,22 +25,22 @@ export const djs = {
   duplex: {
     name: "DUPLEX",
     url: "https://www.instagram.com/duplex_music/",
-    featured_song: "https://soundcloud.com/duplexmusic/duplex-flip-it?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/duplexmusic/duplex-flip-it?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   dabaldo: {
     name: "DaBaldo",
     url: "https://www.instagram.com/dabaldo_music/",
-    featured_song: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing?show_teaser=false",
+    featured_song: "https://soundcloud.com/dabaldo/dabaldo-the-club-house-live?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   criso: {
     name: "Criso",
     url: "https://www.instagram.com/crisosound/",
-    featured_song: "https://soundcloud.com/crisosound/criso-field-of-vision-keota-master-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/crisosound/criso-field-of-vision-keota-master-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   yespeez: {
     name: "YESPEEZ",
     url: "https://www.instagram.com/yespeezmusic/",
-    featured_song: "https://soundcloud.com/alex-mahar-189115224/nobody?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/alex-mahar-189115224/nobody?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   vladislove: {
     name: "VLADISLOVE",
@@ -59,12 +59,12 @@ export const djs = {
   mr_jupiter: {
     name: "Mr. Jupiter",
     url: "https://www.instagram.com/mrjupitermusicofficial/",
-    featured_song: "https://soundcloud.com/lewis-cinco-ocho-crumsey/rec008wav?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/lewis-cinco-ocho-crumsey/rec008wav?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   mvmtone: {
     name: "MvMTone",
     url: "https://www.instagram.com/mvmtone_dmvofficial/",
-    featured_song: "https://soundcloud.com/antonio-geter/shib-b2b-mvmtone-techno-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/antonio-geter/shib-b2b-mvmtone-techno-mix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   nikothekid: {
     name: "Niko The Kid",
@@ -85,32 +85,32 @@ export const djs = {
   masteria: {
     name: "MASTERIA",
     url: "https://instagram.com/itsmasteria/",
-    featured_song: "https://soundcloud.com/itsmasteria/bad-guy-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    featured_song: "https://soundcloud.com/itsmasteria/bad-guy-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   },
   woah: {
     name: "WOAHH!",
     url: "https://instagram.com/woahh_music/",
-    featured_song: "https://soundcloud.com/woahh/gorillaz-feel-good-inc-woahh-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    featured_song: "https://soundcloud.com/woahh/gorillaz-feel-good-inc-woahh-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   },
   basswalker: {
     name: "BASSWALKER",
     url: "https://instagram.com/basswalker_/",
-    featured_song: "https://soundcloud.com/user-507608342/gimme-some-keys-v1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    featured_song: "https://soundcloud.com/user-507608342/gimme-some-keys-v1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   },
   san_pacho: {
     name: "San Pacho",
     url: "https://instagram.com/sanpachomusic/",
-    featured_song: "https://soundcloud.com/sanpachomusic/thevault001?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    featured_song: "https://soundcloud.com/sanpachomusic/thevault001?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   },
   dexter: {
     name: "DEXTER",
     url: "https://instagram.com/thedextermusic/",
-    featured_song: "https://soundcloud.com/thedextermusic/woman-is-a-god-final-master-91422?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    featured_song: "https://soundcloud.com/thedextermusic/woman-is-a-god-final-master-91422?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   pimoux: {
     name: "Pimoux",
     url: "https://instagram.com/primoux/",
-    featured_song: "https://soundcloud.com/primoux/bloodmoney-126?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    featured_song: "https://soundcloud.com/primoux/bloodmoney-126?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   }
 };
 
