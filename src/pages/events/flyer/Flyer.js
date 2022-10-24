@@ -94,7 +94,7 @@ const CurrentFlyer = ({ event }) => {
     }
   }, [event.image_url])
 
-  let tickets = event.ticket_url !== "" ? <button type="button" onClick={() => window.open(event.ticket_url)} className="tickets">Tickets</button>:<button className="tickets">Free</button>
+  let tickets = event.ticket_url !== "" ? <a href={event.ticket_url}><button type="button" className="tickets">Tickets</button></a>:<button className="tickets">Free</button>
   return (
     <div>
       <div className="flyer-container">

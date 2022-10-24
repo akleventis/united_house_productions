@@ -9,6 +9,7 @@ export const djs = {
   sam_wolfe: {
     name: "SAM WOLFE",
     url: "https://www.instagram.com/samwolfemusic/",
+    featured_song: "https://soundcloud.com/6amgroup/premiere-sam-wolfe-kreecher-1984-1605?in=samwolfemusic/sets/prison-break-1605-out-now&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   },
   j_5: {
     name: "J/5",
@@ -49,7 +50,7 @@ export const djs = {
   dlmt: {
     name: "DLMT",
     url: "https://www.instagram.com/dlmtmusic/",
-    featured_song: "",
+    featured_song: "https://soundcloud.com/dlmtmusic/bad-bunny-titi-me-pregunto-dlmt-remix-free-download?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false",
   },
   jermjelly: {
     name: "Jerm Jelly",
@@ -69,6 +70,7 @@ export const djs = {
   nikothekid: {
     name: "Niko The Kid",
     url: "https://www.instagram.com/nikothekid/",
+    featured_song: "https://soundcloud.com/nikothekid/sets/niko-the-kid-lemonade?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&show_teaser=false"
   },
   diskull: {
     name: "DISKULL",
@@ -187,18 +189,6 @@ export const events = [
 
 export const featuredSongs = [
   {
-    dj: djs.masteria,
-    url: djs.masteria.featured_song,
-  },
-  {
-    dj: djs.woah,
-    url: djs.woah.featured_song,
-  },
-  {
-    dj: djs.basswalker,
-    url: djs.basswalker.featured_song,
-  },
-  {
     dj: djs.san_pacho,
     url: djs.san_pacho.featured_song,
   },
@@ -211,7 +201,19 @@ export const featuredSongs = [
     url: djs.pimoux.featured_song,
   },
   {
-    dj: djs.criso,
-    url: djs.criso.featured_song,
+    dj: djs.masteria,
+    url: djs.masteria.featured_song,
+  },
+  {
+    dj: djs.nikothekid,
+    url: djs.nikothekid.featured_song,
+  },
+  {
+    dj: djs.dlmt,
+    url: djs.dlmt.featured_song,
+  },
+  {
+    dj: djs.sam_wolfe,
+    url: djs.sam_wolfe.featured_song,
   },
 ];
