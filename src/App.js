@@ -1,11 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About, Booking, Events, Products, Header, Footer,  Navigate, Soundcloud} from "./pages/index.js";
 import { ToastContainer } from "react-toastify";
+import useContentful from "./useContenful.js"
 import "./App.css";
 import axios from 'axios'
 import { useState, useEffect} from "react";
 
 const App = () => {
+  // Contentful //
+  const [events, setEvents] = useState([])
+  const [featuredArtists, setFeaturedArtists] = useState([])
+  const [about, setAbout] = useState([])
+  const { getEvents, getFeaturedArtists, getAbout } = useContentful();
+  // ---------- //
+
+
+  // Soundcloud Sidebar //
   const [showCart, setCart] = useState(false);
   const [showSideBar, setSideBar] = useState(false)
   const handleViewSidebar = () => {
@@ -14,6 +24,7 @@ const App = () => {
   const handleClose = () => {
     if (showSideBar) handleViewSidebar()
   }
+  // ------------------- //
 
 
 // data structure O(1) access to merch
@@ -67,8 +78,6 @@ const createProductMapping = data => {
 }
   const [products, setproducts] = useState([{}]);
   const [productMapping, setProductMapping] = useState([]);
-  // TODO: Uncomment when server is live 
-  // const [events, setEvents] = useState([{}])
   // const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -86,10 +95,6 @@ const createProductMapping = data => {
               const productMapping = createProductMapping(items.data)
               setProductMapping(productMapping)
 
-              // TODO: Uncomment when server is live 
-              // get events
-              // const events = await axios.get(`${server_url}/events`)
-              // setEvents(events.data)
               // setLoading(false)
           } catch (error) {
               console.log("Error accounted for, server still wip")
@@ -97,6 +102,16 @@ const createProductMapping = data => {
           }
       }
       getItems()
+
+      getEvents().then((res) => {
+        setEvents(res)
+      })
+      getFeaturedArtists().then((res) => {
+          setFeaturedArtists(res)
+        })
+      getAbout().then((res) => {
+        setAbout(res)
+      })
   }, []);
 
 
@@ -115,13 +130,13 @@ const createProductMapping = data => {
             <Routes>
               {/* TODO: Uncomment when server is live */}
             {/* {isLoading ? <Route path="/" element={<div>loading...</div>} /> : <Route path="/" element={<Events events={events} />} />} */}
-              <Route path="/" element={<Events />} />
+              <Route path="/" element={<Events events={events}/>} />
               <Route path="/merch" element={<Products products={products} productMapping={productMapping}/>} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About textFields={about}/>} />
               <Route path="/booking" element={<Booking />} />
             </Routes>
           </div>
-          <Soundcloud isOpen={showSideBar} toggleSideBar={handleViewSidebar}/>
+          <Soundcloud isOpen={showSideBar} toggleSideBar={handleViewSidebar} featuredArtists={featuredArtists}/>
         </div>
       </Router>
       <Footer />
