@@ -32,11 +32,9 @@ const Product = ({ product, products }) => {
     setSize("");
   }
 
-  let displaySize 
+  let displaySize = selectedSize === '' ? <span /> : <span className="txt display-size">{selectedSize}</span>
   if (product.size === 'Universal') {
     displaySize = <></>
-  } else {
-    displaySize = selectedSize === '' ? <span /> : <span className="txt display-size">{selectedSize}</span>
   }
 
   // sort sizes for display
@@ -51,7 +49,7 @@ const Product = ({ product, products }) => {
         <div className="row">
           <div className="el-wrapper">
             <div className="box-up">
-              <img className="img" src={product.img} alt="" />
+              <img className="img" src={product.image_url} alt="" />
               <div className="img-info">
                 <div className="info-inner">
                   <span className="p-company">{product.name}</span>

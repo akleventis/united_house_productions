@@ -11,7 +11,8 @@ const App = () => {
   const [events, setEvents] = useState([])
   const [featuredArtists, setFeaturedArtists] = useState([])
   const [about, setAbout] = useState([])
-  const { getEvents, getFeaturedArtists, getAbout } = useContentful();
+  const [aboutImage, setAboutImage] = useState([])
+  const { getEvents, getFeaturedArtists, getAbout, getAboutImages } = useContentful();
   // ---------- //
 
 
@@ -27,19 +28,13 @@ const App = () => {
   // ------------------- //
 
 
-// data structure O(1) access to merch
-//   "T-Shirt": {
-//     "S": { id: "prod_id", name: "", price: 25, size: "", img: ""},
-//     "M": { id: "prod_id", name: "", price: 25, size: "", img: ""},
-//   }, 
-//   "Bucket Hat": {
-//     "Universal": { id: "prod_id", name: "", price: 25, size: "", img: ""},
-//   }
+
 const hashProducts = data => {
     let products = {}
     data.forEach(p => {
+        p.price = p.price / 100
         let sizeMapping = {}
-        let pInfo = {id: p.id, name: p.name, size: p.size, price: p.price, img: p.image_url}
+        let pInfo = {id: p.id, name: p.name, size: p.size, price: p.price, image_url: p.image_url}
         if (p.name in products) {
             sizeMapping = pInfo
             products[p.name][p.size] = sizeMapping
@@ -51,11 +46,6 @@ const hashProducts = data => {
     return products
 }
 
-// data structure (group sizes for same product, name as pkey)
-// productMapping = [
-//   {id: 1, name: "T-Shirt", price: 25, sizes: ["S", "M", "L", "XL"], size: "", img: Shirt},
-//   {id: 2, name: "Bucket Hat", price: 15, sizes: ["Universal"], size: "Universal", img: Shroomy}
-// ]
 const createProductMapping = data => {
     let productMapping = []
     for (const [, value] of Object.entries(data)) {
@@ -71,7 +61,7 @@ const createProductMapping = data => {
         if (flag) continue
         let size = value.size === "Universal" ? "Universal" : ""
         productMapping.push({
-            name: value.name, price: value.price, sizes: [value.size], size: size, img: value.image_url
+            name: value.name, price: value.price, sizes: [value.size], size: size, image_url: value.image_url
         })
     }
     return productMapping
@@ -112,6 +102,10 @@ const createProductMapping = data => {
       getAbout().then((res) => {
         setAbout(res)
       })
+      getAboutImages().then((res) => {
+        let image = res[Math.floor(Math.random()*res.length)]
+        setAboutImage(image)
+      })
   }, []);
 
 
@@ -132,7 +126,7 @@ const createProductMapping = data => {
             {/* {isLoading ? <Route path="/" element={<div>loading...</div>} /> : <Route path="/" element={<Events events={events} />} />} */}
               <Route path="/" element={<Events events={events}/>} />
               <Route path="/merch" element={<Products products={products} productMapping={productMapping}/>} />
-              <Route path="/about" element={<About textFields={about}/>} />
+              <Route path="/about" element={<About textFields={about} image={aboutImage}/>} />
               <Route path="/booking" element={<Booking />} />
             </Routes>
           </div>

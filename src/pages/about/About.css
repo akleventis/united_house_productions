@@ -8,6 +8,7 @@
     align-items: center;
     text-align: center;
 }
+
 .box p {
     width: 45em;
 }
@@ -21,11 +22,12 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.py-img {
-    width: 250px;
-    height: auto;
-    box-shadow: rgba(232, 221, 221, 0.1) 0px 10px 50px;
+.abt-image {
+    width: 50%;
+    min-width: 300px;
+    max-width: 400px;
     border-radius: 5px;
+    box-shadow: rgba(232, 221, 221, 0.1) 0px 10px 50px;
 }
 
 @media (max-width: 767px) {

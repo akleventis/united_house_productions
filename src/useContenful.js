@@ -1,7 +1,5 @@
 import { createClient } from "contentful";
 import "./App.css";
-// import axios from "axios";
-// import { useState, useEffect } from "react";
 
 const useContentful = () => {
   const cSpace = process.env.REACT_APP_CONTENTFUL_SPACE;
@@ -34,7 +32,6 @@ const useContentful = () => {
     try {
         const featuredArtists = await client.getEntries({ 
           content_type: "featuredSongs",
-        //   order: 'fields.startT ime'
         });
         return featuredArtists.items[0].fields.featuredSongs.map((item) => { 
                 const e = item.fields
@@ -52,7 +49,6 @@ const useContentful = () => {
     try {
       const about = await client.getEntries({
         content_type: "about",
-        // order: '-fields.startTime'
       });
 
       return about.items[0].fields
@@ -61,7 +57,24 @@ const useContentful = () => {
     }
   };
 
-  return { getEvents, getFeaturedArtists, getAbout };
+  const getAboutImages = async () => {
+    try {
+      const image = await client.getEntries({
+        content_type: "aboutImages"
+      });
+      return image.includes.Asset.map((item) => {
+        const e = item.fields
+        return {
+          ...item.fields.file,
+          e
+        }
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  return { getEvents, getFeaturedArtists, getAbout, getAboutImages };
 };
 
 export default useContentful;

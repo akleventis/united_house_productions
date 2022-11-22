@@ -14,10 +14,11 @@ const alertErr = (data) => {
 const handleCheckout = async items => {
   let itemArr = []
   items.map(item => {
-    return itemArr.push({ id: item.id, quantity: item.quantity})
+    return itemArr.push({ id: item.id, name: item.name, size: item.size, image_url: item.image_url, price: item.price, quantity: item.quantity})
   })
   try {
     const resp = await axios.post(`${server_url}/checkout`, {items: itemArr})
+    console.log(resp.data)
     if (resp.status === 202) {
       const [quantity, size, name] = [resp.data.product.quantity, resp.data.product.size, resp.data.product.name]
       let message
@@ -26,7 +27,7 @@ const handleCheckout = async items => {
           message = `${size} ${name} is out of stock. Please update cart`
           break
         default:
-          message = `Only ${quantity} ${size} ${name}(s) in stock. Please update cart`
+          message = `Only ${quantity} ${size} ${name}(s) in  stock. Please update cart`
       }
       alertErr(message)
       return
