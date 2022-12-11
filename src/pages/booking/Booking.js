@@ -1,5 +1,4 @@
 import emailjs from "emailjs-com";
-import { toast } from "react-toastify";
 import { SocialIcon } from "react-social-icons";
 // import axios from 'axios'
 import "./Booking.css";
@@ -22,7 +21,8 @@ import "./Booking.css";
 //   }
 // };
 
-const Booking = () => {
+
+const Booking = ({ toggleToast }) => {
   const [user_id, service_id, template_id] = [
     process.env.REACT_APP_EMAIL_USER,
     process.env.REACT_APP_EMAIL_SERVICE,
@@ -34,15 +34,15 @@ const Booking = () => {
     emailjs.sendForm(service_id, template_id, e.target, user_id).then(
       (result) => {
         console.log(result.text);
-        toast("Your message has been delivered");
+        toggleToast("Your message has been delivered");
         document.getElementById("email-form").reset();
       },
       (error) => {
         console.log(error.text);
-        toast.error("error sending email");
+        toggleToast("error sending email");
       }
     );
-    e.target.close();
+    console.log(e)
   };
 
   return (

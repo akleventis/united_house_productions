@@ -1,10 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About, Booking, Events, Products, Header, Footer,  Navigate, Soundcloud} from "./pages/index.js";
-import { ToastContainer } from "react-toastify";
+import Toast from 'react-bootstrap/Toast'
 import useContentful from "./useContenful.js"
 import "./App.css";
 import axios from 'axios'
 import { useState, useEffect} from "react";
+
+const BootstrapToast = ({ data, toast, toggleToast} ) => {
+  return (
+    <Toast autohide show={toast} style={{position: "fixed", top: 0, right: 0, zIndex: 7000}} onClose={()=>toggleToast("")}>
+      <Toast.Header>
+        <strong>Alert</strong>
+      </Toast.Header>
+      <Toast.Body>{data}</Toast.Body>
+    </Toast>
+  )
+}
+
 
 const App = () => {
   // Contentful //
@@ -14,6 +26,15 @@ const App = () => {
   const [aboutImage, setAboutImage] = useState([])
   const { getEvents, getFeaturedArtists, getAbout, getAboutImages } = useContentful();
   // ---------- //
+
+  // Toast //
+  const [toast, setToast] = useState(false)
+  const [toastData, setToastData] = useState("")
+  const toggleToast = (data) => {
+    setToastData(data)
+    setToast(!toast)
+  }
+  // --------------- //
 
 
   // Soundcloud Sidebar //
@@ -112,12 +133,13 @@ const createProductMapping = data => {
 
   return (
     <div onClick={handleClose}>
-      <ToastContainer autoClose={3000} pauseOnHover={false} pauseOnFocusLoss={false}/>
+      <BootstrapToast data={toastData} toast={toast} toggleToast={toggleToast} />
       <Header />
       <Router>
         <Navigate
           showCart={showCart}
           setCart={setCart}
+          toggleToast={toggleToast}
         />
         <div className="outer-container">
           <div className="inner-container">
@@ -125,9 +147,9 @@ const createProductMapping = data => {
               {/* TODO: Uncomment when server is live */}
             {/* {isLoading ? <Route path="/" element={<div>loading...</div>} /> : <Route path="/" element={<Events events={events} />} />} */}
               <Route path="/" element={<Events events={events}/>} />
-              <Route path="/merch" element={<Products products={products} productMapping={productMapping}/>} />
+              <Route path="/merch" element={<Products products={products} productMapping={productMapping} toggleToast={toggleToast} />} />
               <Route path="/about" element={<About textFields={about} image={aboutImage}/>} />
-              <Route path="/booking" element={<Booking />} />
+              <Route path="/booking" element={<Booking toggleToast={toggleToast} />} />
             </Routes>
           </div>
           <Soundcloud isOpen={showSideBar} toggleSideBar={handleViewSidebar} featuredArtists={featuredArtists}/>

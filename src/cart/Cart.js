@@ -1,17 +1,11 @@
 import { Modal } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-import { toast } from "react-toastify";
 import axios from 'axios'
 import "./cart.css";
 
 const server_url=process.env.REACT_APP_SERVER_URL
 
-const alertErr = (data) => {
-  toast.error(data);
-  return;
-}
-
-const handleCheckout = async items => {
+const handleCheckout = async (items, toggleToast) => {
   let itemArr = []
   items.map(item => {
     return itemArr.push({ id: item.id, name: item.name, size: item.size, image_url: item.image_url, price: item.price, quantity: item.quantity})
@@ -29,17 +23,17 @@ const handleCheckout = async items => {
         default:
           message = `Only ${quantity} ${size} ${name}(s) in  stock. Please update cart`
       }
-      alertErr(message)
+      toggleToast(message)
       return
     }
     window.location = resp.data.url
   } catch (error) {
     console.log(error)
-    alertErr("Network Error")
+    toggleToast("Network Error")
   }
 }
 
-const Cart = ({ showCart, setCart }) => {
+const Cart = ({ showCart, setCart, toggleToast }) => {
   const handleClose = () => setCart(false);
   const {
     isEmpty,
@@ -83,7 +77,7 @@ const Cart = ({ showCart, setCart }) => {
       ))}
       <Modal.Footer>
         <h5 className='total'>Total: ${cartTotal}</h5>
-        <button className="checkout" onClick={ () => handleCheckout(items) }>Checkout</button>
+        <button className="checkout" onClick={ () => handleCheckout(items, toggleToast) }>Checkout</button>
       </Modal.Footer>
     </Modal>
   );

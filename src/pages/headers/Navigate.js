@@ -33,7 +33,7 @@ const Socials = ({ size }) => {
   );
 };
 
-const Navigate = ({ showCart, setCart }) => {
+const Navigate = ({ showCart, setCart, toggleToast }) => {
   return (
     <>
       <Navbar collapseOnSelect expand="md navbar-dark" className="nav-links">
@@ -60,6 +60,7 @@ const Navigate = ({ showCart, setCart }) => {
             <Cart
               showCart={showCart}
               setCart={setCart}
+              toggleToast={toggleToast}
             />
             <Socials size="large" />
           </Navbar.Collapse>

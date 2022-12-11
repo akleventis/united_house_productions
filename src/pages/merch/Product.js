@@ -1,22 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { toast } from "react-toastify";
 import { useCart } from "react-use-cart";
-import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import './Merch.css'
 
-const alertAdd = (p) => {
-  toast(`${p.name} added to cart 🔥`, {});
-  return;
-}
-
-const alertSelectSize = () => {
-  toast.error("Please select a size!", {});
-  return;
-}
-
-const Product = ({ product, products }) => {
+const Product = ({ product, products, toggleToast }) => {
   const [selectedSize, setSize] = useState("");
   const { addItem } = useCart();
 
@@ -26,10 +14,11 @@ const Product = ({ product, products }) => {
       p.size = p.size === 'Universal' ? p.size : selectedSize
       let item = products[p.name][p.size]
       addItem(item)
-      alertAdd(item)
+      toggleToast(`${item.name} added to cart 🔥`)
+    } else {
+      toggleToast("Please select a size!")
+      setSize("");
     }
-    else alertSelectSize()
-    setSize("");
   }
 
   let displaySize = selectedSize === '' ? <span /> : <span className="txt display-size">{selectedSize}</span>
