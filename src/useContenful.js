@@ -74,7 +74,25 @@ const useContentful = () => {
     }
   }
 
-  return { getEvents, getFeaturedArtists, getAbout, getAboutImages };
+  const getProductImages = async () => {
+    try {
+      const productImages = await client.getEntries({
+        content_type: "merch"
+      }); 
+      return productImages.items.map((item) => {
+        const e = item.fields
+        return {
+          ...item.fields,
+          e
+        }
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  } 
+  
+
+  return { getEvents, getFeaturedArtists, getAbout, getAboutImages, getProductImages };
 };
 
 export default useContentful;

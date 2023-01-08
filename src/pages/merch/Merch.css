@@ -51,21 +51,21 @@
   background-color: #fff;
 }
 
-@media (max-width: 991px) {
-  .el-wrapper {
-    width: 345px;
-  }
-}
 
 @media (max-width: 767px) {
   .el-wrapper {
-    width: 290px;
+    /* width: 290px; */
     margin: 30px auto;
   }
 
   .merch-grid {
     flex-direction: column;
   }
+
+  .el-wrapper:hover .a-size {
+    bottom: 10px;
+  }
+  
 }
 
 .el-wrapper:hover .h-bg {
@@ -85,23 +85,15 @@
   left: 50%;
 }
 
-.el-wrapper:hover .img {
-  -o-filter: blur(7px);
-  -ms-filter: blur(7px);
-  filter: blur(7px);
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
-  opacity: 0.4;
-}
-
 .el-wrapper:hover .info-inner {
-  bottom: 155px;
+  bottom: 300px;
 }
 
 .el-wrapper:hover .a-size {
   -webkit-transition-delay: 300ms;
   -o-transition-delay: 300ms;
   transition-delay: 300ms;
-  bottom: 50px;
+  bottom: 3px;
   opacity: 1;
 }
 
@@ -218,11 +210,11 @@
   cursor: pointer;
   text-decoration: none !important;
   color: #636363;
+  font-weight: bold;
 }
 
 .sizes:hover {
-  color: #1e84c4;
-  font-weight: bold;
+  color: #ce4141;
 }
 
 .cart {
@@ -294,9 +286,23 @@
   white-space: nowrap;
 }
 
+.size-container {
+  display: flex;
+  justify-content: center;
+}
+
 .display-size {
-  padding: 5px 7px;
-  margin-left: 1em;
-  background-color: #3f96cd;
+  width: 30px;
+  background-color: #ce4141;
   border-radius: 50px;
+}
+
+
+.box-up .carousel-control-next-icon {
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ce4141'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+}
+.box-up .carousel-control-prev-icon {
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ce4141'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }

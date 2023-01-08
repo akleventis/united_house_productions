@@ -1,8 +1,7 @@
 import Product from './Product'
 import { ComingSoon } from '../../assets'
 
-const Products = (props) => {
-    const {products, productMapping, toggleToast} = props
+const Products = ({products, productMapping, toggleToast, displayToast }) => {
     if (productMapping.length === 0) {
         return (
             <main>
@@ -18,7 +17,7 @@ const Products = (props) => {
             <div className='merch-grid'>
                 {productMapping.map((p) => (
                     <div key={`g${p.name}`} xs={12} sm={6} md={4} lg={3}>
-                        <Product key={p.id} products={products} product={p} toggleToast={toggleToast}/>
+                        <Product key={p.id} products={products} product={p} toggleToast={toggleToast} displayToast={displayToast} />
                     </div>
                 ))}
             </div>

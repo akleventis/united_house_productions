@@ -22,7 +22,7 @@ import "./Booking.css";
 // };
 
 
-const Booking = ({ toggleToast }) => {
+const Booking = ({ toggleToast,  displayToast}) => {
   const [user_id, service_id, template_id] = [
     process.env.REACT_APP_EMAIL_USER,
     process.env.REACT_APP_EMAIL_SERVICE,
@@ -34,12 +34,12 @@ const Booking = ({ toggleToast }) => {
     emailjs.sendForm(service_id, template_id, e.target, user_id).then(
       (result) => {
         console.log(result.text);
-        toggleToast("Your message has been delivered");
+        toggleToast("Your message has been delivered", displayToast);
         document.getElementById("email-form").reset();
       },
       (error) => {
         console.log(error.text);
-        toggleToast("error sending email");
+        toggleToast("error sending email", displayToast);
       }
     );
     console.log(e)

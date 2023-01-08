@@ -29,7 +29,7 @@ nav {
   font-size: 1.1em;
   font-weight: 600;
   position: sticky !important;
-  z-index: 1;
+  z-index: 2;
   background-color: #30303e;
   border-top: 1px solid rgba(128, 125, 125, 0.401);
   border-bottom: 1px solid rgba(128, 125, 125, 0.401);

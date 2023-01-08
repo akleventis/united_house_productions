@@ -5,7 +5,7 @@ import "./cart.css";
 
 const server_url=process.env.REACT_APP_SERVER_URL
 
-const handleCheckout = async (items, toggleToast) => {
+const handleCheckout = async (items, toggleToast, displayToast) => {
   let itemArr = []
   items.map(item => {
     return itemArr.push({ id: item.id, name: item.name, size: item.size, image_url: item.image_url, price: item.price, quantity: item.quantity})
@@ -23,17 +23,17 @@ const handleCheckout = async (items, toggleToast) => {
         default:
           message = `Only ${quantity} ${size} ${name}(s) in  stock. Please update cart`
       }
-      toggleToast(message)
+      toggleToast(message, displayToast)
       return
     }
     window.location = resp.data.url
   } catch (error) {
     console.log(error)
-    toggleToast("Network Error")
+    toggleToast("Network Error", displayToast)
   }
 }
 
-const Cart = ({ showCart, setCart, toggleToast }) => {
+const Cart = ({ showCart, setCart, toggleToast, displayToast }) => {
   const handleClose = () => setCart(false);
   const {
     isEmpty,
@@ -77,7 +77,7 @@ const Cart = ({ showCart, setCart, toggleToast }) => {
       ))}
       <Modal.Footer>
         <h5 className='total'>Total: ${cartTotal}</h5>
-        <button className="checkout" onClick={ () => handleCheckout(items, toggleToast) }>Checkout</button>
+        <button className="checkout" onClick={ () => handleCheckout(items, toggleToast, displayToast) }>Checkout</button>
       </Modal.Footer>
     </Modal>
   );

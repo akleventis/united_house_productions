@@ -1,8 +1,21 @@
 import "./About.css";
+import Carousel from "react-bootstrap/Carousel";
 
-const About = ({textFields, image}) => {
+const AboutImages = ({images}) => {
+  return (
+    <Carousel className="abt-image" controls={false} indicators={false}>
+      {images.map((image, i) => (
+        <Carousel.Item key={i}>
+          <img className="d-block w-100" src={image.url} alt="First slide" />
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  );
+}
 
-  let imageURL = image === undefined ? "" : image.url
+const About = ({textFields, images}) => {
+
+  // let imageURL = images === undefined ? "" : images.url
 
   return (
     <>
@@ -24,7 +37,7 @@ const About = ({textFields, image}) => {
           
           <hr className="abt-break"/>
           <div className="box">
-            <img src={imageURL} alt="" className="abt-image"/>
+            {images === undefined ? <></> : <AboutImages images={images} />}
           </div>
       </div>
     </>

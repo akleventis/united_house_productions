@@ -26,8 +26,10 @@
     width: 50%;
     min-width: 300px;
     max-width: 400px;
-    border-radius: 5px;
-    box-shadow: rgba(232, 221, 221, 0.1) 0px 10px 50px;
+}
+
+.abt-image img {
+    border-radius: 10px;
 }
 
 @media (max-width: 767px) {
