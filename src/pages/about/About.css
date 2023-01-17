@@ -23,14 +23,12 @@
 }
 
 .abt-image {
+    margin-top: 1.5em;
     width: 50%;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 400px;
+    max-width: 500px;
 }
 
-.abt-image img {
-    border-radius: 10px;
-}
 
 @media (max-width: 767px) {
 }

@@ -32,10 +32,10 @@
   display: flex;
   position: absolute;
   padding: 0 20px 0;
-  border-top: 1px solid #30303e;
   background-color: #30303e;
   flex-direction: column;
   padding-bottom: 0;
+  border-bottom-left-radius: 5px;
 }
 
 .soundcloud-inner-container {

@@ -62,7 +62,7 @@ const useContentful = () => {
       const image = await client.getEntries({
         content_type: "aboutImages"
       });
-      return image.includes.Asset.map((item) => {
+      return image.items[0].fields.images.map((item) => {
         const e = item.fields
         return {
           ...item.fields.file,

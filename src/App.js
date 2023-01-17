@@ -40,6 +40,8 @@ const App = () => {
   const [featuredArtists, setFeaturedArtists] = useState([]);
   const [about, setAbout] = useState([]);
   const [aboutImage, setAboutImage] = useState([]);
+  const [products, setproducts] = useState([{}]);
+  const [productMapping, setProductMapping] = useState([]);
   const {
     getEvents,
     getFeaturedArtists,
@@ -128,8 +130,6 @@ const App = () => {
     }
     return productMapping;
   };
-  const [products, setproducts] = useState([{}]);
-  const [productMapping, setProductMapping] = useState([]);
 
   useEffect(() => {
     const getItems = async (productImages) => {
