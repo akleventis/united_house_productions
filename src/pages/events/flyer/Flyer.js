@@ -29,6 +29,10 @@ const Flyer = ({ event, isCurrentEvent }) => {
     console.log("Order was completed successfully");
   }, []);
 
+  const handleClose = () => {
+    window.location.reload();
+  }
+
   const modalButtonCheckout = () => {
     window.EBWidgets.createWidget({
       widgetType: "checkout",
@@ -36,6 +40,7 @@ const Flyer = ({ event, isCurrentEvent }) => {
       modal: true,
       modalTriggerElementId: "504081560517",
       onOrderComplete: handleOrderCompleted,
+      onWidgetModalClose: handleClose,
     });
   }
   

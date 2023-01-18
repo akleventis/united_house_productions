@@ -77,6 +77,11 @@ nav {
 .linktree {
   right: 90px;
 }
+
+.shopping-cart {
+  right: 130px;
+}
+
 .social:hover {
   background-color: #f33b3b;
   box-shadow: rgb(255, 0, 0) 0px 0px 20px;
