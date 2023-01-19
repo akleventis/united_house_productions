@@ -62,6 +62,7 @@ const Flyer = ({ event, isCurrentEvent }) => {
 
   // ------------------------------------- //
 
+  
   return (
     <div>
       <div className="flyer-container">
