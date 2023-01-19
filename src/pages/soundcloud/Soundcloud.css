@@ -47,7 +47,9 @@
   padding: 5px;
   color: white;
   margin-bottom: 7px;
+  font-family: cursive;
 }
+
 .soundcloud-name {
   background-color: #ffffffc9;
   font-size: .8em;

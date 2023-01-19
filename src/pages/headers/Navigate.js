@@ -33,7 +33,7 @@ const Socials = ({ setCart, size }) => {
         bgColor="#E7E7E7"
         style={{ height: 30, width: 30 }}
         rel="noreferrer"
-        title="Link Tree"
+        title="Linktree"
         url="https://linktree.com/unitedhouseproductions"
       />
       <SocialIcon
