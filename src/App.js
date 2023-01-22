@@ -1,4 +1,10 @@
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import BootstrapToast from "./lib/Toast.js";
+import useContentful from "./lib/useContenful.js";
+import productHelpers from "./lib/productHelpers.js";
 import {
   About,
   Booking,
@@ -9,46 +15,27 @@ import {
   Navigate,
   Soundcloud,
 } from "./pages/index.js";
-import Toast from "react-bootstrap/Toast";
-import useContentful from "./useContenful.js";
-import "./App.css";
-import axios from "axios";
-import { useState, useEffect } from "react";
 
-
-const BootstrapToast = ({ toastData, displayToast, toggleToast }) => {
-  return (
-    <div>
-      <Toast
-        autohide
-        show={displayToast}
-        style={{ position: "fixed", top: 0, right: 0, zIndex: 7000 }}
-        onClose={() => toggleToast("", false)}
-      >
-        <Toast.Header>
-          <strong>😳</strong>
-        </Toast.Header>
-        <Toast.Body>{toastData}</Toast.Body>
-      </Toast>
-    </div>
-  );
-};
 
 const App = () => {
   // Contentful //
   const [events, setEvents] = useState([]);
   const [featuredArtists, setFeaturedArtists] = useState([]);
-  const [about, setAbout] = useState([]);
+  const [aboutText, setAboutText] = useState([]);
   const [aboutImage, setAboutImage] = useState([]);
   const [products, setproducts] = useState([{}]);
   const [productMapping, setProductMapping] = useState([]);
   const {
     getEvents,
     getFeaturedArtists,
-    getAbout,
+    getAboutText,
     getAboutImages,
     getProductImages,
   } = useContentful();
+  const {
+    hashProducts,
+    createProductMapping
+  } = productHelpers()
   // ---------- //
 
   // Toast //
@@ -70,66 +57,6 @@ const App = () => {
     if (showSideBar) handleViewSidebar();
   };
   // ------------------- //
-
-  const hashProducts = (data) => {
-    let products = {};
-    data.forEach((p) => {
-      p.price = p.price / 100;
-      let sizeMapping = {};
-      let pInfo = {
-        id: p.id,
-        name: p.name,
-        size: p.size,
-        price: p.price,
-        image_url: p.image_url,
-      };
-      if (p.name in products) {
-        sizeMapping = pInfo;
-        products[p.name][p.size] = sizeMapping;
-      } else {
-        sizeMapping[p.size] = pInfo;
-        products[p.name] = sizeMapping;
-      }
-    });
-    return products;
-  };
-
-  // single entity (s,m,l t-shirts are a single product)
-  const createProductMapping = (data, productImages) => {
-    let productMapping = [];
-    for (const [, value] of Object.entries(data)) {
-      let flag = false;
-      if (productMapping.length > 0) {
-        productMapping.forEach((p) => {
-          if (p.name === value.name) {
-            p.sizes.push(value.size);
-            flag = true;
-          }
-        });
-      }
-      if (flag) continue;
-      let size = value.size === "Universal" ? "Universal" : "";
-
-      // set images from contentful
-      let images = [];
-      productImages.forEach((p) => {
-        if (p.name === value.name) {
-          p.images.forEach((e) => {
-            images.push("https://" + e.fields.file.url);
-          });
-        }
-      });
-      productMapping.push({
-        name: value.name,
-        price: value.price,
-        sizes: [value.size],
-        size: size,
-        image_url: value.image_url,
-        images: images,
-      });
-    }
-    return productMapping;
-  };
 
   useEffect(() => {
     const getItems = async (productImages) => {
@@ -160,11 +87,11 @@ const App = () => {
     getFeaturedArtists().then((res) => {
       setFeaturedArtists(res);
     });
-    getAbout().then((res) => {
-      setAbout(res);
+    getAboutText().then((res) => {
+      res && setAboutText(res);
     });
     getAboutImages().then((res) => {
-      if (res !== undefined) setAboutImage(res);
+      res && setAboutImage(res);
     });
   }, []);
 
@@ -201,7 +128,7 @@ const App = () => {
               />
               <Route
                 path="/about"
-                element={<About textFields={about} images={aboutImage} />}
+                element={<About textArr={aboutText} images={aboutImage} />}
               />
               <Route
                 path="/booking"

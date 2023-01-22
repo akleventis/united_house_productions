@@ -7,9 +7,9 @@ const Soundcloud = ({isOpen, toggleSideBar, featuredArtists}) => {
   const items = featuredArtists.map((fa, i) => {
     return (
       <div className="soundcloud-inner-container" key={i}>
-        <div className="soundcloud-name"> <a rel='noreferrer' href={fa.url}>{fa.name}</a> </div>
-        <ReactPlayer width="100%" height="100%" url={fa.featuredSong} />
-      </div>
+        <div className="soundcloud-name"> <a rel='noreferrer' href={fa.instagramUrl}>{fa.name}</a> </div>
+        <ReactPlayer width="100%" height="100%" url={fa.soundcloudEmbedUrl} allow="autoplay" />
+      </div> 
     );
   })
   

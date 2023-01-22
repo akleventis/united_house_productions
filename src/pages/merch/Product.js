@@ -16,8 +16,9 @@ const ProductImages = ({ productImages }) => {
     </Carousel>
   );
 };
-
+ 
 const Product = ({
+  images,
   product,
   products,
   toggleToast,
@@ -63,13 +64,13 @@ const Product = ({
         <div className="row">
           <div className="el-wrapper">
             <div className="box-up">
-              <ProductImages productImages={product.images} />
+              <ProductImages productImages={images} />
               <div className="img-info">
                 <div className="info-inner">
                   <span className="p-company">{product.name}</span>
                 </div>
                 <div className="a-size">
-                  Size:{" "}
+                  Size:{" "} 
                   <span className="size">
                     {product.sizes.map((s) => (
                       <a className="sizes" key={s} onClick={() => setSize(s)}>

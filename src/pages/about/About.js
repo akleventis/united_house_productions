@@ -1,9 +1,9 @@
 import "./About.css";
 import Carousel from "react-bootstrap/Carousel";
 
-const AboutImages = ({images}) => {
+const AboutImages = ({ images }) => {
   return (
-    <Carousel className="abt-image" >
+    <Carousel className="abt-image">
       {images.map((image, i) => (
         <Carousel.Item key={i}>
           <img className="d-block w-100" src={image.url} alt="First slide" />
@@ -11,32 +11,25 @@ const AboutImages = ({images}) => {
       ))}
     </Carousel>
   );
-}
+};
 
-const About = ({textFields, images}) => {
-
+const About = ({ textArr, images }) => {
   return (
     <>
       <h3 className="router-title">About</h3>
       <div className="about-container">
-          <div className="box">
-            <p className='p0'>{textFields.textField1}</p>
-        
-          </div>
-          <hr className="abt-break" />
-          <div className="box">
-            <p className='p0'>{textFields.textField2}</p>
-           
-          </div>
-          <hr className="abt-break"/>
-          <div className="box">
-            <p className='p0'>{textFields.textField3}</p>
-          </div>
-          
-          <hr className="abt-break"/>
-          <div className="box">
-            {images === undefined ? <></> : <AboutImages images={images} />}
-          </div>
+        {textArr.length !== 0 &&
+          textArr.textField.map((text, i) => (
+            <div key={i}>
+              <div className="box" >
+                <p className="p0">{text}</p>
+              </div>
+              <hr className="abt-break" />
+            </div>
+          ))}
+        <div className="box">
+          {images === undefined ? <></> : <AboutImages images={images} />}
+        </div>
       </div>
     </>
   );

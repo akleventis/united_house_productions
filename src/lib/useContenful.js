@@ -1,5 +1,5 @@
 import { createClient } from "contentful";
-import "./App.css";
+import "../App.css";
 
 const useContentful = () => {
   const cSpace = process.env.REACT_APP_CONTENTFUL_SPACE;
@@ -13,10 +13,10 @@ const useContentful = () => {
   const getEvents = async () => {
     try {
       const events = await client.getEntries({
-        content_type: "event",
-        order: '-fields.startTime'
+        content_type: "eventList",
+        include: 10 
       });
-      return events.items.map((item) => {
+      return events.items[0].fields.events.map((item) => {
         const e = item.fields;
         return {
           ...item.fields,
@@ -31,27 +31,26 @@ const useContentful = () => {
   const getFeaturedArtists = async () => {
     try {
         const featuredArtists = await client.getEntries({ 
-          content_type: "featuredSongs",
+          content_type: "soundcloudList",
         });
-        return featuredArtists.items[0].fields.featuredSongs.map((item) => { 
-                const e = item.fields
-                return { 
-                    ...item.fields,
-                    e
-                } 
+        return featuredArtists.items[0].fields.artists.map((item) => { 
+          const e = item.fields
+          return { 
+            ...item.fields,
+            e
+          } 
         });
       } catch (err) {
         console.log(err); 
-      }
-  }
-
-  const getAbout = async () => {
-    try {
-      const about = await client.getEntries({
-        content_type: "about",
-      });
-
-      return about.items[0].fields
+      } 
+    } 
+    
+    const getAboutText = async () => {
+      try {
+        const textFields = await client.getEntries({
+          content_type: "aboutText",
+        });
+      return textFields.items[0].fields
     } catch (err) {
       console.log(err);
     }
@@ -92,7 +91,7 @@ const useContentful = () => {
   } 
   
 
-  return { getEvents, getFeaturedArtists, getAbout, getAboutImages, getProductImages };
+  return { getEvents, getFeaturedArtists, getAboutText, getAboutImages, getProductImages };
 };
 
 export default useContentful;
