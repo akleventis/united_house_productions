@@ -98,6 +98,7 @@ const Flyer = ({ event, isCurrentEvent }) => {
         </div>
         <div className="item-center">
           <ul className="list-group">
+            
             {/* HEADLINER */}
             <li className="list-group-item headliner">
               {eventHeadliner.instagramUrl ? (

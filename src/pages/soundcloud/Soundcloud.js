@@ -16,7 +16,6 @@ const Soundcloud = ({isOpen, toggleSideBar, featuredArtists}) => {
   return (
     <div className='sidebar-container'>
     <button title="Spotlight" onClick={toggleSideBar} className={toggleButtonClass} />
-
     <div className={sidebarClass}>
       <div className="soundcloud-container">
         <div className="dj-title">Spotlight</div>

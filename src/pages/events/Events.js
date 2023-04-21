@@ -60,7 +60,7 @@ const Event = ({ month_map, past_event }) => {
     <div className="events-container">
       <h3 className="router-title">Upcoming Events</h3>
       {Object.entries(currentMonthsEventMapping).length === 0 ? (
-          <div className="nil-events">No current events. Will update soon! In the meantime, check out our previously thrown events below</div>
+          <div className="nil-events">No current shows. Will update soon! In the meantime, check out our previously thrown events below</div>
         ) : (
           <Event month_map={currentMonthsEventMapping} past_event={false} />
       )}

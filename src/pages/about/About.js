@@ -14,6 +14,7 @@ const AboutImages = ({ images }) => {
 };
 
 const About = ({ textArr, images }) => {
+  console.log("textArr: ", textArr);
   return (
     <>
       <h3 className="router-title">About</h3>
@@ -21,14 +22,14 @@ const About = ({ textArr, images }) => {
         {textArr.length !== 0 &&
           textArr.textField.map((text, i) => (
             <div key={i}>
-              <div className="box" >
+              <div className="box">
                 <p className="p0">{text}</p>
               </div>
               <hr className="abt-break" />
             </div>
           ))}
         <div className="box">
-          {images === undefined ? <></> : <AboutImages images={images} />}
+          {images.length > 0 && <AboutImages images={images} />}
         </div>
       </div>
     </>
