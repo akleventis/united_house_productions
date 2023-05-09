@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Flyer from "./flyer/Flyer.js";
 import "./events.css";
 import moment from "moment";
@@ -31,9 +32,16 @@ const Event = ({ month_map, past_event }) => {
 
 // Mapping format => {August 2022: [{event}, {event}], July 2022: [{event}, {event}]}
   const Events = ({events}) => {
-      const [currEvents, pastEvents] = [[], []]
-      const [currentMonthsEventMapping, pastMonthsEventMapping] = [{}, {}];
+    const [currEvents, pastEvents] = [[], []]
+    const [currentMonthsEventMapping, pastMonthsEventMapping] = [{}, {}];
+    const [delayMsg, setDelayedMsg] = useState('')
 
+
+  // i hope no one sees this... will convert whole app to next.js sometime in near future 😆
+  setTimeout(() => {
+    setDelayedMsg('No current shows. Will update soon! In the meantime, check out our previously thrown events below')
+  }, 1000)
+    
   
   events.forEach((event) => {
     if (moment(event.endTime) < moment()) {
@@ -60,11 +68,11 @@ const Event = ({ month_map, past_event }) => {
     <div className="events-container">
       <h3 className="router-title">Upcoming Events</h3>
       {Object.entries(currentMonthsEventMapping).length === 0 ? (
-          <div className="nil-events">No current shows. Will update soon! In the meantime, check out our previously thrown events below</div>
+          <div className="nil-events">{delayMsg}</div>
+          // <div className="nil-events">No current shows. Will update soon! In the meantime, check out our previously thrown events below</div>
         ) : (
           <Event month_map={currentMonthsEventMapping} past_event={false} />
       )}
-
       <h3 className="router-title router-title-past">
         <button className="past-events">Past Events</button>
       </h3>
