@@ -1,10 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import BootstrapToast from "./lib/Toast.js";
 import useContentful from "./lib/useContenful.js";
-import productHelpers from "./lib/productHelpers.js";
 import {
   About,
   Booking,
@@ -23,19 +21,12 @@ const App = () => {
   const [featuredArtists, setFeaturedArtists] = useState([]);
   const [aboutText, setAboutText] = useState([]);
   const [aboutImage, setAboutImage] = useState([]);
-  const [products, setproducts] = useState([{}]);
-  const [productMapping, setProductMapping] = useState([]);
   const {
     getEvents,
     getFeaturedArtists,
     getAboutText,
     getAboutImages,
-    getProductImages,
   } = useContentful();
-  const {
-    hashProducts,
-    createProductMapping
-  } = productHelpers()
   // ---------- //
 
   // Toast //
@@ -59,28 +50,6 @@ const App = () => {
   // ------------------- //
 
   useEffect(() => {
-    const getItems = async (productImages) => {
-      const server_url = process.env.REACT_APP_SERVER_URL;
-      try {
-        // get all merch from database
-        const items = await axios.get(`${server_url}/products`);
-
-        // create hashed data structure
-        const hashedProducts = hashProducts(items.data);
-        setproducts(hashedProducts);
-
-        // create product mapping for front-end cards
-        const productMapping = createProductMapping(items.data, productImages);
-        setProductMapping(productMapping);
-      } catch (error) {
-        console.log("Error accounted for, server still wip");
-      }
-    };
-    // get product images from contentful
-    getProductImages().then((res) => {
-      getItems(res);
-    });
-
     getEvents().then((res) => {
       setEvents(res);
     });
@@ -93,7 +62,7 @@ const App = () => {
     getAboutImages().then((res) => {
       res && setAboutImage(res);
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div onClick={handleClose}>
@@ -119,8 +88,8 @@ const App = () => {
                 path="/merch"
                 element={
                   <Products
-                    products={products}
-                    productMapping={productMapping}
+                    products={{}}
+                    productMapping={[]}
                     toggleToast={toggleToast}
                     displayToast={displayToast}
                   />
